@@ -1,0 +1,15 @@
+[data-theme="light"] {
+  --background: #F2F2F2;
+  --mainColor: #2A95ED;
+  --secondColor: #E710AB;
+  --gradient: gradien(180deg, var(--mainColor), var(--secondColor));
+  --text: #3d3d3d;
+}
+
+[data-theme="dark"] {
+  --background: #191919;
+  --mainColor: #2A95ED;
+  --secondColor: #E710AB;
+  --gradient: gradien(180deg, var(--mainColor), var(--secondColor));
+  --text: #bebebe;
+}
