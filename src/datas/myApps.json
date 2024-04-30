@@ -1,0 +1,66 @@
+[
+  {
+    "name": "Mac OS",
+    "icon": "./myApps/macOS.png"
+  },
+  {
+    "name": "Motivation",
+    "icon": "./myApps/music.png"
+  },
+  {
+    "name": "Notion",
+    "icon": "./myApps/notion.png"
+  },
+  {
+    "name": "Trello",
+    "icon": "./myApps/trello.png"
+  },
+  {
+    "name": "Slack",
+    "icon": "./myApps/slack.png"
+  },
+  {
+    "name": "Chat GPT",
+    "icon": "./myApps/chatGPT.png"
+  },
+  {
+    "name": "Arc",
+    "icon": "./myApps/arc.png"
+  },
+  {
+    "name": "Chrome",
+    "icon": "./myApps/chrome.png"
+  },
+  {
+    "name": "VSCode",
+    "icon": "./myApps/vsCode.png"
+  },
+  {
+    "name": "Terminal",
+    "icon": "./myApps/terminal.png"
+  },
+  {
+    "name": "Figma",
+    "icon": "./myApps/figma.png"
+  },
+  {
+    "name": "Acrobat Pro",
+    "icon": "./myApps/acrobatPro.png"
+  },
+  {
+    "name": "Photoshop",
+    "icon": "./myApps/photoshop.png"
+  },
+  {
+    "name": "Indesign",
+    "icon": "./myApps/indesign.png"
+  },
+  {
+    "name": "Illustrator",
+    "icon": "./myApps/illustrator.png"
+  },
+  {
+    "name": "Excel",
+    "icon": "./myApps/excel.png"
+  }
+]
