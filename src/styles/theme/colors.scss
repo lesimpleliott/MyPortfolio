@@ -1,15 +1,27 @@
 [data-theme="light"] {
-  --background: #F2F2F2;
-  --mainColor: #2A95ED;
-  --secondColor: #E710AB;
-  --gradient: gradien(180deg, var(--mainColor), var(--secondColor));
+  --background: #f2f2f2;
+  --mainColor: #e710ab;
+  --secondColor: #2a95ed;
+  --gradient: linear-gradient(#e710ab, #2a95ed);
   --text: #3d3d3d;
+  --heroBackground: linear-gradient(
+    0deg,
+    rgba(242, 242, 242, 1) 0%,
+    rgba(242, 242, 242, 0.7) 25%,
+    rgba(242, 242, 242, 0.7) 35%
+  );
 }
 
 [data-theme="dark"] {
   --background: #191919;
-  --mainColor: #2A95ED;
-  --secondColor: #E710AB;
-  --gradient: gradien(180deg, var(--mainColor), var(--secondColor));
+  --mainColor: #e710ab;
+  --secondColor: #2a95ed;
+  --gradient: linear-gradient(#e710ab, #2a95ed);
   --text: #bebebe;
+  --heroBackground: linear-gradient(
+    0deg,
+    rgba(25, 25, 25, 1) 0%,
+    rgba(25, 25, 25, 0.7) 10%,
+    rgba(25, 25, 25, 0.7) 25%
+  );
 }
