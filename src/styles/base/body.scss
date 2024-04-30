@@ -4,3 +4,16 @@ body {
   background: var(--background);
   color: var(--text);
 }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+
+  section {
+    width: 100%;
+    padding-inline: 5vw;
+    gap: 30px;
+  }
+}

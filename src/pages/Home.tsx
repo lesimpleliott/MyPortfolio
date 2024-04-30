@@ -11,9 +11,23 @@ const Home = () => {
       <section className="stack">
         <h2>Stack</h2>
         <h3>Technologies avec lesquelles je travaille</h3>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat
+          harum quas velit, laudantium earum sequi dignissimos mollitia iusto
+          voluptas nemo aut est corrupti reiciendis odit esse omnis deleniti
+          inventore obcaecati rem pariatur. Commodi voluptatem optio porro
+          perferendis facilis eaque tenetur aspernatur distinctio officiis. Nisi
+          placeat beatae alias nesciunt officia? Ad totam odio dolorum autem
+          animi voluptate quaerat dolore id. Veniam asperiores optio deleniti
+          sapiente officia id accusantium voluptates, iusto eligendi molestiae
+          doloremque veritatis hic, fuga fugiat cumque voluptatibus ab alias
+          voluptatem nulla, obcaecati ut. Similique, magnam quibusdam molestiae
+          eligendi earum neque vitae excepturi alias nemo eos officia minus,
+          aspernatur cum!
+        </p>
 
         <h3>Les Apps que j'utilise tous les jours</h3>
-        <div className="dock">
+        <div className="content dock">
           <ul>
             {dataApp.map((app, index) => (
               <MyApps key={index} data={app} />
@@ -33,9 +47,11 @@ const Home = () => {
 // STYLED-COMPONENTS
 
 const HomeStyled = styled.main`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  .stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   .dock {
     display: inline-block;
