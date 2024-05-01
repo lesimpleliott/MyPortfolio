@@ -1,4 +1,6 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import Logo from "./Logo";
 
 const Header = () => {
   const toggleTheme = () => {
@@ -12,23 +14,92 @@ const Header = () => {
 
   return (
     <HeaderStyled>
-      <button onClick={toggleTheme} id="toggleThemeBtn">
-        Toggle Theme
-      </button>
+      <div className="container">
+        <NavLink to="/">
+          <Logo height={40} />
+        </NavLink>
+
+        <div className="navbar">
+          <ul className="navbar">
+            <li>
+              <NavLink to="#stack">Stack</NavLink>
+            </li>
+            <li>
+              <a href="#projects">Projets</a>
+            </li>
+            <li>
+              <a href="/about">À propos</a>
+            </li>
+            <li>
+              <a href="/contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <section className="icons">
+          <button className="headerBtn" id="toggleThemeBtn">
+            <img src="./icons/github_white.webp" alt="" />
+          </button>
+          <button className="headerBtn" id="toggleThemeBtn">
+            <img src="./icons/linkedin_white.webp" alt="" />
+          </button>
+          <button
+            onClick={toggleTheme}
+            className="headerBtn"
+            id="toggleThemeBtn"
+          >
+            <img src="./icons/theme_white.webp" alt="" />
+          </button>
+        </section>
+      </div>
     </HeaderStyled>
   );
 };
 
 const HeaderStyled = styled.header`
   width: 100%;
-  height: 50px;
+  height: 70px;
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0;
   z-index: 1;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: var(--headerBackground);
   transition: background-color 300ms ease-in-out;
+
+  .container {
+    width: 100%;
+    padding-inline: 5vw;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .navbar {
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+
+    font-size: 1.2rem;
+  }
+
+  .icons {
+    display: flex;
+    gap: 15px;
+
+    .headerBtn {
+      all: unset;
+
+      img {
+        height: 25px;
+        width: 25px;
+      }
+    }
+  }
 `;
 
 export default Header;

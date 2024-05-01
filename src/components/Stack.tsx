@@ -26,7 +26,6 @@ const StackStyled = styled.div`
     grid-template-columns: repeat(6, 1fr);
 
     li {
-      list-style: none;
       width: 100px;
       max-width: 150px;
 

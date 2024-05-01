@@ -9,7 +9,7 @@ const Home = () => {
     <HomeStyled>
       <HeroBanner />
 
-      <section className="stack">
+      <section className="stack" id="stack">
         <h2>Stack</h2>
         <h3>Technologies avec lesquelles je travaille</h3>
         <Stack />
@@ -17,9 +17,10 @@ const Home = () => {
         <Dock />
       </section>
 
-      <section className="projects">
+      <section className="projects" id="projects">
         <h2>Mes projets</h2>
         <h3>Les projets sur lesquels j'ai travaillé depuis mes débuts.</h3>
+        <div className="blank"></div>
       </section>
     </HomeStyled>
   );
@@ -31,6 +32,10 @@ const HomeStyled = styled.main`
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .blank {
+    height: 100vh;
   }
 `;
 
