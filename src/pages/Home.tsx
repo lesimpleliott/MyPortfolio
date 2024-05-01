@@ -54,12 +54,12 @@ const HomeStyled = styled.main`
   }
 
   .dock {
-    padding: 2px 4px;
+    padding: 4px 6px;
     border-radius: 16px;
-    border: solid 2px rgb(148, 148, 148);
+    border: solid 1px rgb(148, 148, 148);
     background: linear-gradient(
-      rgba(255, 255, 255, 0.4),
-      rgba(255, 255, 255, 0.2)
+      rgba(79, 79, 79, 0.2),
+      rgba(255, 255, 255, 0.4)
     );
 
     ul {
@@ -67,12 +67,12 @@ const HomeStyled = styled.main`
       align-items: end;
       list-style: none;
 
-      @media screen and (max-width: 1024px) {
+      /* @media screen and (max-width: 1024px) {
         padding: 10px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-gap: 20px;
-      }
+      } */
     }
   }
 `;

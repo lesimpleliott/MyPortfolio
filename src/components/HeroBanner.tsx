@@ -47,6 +47,9 @@ const HeroBannerStyled = styled.section`
       position: absolute;
       inset: 0;
       background: var(--heroBackground);
+      transition: background-color 300ms ease-in-out;
+      box-shadow: 0 -200px 50px -150px var(--background) inset;
+      transition: box-shadow 250ms ease-in-out;
     }
   }
 

@@ -3,6 +3,8 @@ body {
   justify-content: center;
   background: var(--background);
   color: var(--text);
+
+  transition: all 250ms ease-in-out;
 }
 
 main {
