@@ -54,7 +54,6 @@ const HomeStyled = styled.main`
   }
 
   .dock {
-    display: inline-block;
     padding: 2px 4px;
     border-radius: 16px;
     border: solid 2px rgb(148, 148, 148);
@@ -65,11 +64,10 @@ const HomeStyled = styled.main`
 
     ul {
       display: flex;
-      justify-content: center;
       align-items: end;
       list-style: none;
 
-      @media screen and (max-width: 728px) {
+      @media screen and (max-width: 1024px) {
         padding: 10px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
