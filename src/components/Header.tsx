@@ -27,8 +27,8 @@ const HeaderStyled = styled.header`
   left: 0;
   z-index: 1;
 
-  background: var(--headerBackground);
-  transition: background-color 250ms ease-in;
+  background-color: var(--headerBackground);
+  transition: background-color 300ms ease-in-out;
 `;
 
 export default Header;
