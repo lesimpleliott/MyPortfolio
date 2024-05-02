@@ -66,6 +66,7 @@ const HeroBannerStyled = styled.section`
     gap: 8vw;
     @media (max-width: 728px) {
       flex-direction: column-reverse;
+      margin-top: 15px;
       gap: 5vw;
     }
 
@@ -75,6 +76,9 @@ const HeroBannerStyled = styled.section`
       font-size: clamp(1.8rem, 4vw, 3rem);
       color: var(--text);
       transition: color 250ms ease-in-out;
+      @media (max-width: 728px) {
+        text-align: center;
+      }
     }
   }
 `;
