@@ -9,5 +9,6 @@
   { "name": "Typescript", "icon": "./myStack/TYPESCRIPT.svg" },
   { "name": "Styled-Component", "icon": "./myStack/STYLED-COMPONENTS.png" },
   { "name": "Redux", "icon": "./myStack/REDUX.svg" },
-  { "name": "Zustand", "icon": "./myStack/ZUSTAND.png" }
+  { "name": "Zustand", "icon": "./myStack/ZUSTAND.png" },
+  { "name": "JEST", "icon": "./myStack/JEST.svg" }
 ]
