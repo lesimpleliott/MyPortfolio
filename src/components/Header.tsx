@@ -65,8 +65,7 @@ const HeaderStyled = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--headerBackground);
-  transition: background-color 300ms ease-in-out;
+  backdrop-filter: blur(10px);
 
   .container {
     width: 100%;
@@ -84,7 +83,7 @@ const HeaderStyled = styled.header`
     justify-content: end;
     gap: 20px;
 
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .icons {

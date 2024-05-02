@@ -4,7 +4,6 @@
   --gradient: linear-gradient(#e710ab, #2a95ed);
   --text: #3d3d3d;
   --background: #f2f2f2;
-  --headerBackground: rgba(177, 177, 177, 0.5);
   --heroBackground: rgba(242, 242, 242, 0.7);
 }
 
@@ -14,14 +13,5 @@
   --gradient: linear-gradient(#e710ab, #2a95ed);
   --text: #d8d8d8;
   --background: #191919;
-  --headerBackground: rgba(25, 25, 25, 0.5);
   --heroBackground: rgba(25, 25, 25, 0.7);
-}
-
-.cls-2 {
-  fill: var(--mainColor);
-}
-
-.cls-1 {
-  fill: var(--secondColor);
 }

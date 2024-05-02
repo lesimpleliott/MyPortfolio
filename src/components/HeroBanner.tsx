@@ -46,10 +46,10 @@ const HeroBannerStyled = styled.section`
       content: "";
       position: absolute;
       inset: 0;
-      background: var(--heroBackground);
-      transition: background-color 300ms ease-in-out;
+      background-color: var(--heroBackground);
       box-shadow: 0 -200px 50px -150px var(--background) inset;
-      transition: box-shadow 250ms ease-in-out;
+      transition: box-shadow 250ms ease-in-out,
+        background-color 250ms ease-in-out;
     }
   }
 
@@ -74,6 +74,7 @@ const HeroBannerStyled = styled.section`
       font-weight: 700;
       font-size: clamp(1.8rem, 4vw, 3rem);
       color: var(--text);
+      transition: color 250ms ease-in-out;
     }
   }
 `;

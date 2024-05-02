@@ -16,11 +16,11 @@ const ProfilPicture = ({ img, alt }: ImageType) => {
 const ProfilPictureStyled = styled.div`
   position: relative;
   width: 20vw;
-  min-width: 250px;
-  max-width: 350px;
+  min-width: 200px;
+  max-width: 300px;
   height: 20vw;
-  min-height: 250px;
-  max-height: 350px;
+  min-height: 200px;
+  max-height: 300px;
   border-radius: 100%;
   background: linear-gradient(#e710ab, #2a95ed);
 
