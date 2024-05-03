@@ -1,6 +1,6 @@
 [
-  { "name": "Html", "icon": "./myStack/HTML.svg" },
-  { "name": "Css", "icon": "./myStack/CSS.svg" },
+  { "name": "HTML", "icon": "./myStack/HTML.svg" },
+  { "name": "CSS", "icon": "./myStack/CSS.svg" },
   { "name": "Sass", "icon": "./myStack/SASS.svg" },
   { "name": "Javascript", "icon": "./myStack/JAVASCRIPT.svg" },
   { "name": "Github", "icon": "./myStack/GITHUB_WHITE.svg" },
@@ -10,5 +10,5 @@
   { "name": "Styled-Component", "icon": "./myStack/STYLED-COMPONENTS.png" },
   { "name": "Redux", "icon": "./myStack/REDUX.svg" },
   { "name": "Zustand", "icon": "./myStack/ZUSTAND.png" },
-  { "name": "JEST", "icon": "./myStack/JEST.svg" }
+  { "name": "Jest", "icon": "./myStack/JEST.svg" }
 ]
