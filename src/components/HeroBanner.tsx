@@ -29,6 +29,7 @@ const HeroBannerStyled = styled.section`
   position: relative;
   padding: 0;
   margin-bottom: -70px;
+  z-index: -1;
 
   .banner {
     width: 100%;

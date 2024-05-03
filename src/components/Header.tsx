@@ -75,7 +75,7 @@ const HeaderStyled = styled.header`
   height: 70px;
   position: fixed;
   inset: 0;
-  z-index: 1;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
