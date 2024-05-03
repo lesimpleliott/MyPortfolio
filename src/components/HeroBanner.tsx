@@ -64,7 +64,7 @@ const HeroBannerStyled = styled.section`
     align-items: center;
     justify-content: center;
     gap: 8vw;
-    @media (max-width: 728px) {
+    @media (max-width: 768px) {
       flex-direction: column-reverse;
       margin-top: 15px;
       gap: 5vw;

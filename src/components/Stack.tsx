@@ -16,18 +16,41 @@ const Stack = () => {
 };
 
 const StackStyled = styled.div`
-  margin-block-start: 3vw;
-  margin-block-end: 5vw;
+  width: 100%;
+  max-width: 1024px;
+  margin-block-start: 50px;
+  margin-block-end: 75px;
 
   ul {
+    width: 100%;
     display: grid;
     grid-column-gap: 5vw;
     grid-row-gap: 30px;
     grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: 1024px) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 15px;
+    }
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 15px;
+      grid-row-gap: 40px;
+    }
 
     li {
-      width: 100px;
-      max-width: 150px;
+      width: 10vw;
+      max-width: 100px;
+      justify-self: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media screen and (max-width: 1024px) {
+        width: 20vw;
+        max-width: 125px;
+      }
 
       img {
         width: 100%;
