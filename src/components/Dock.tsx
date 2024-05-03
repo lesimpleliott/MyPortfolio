@@ -15,12 +15,12 @@ const Dock = () => {
 };
 
 // STYLED-COMPONENTS
-const size = 55;
-const sizeHover = 90;
+const size = 60;
+const sizeHover = 80;
 
 const DockStyled = styled.ul`
-  margin-block-start: 3vw;
-  margin-block-end: 5vw;
+  margin-block-start: 50px;
+  margin-block-end: 75px;
   padding: 4px 6px;
   border-radius: 16px;
   border: solid 1px rgb(148, 148, 148);
@@ -28,15 +28,23 @@ const DockStyled = styled.ul`
   display: flex;
   align-items: end;
   list-style: none;
+  @media screen and (max-width: 1024px) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    padding: 15px;
+  }
 
   .app {
-    width: ${size}px;
-    height: ${size}px;
+    max-width: 75px;
     position: relative;
     display: flex;
     justify-content: center;
     transition: all 150ms ease-out;
+    // Gestion des tailles des apps
     @media screen and (min-width: 1024px) {
+      width: ${size}px;
+      height: ${size}px;
       &:hover {
         width: ${sizeHover}px;
         height: ${sizeHover}px;
@@ -75,6 +83,7 @@ const DockStyled = styled.ul`
       background: #000000;
       border-radius: 5px;
       opacity: 0;
+      transition: opacity 150ms ease-out;
     }
     &:hover .appName {
       opacity: 0.8;
