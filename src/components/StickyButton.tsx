@@ -8,6 +8,7 @@ type StickyBtnProps = {
   iconLight: string;
   alt: string;
 };
+// RENDRE LINK OU FUNCTION Obligatoire ... Typescript
 
 const StickyButton: React.FC<StickyBtnProps> = (props) => {
   const anim = () => {

@@ -20,7 +20,7 @@ const StackStyled = styled.div`
   width: 100%;
   max-width: 1024px;
   margin-block-start: 50px;
-  margin-block-end: 75px;
+  margin-block-end: 100px;
 
   ul {
     width: 100%;
@@ -52,9 +52,7 @@ const StackStyled = styled.div`
       position: relative;
       @media screen and (max-width: 1024px) {
         width: 20vw;
-        max-width: 125px;
         height: 20vw;
-        max-height: 125px;
       }
 
       &:hover {
