@@ -1,14 +1,13 @@
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import useStoreTheme from "../theme.store";
 import Logo from "./Logo";
 import StickyButton from "./StickyButton";
 
 const Header = () => {
-  const [theme, setTheme] = useState("dark");
-
+  const { theme, setTheme } = useStoreTheme();
   const toggleTheme = () => {
-    // const theme = document.body.getAttribute("data-theme");
+    setTheme(theme === "dark" ? "dark" : "light");
     if (theme === "dark") {
       document.body.setAttribute("data-theme", "light");
       setTheme("light");

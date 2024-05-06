@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import useStoreTheme from "../theme.store";
 import Logo from "./Logo";
 import StickyButton from "./StickyButton";
 
 const Footer = () => {
-  const theme = "dark";
+  const { theme } = useStoreTheme();
 
   return (
     <FooterStyled>

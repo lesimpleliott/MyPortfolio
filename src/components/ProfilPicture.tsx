@@ -22,7 +22,7 @@ const ProfilPictureStyled = styled.div`
   min-height: 200px;
   max-height: 300px;
   border-radius: 100%;
-  background: linear-gradient(#e710ab, #2a95ed);
+  background: var(--gradient);
 
   img {
     width: calc(100% - 16px);

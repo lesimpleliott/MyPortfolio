@@ -1,13 +1,24 @@
 import styled from "styled-components";
 import dataStack from "../datas/myStack.json";
+import useStoreTheme from "../theme.store";
 
 const Stack = () => {
+  const { theme } = useStoreTheme();
+
   return (
     <StackStyled>
       <ul>
         {dataStack.map((stack, index) => (
           <li key={index}>
-            <img className="icon" src={stack.icon} alt={stack.name} />
+            <img
+              className="icon"
+              src={
+                stack.iconLight && theme === "light"
+                  ? stack.iconLight
+                  : stack.icon
+              }
+              alt={stack.name}
+            />
             <span className="name">{stack.name}</span>
           </li>
         ))}

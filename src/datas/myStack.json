@@ -3,7 +3,11 @@
   { "name": "CSS", "icon": "./myStack/CSS.svg" },
   { "name": "Sass", "icon": "./myStack/SASS.svg" },
   { "name": "Javascript", "icon": "./myStack/JAVASCRIPT.svg" },
-  { "name": "Github", "icon": "./myStack/GITHUB_WHITE.svg" },
+  {
+    "name": "Github",
+    "icon": "./myStack/GITHUB_WHITE.svg",
+    "iconLight": "./myStack/GITHUB_BLACK.svg"
+  },
   { "name": "Git", "icon": "./myStack/GIT.svg" },
   { "name": "React", "icon": "./myStack/REACT.svg" },
   { "name": "Typescript", "icon": "./myStack/TYPESCRIPT.svg" },
