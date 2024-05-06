@@ -96,6 +96,21 @@ const FooterStyled = styled.footer`
   .icons {
     display: flex;
   }
+
+  .activeTheme {
+    &::after {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background-color: var(--mainColor);
+    }
+  }
 `;
 
 export default Footer;
