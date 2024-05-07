@@ -5,9 +5,11 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Error from "./pages/Error";
 import Home from "./pages/Home";
+import useStoreTheme from "./theme.store";
 
 const App = () => {
-  document.body.setAttribute("data-theme", "dark");
+  const { theme } = useStoreTheme();
+  document.body.setAttribute("data-theme", theme);
 
   return (
     <BrowserRouter>

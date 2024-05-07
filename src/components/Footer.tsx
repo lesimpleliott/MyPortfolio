@@ -4,7 +4,26 @@ import Logo from "./Logo";
 import StickyButton from "./StickyButton";
 
 const Footer = () => {
-  const { theme } = useStoreTheme();
+  const { theme, setTheme } = useStoreTheme();
+
+  const setSystemTheme = () => {
+    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
+      .matches
+      ? "dark"
+      : "light";
+    setTheme(systemTheme);
+    // Ajouter class "activeTheme" à l'option choisie
+  };
+
+  const setDarkTheme = () => {
+    setTheme("dark");
+    // Ajouter class "activeTheme" à l'option choisie
+  };
+
+  const setLightTheme = () => {
+    setTheme("light");
+    // Ajouter class "activeTheme" à l'option choisie
+  };
 
   return (
     <FooterStyled>
@@ -53,21 +72,21 @@ const Footer = () => {
           </ul>
           <div className="icons">
             <StickyButton
-              link="#"
+              function={setSystemTheme}
               icon="./icons/system_white.webp"
               iconLight="./icons/system_black.webp"
               theme={theme}
               alt="system theme"
             />
             <StickyButton
-              link="#"
+              function={setDarkTheme}
               icon="./icons/dark_white.webp"
               iconLight="./icons/dark_black.webp"
               theme={theme}
               alt="system theme"
             />
             <StickyButton
-              link="#"
+              function={setLightTheme}
               icon="./icons/light_white.webp"
               iconLight="./icons/light_black.webp"
               theme={theme}

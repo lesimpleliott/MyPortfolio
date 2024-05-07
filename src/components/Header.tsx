@@ -9,10 +9,8 @@ const Header = () => {
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "dark" : "light");
     if (theme === "dark") {
-      document.body.setAttribute("data-theme", "light");
       setTheme("light");
     } else {
-      document.body.setAttribute("data-theme", "dark");
       setTheme("dark");
     }
   };
