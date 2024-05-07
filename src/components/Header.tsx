@@ -19,9 +19,9 @@ const Header = () => {
 
   return (
     <HeaderStyled>
-      <Logo height={30} />
+      <div className="headerContainer">
+        <Logo height={30} />
 
-      <div className="navbar">
         <ul className="navbar">
           <NavLink to="/#stack">
             <li>Stack</li>
@@ -36,65 +36,84 @@ const Header = () => {
             <li>Contact</li>
           </NavLink>
         </ul>
-      </div>
 
-      <section className="icons">
-        <StickyButton
-          link="https://github.com/lesimpleliott"
-          theme={theme}
-          icon="./icons/github_white.webp"
-          iconLight="./icons/github_black.webp"
-          alt="github icon"
-        />
-        <StickyButton
-          link="https://www.linkedin.com/in/lesimpleliott/"
-          theme={theme}
-          icon="./icons/linkedin_white.webp"
-          iconLight="./icons/linkedin_black.webp"
-          alt="linkedin icon"
-        />
-        <StickyButton
-          function={toggleTheme}
-          theme={theme}
-          icon="./icons/theme_white.webp"
-          iconLight="./icons/theme_black.webp"
-          alt="theme icon"
-        />
-      </section>
+        <section className="icons">
+          <StickyButton
+            link="https://github.com/lesimpleliott"
+            theme={theme}
+            icon="./icons/github_white.webp"
+            iconLight="./icons/github_black.webp"
+            alt="github icon"
+          />
+          <StickyButton
+            link="https://www.linkedin.com/in/lesimpleliott/"
+            theme={theme}
+            icon="./icons/linkedin_white.webp"
+            iconLight="./icons/linkedin_black.webp"
+            alt="linkedin icon"
+          />
+          <StickyButton
+            function={toggleTheme}
+            theme={theme}
+            icon="./icons/light_white.webp"
+            iconLight="./icons/dark_black.webp"
+            alt="theme icon"
+          />
+        </section>
+      </div>
     </HeaderStyled>
   );
 };
 
 const HeaderStyled = styled.header`
-  height: 70px;
+  height: 60px;
   width: 100%;
-  max-width: calc(1024px + 5vw);
-  padding-inline: 5vw;
-  margin: 0 auto;
   position: fixed;
   inset: 0;
   z-index: 10;
+  backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: center;
-  backdrop-filter: blur(10px);
-  gap: 20px;
 
-  .navbar {
-    flex: 1;
-    display: flex;
-    justify-content: end;
-    gap: 15px;
-    font-size: 1rem;
-    font-weight: 500;
-    li {
-      cursor: pointer;
-    }
-  }
-
-  .icons {
+  .headerContainer {
+    width: 100%;
+    max-width: 1024px;
+    margin-inline: 5vw;
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    .navbar {
+      flex: 1;
+      display: flex;
+      justify-content: end;
+      gap: 20px;
+      li {
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 500;
+        &::after {
+          content: "";
+          display: block;
+          width: 0%;
+          height: 2px;
+          border-radius: 2px;
+          background-color: var(--mainColor);
+          transition: width 200ms ease-in-out;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+    }
   }
 `;
 
