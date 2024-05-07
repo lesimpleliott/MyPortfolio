@@ -1,16 +1,18 @@
 import styled from "styled-components";
+import useStoreTheme from "../theme.store";
 
 type StickyBtnProps = {
   function?: () => void;
   link?: string;
-  theme: string;
-  icon: string;
+  iconDark: string;
   iconLight: string;
   alt: string;
 };
 // RENDRE LINK OU FUNCTION Obligatoire ... Typescript
 
 const StickyButton: React.FC<StickyBtnProps> = (props) => {
+  const { theme } = useStoreTheme();
+
   const anim = () => {
     const btns = document.querySelectorAll(".btn");
 
@@ -33,7 +35,7 @@ const StickyButton: React.FC<StickyBtnProps> = (props) => {
       {props.function && (
         <button onMouseOver={anim} className="btn" onClick={props.function}>
           <img
-            src={props.theme === "dark" ? props.icon : props.iconLight}
+            src={theme === "dark" ? props.iconDark : props.iconLight}
             alt={props.alt}
           />
         </button>
@@ -42,7 +44,7 @@ const StickyButton: React.FC<StickyBtnProps> = (props) => {
       {props.link && (
         <a onMouseOver={anim} className="btn" href={props.link} target="_blank">
           <img
-            src={props.theme === "dark" ? props.icon : props.iconLight}
+            src={theme === "dark" ? props.iconDark : props.iconLight}
             alt={props.alt}
           />
         </a>

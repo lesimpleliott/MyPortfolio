@@ -7,12 +7,7 @@ import StickyButton from "./StickyButton";
 const Header = () => {
   const { theme, setTheme } = useStoreTheme();
   const toggleTheme = () => {
-    setTheme(theme === "dark" ? "dark" : "light");
-    if (theme === "dark") {
-      setTheme("light");
-    } else {
-      setTheme("dark");
-    }
+    setTheme(theme === "dark" ? "light" : "dark");
   };
 
   return (
@@ -38,22 +33,19 @@ const Header = () => {
         <section className="icons">
           <StickyButton
             link="https://github.com/lesimpleliott"
-            theme={theme}
-            icon="./icons/github_white.webp"
+            iconDark="./icons/github_white.webp"
             iconLight="./icons/github_black.webp"
             alt="github icon"
           />
           <StickyButton
             link="https://www.linkedin.com/in/lesimpleliott/"
-            theme={theme}
-            icon="./icons/linkedin_white.webp"
+            iconDark="./icons/linkedin_white.webp"
             iconLight="./icons/linkedin_black.webp"
             alt="linkedin icon"
           />
           <StickyButton
             function={toggleTheme}
-            theme={theme}
-            icon="./icons/light_white.webp"
+            iconDark="./icons/light_white.webp"
             iconLight="./icons/dark_black.webp"
             alt="theme icon"
           />

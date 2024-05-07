@@ -4,7 +4,7 @@ import Logo from "./Logo";
 import StickyButton from "./StickyButton";
 
 const Footer = () => {
-  const { theme, setTheme } = useStoreTheme();
+  const { setTheme } = useStoreTheme();
 
   const setSystemTheme = () => {
     const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
@@ -33,29 +33,25 @@ const Footer = () => {
           <div className="icons">
             <StickyButton
               link="mailto:lesimpleliott@gmail.com"
-              theme={theme}
-              icon="./icons/mail_white.webp"
+              iconDark="./icons/mail_white.webp"
               iconLight="./icons/mail_black.webp"
               alt="mail icon"
             />
             <StickyButton
               link="tel: +33663991329"
-              theme={theme}
-              icon="./icons/telephone_white.webp"
+              iconDark="./icons/telephone_white.webp"
               iconLight="./icons/telephone_black.webp"
               alt="mail icon"
             />
             <StickyButton
               link="https://github.com/lesimpleliott"
-              theme={theme}
-              icon="./icons/github_white.webp"
+              iconDark="./icons/github_white.webp"
               iconLight="./icons/github_black.webp"
               alt="github icon"
             />
             <StickyButton
               link="mailto:https://www.linkedin.com/in/lesimpleliott/"
-              theme={theme}
-              icon="./icons/linkedin_white.webp"
+              iconDark="./icons/linkedin_white.webp"
               iconLight="./icons/linkedin_black.webp"
               alt="linkedin icon"
             />
@@ -73,24 +69,21 @@ const Footer = () => {
           <div className="icons">
             <StickyButton
               function={setSystemTheme}
-              icon="./icons/system_white.webp"
+              iconDark="./icons/system_white.webp"
               iconLight="./icons/system_black.webp"
-              theme={theme}
               alt="system theme"
             />
             <StickyButton
               function={setDarkTheme}
-              icon="./icons/dark_white.webp"
+              iconDark="./icons/dark_white.webp"
               iconLight="./icons/dark_black.webp"
-              theme={theme}
-              alt="system theme"
+              alt="dark theme"
             />
             <StickyButton
               function={setLightTheme}
-              icon="./icons/light_white.webp"
+              iconDark="./icons/light_white.webp"
               iconLight="./icons/light_black.webp"
-              theme={theme}
-              alt="system theme"
+              alt="light theme"
             />
           </div>
         </section>
