@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import dataApp from "../datas/myApps.json";
+import dataApp from "../assets/datas/myApps.json";
 
 const Dock = () => {
   return (

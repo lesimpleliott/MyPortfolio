@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ProfilPicture from "./ProfilPicture";
+import ProfilPicture from "../components/ProfilPicture";
 
 const HeroBanner = () => {
   return (

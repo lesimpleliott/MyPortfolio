@@ -1,7 +1,7 @@
 import styled from "styled-components";
+import Logo from "../components/Logo";
+import StickyButton from "../components/StickyButton";
 import useStoreTheme from "../theme.store";
-import Logo from "./Logo";
-import StickyButton from "./StickyButton";
 
 const Footer = () => {
   const { setTheme } = useStoreTheme();

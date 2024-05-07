@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import HeroBanner from "../components/HeroBanner";
+import HeroBanner from "../layouts/HeroBanner";
 
 import Dock from "../components/Dock";
 import Stack from "../components/Stack";
