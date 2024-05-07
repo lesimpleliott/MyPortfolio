@@ -4,7 +4,8 @@ import StickyButton from "../components/StickyButton";
 import useStoreTheme from "../theme.store";
 
 const Footer = () => {
-  const { setTheme } = useStoreTheme();
+  const { theme, setTheme } = useStoreTheme();
+  const getSysTheme = localStorage.getItem("sysTheme");
 
   const setSystemTheme = () => {
     const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
@@ -13,16 +14,19 @@ const Footer = () => {
       : "light";
     setTheme(systemTheme);
     // Ajouter class "activeTheme" à l'option choisie
+    localStorage.setItem("sysTheme", "true");
   };
 
   const setDarkTheme = () => {
     setTheme("dark");
     // Ajouter class "activeTheme" à l'option choisie
+    localStorage.setItem("sysTheme", "false");
   };
 
   const setLightTheme = () => {
     setTheme("light");
     // Ajouter class "activeTheme" à l'option choisie
+    localStorage.setItem("sysTheme", "false");
   };
 
   return (
@@ -59,7 +63,7 @@ const Footer = () => {
         </section>
 
         <section className="credits">
-          <ul className="cred">
+          <ul>
             <li>
               Made by <strong>Eliott Lesimple</strong> with{" "}
               <strong>Love</strong> and <strong>lots of coffee</strong>
@@ -72,18 +76,25 @@ const Footer = () => {
               iconDark="./icons/system_white.webp"
               iconLight="./icons/system_black.webp"
               alt="system theme"
+              active={getSysTheme === "true" ? true : false}
             />
             <StickyButton
               function={setDarkTheme}
               iconDark="./icons/dark_white.webp"
               iconLight="./icons/dark_black.webp"
               alt="dark theme"
+              active={
+                getSysTheme === "false" && theme === "dark" ? true : false
+              }
             />
             <StickyButton
               function={setLightTheme}
               iconDark="./icons/light_white.webp"
               iconLight="./icons/light_black.webp"
               alt="light theme"
+              active={
+                getSysTheme === "false" && theme === "light" ? true : false
+              }
             />
           </div>
         </section>
@@ -119,21 +130,6 @@ const FooterStyled = styled.footer`
       display: flex;
     }
   }
-
-  /* .activeTheme {
-    &::after {
-      content: "";
-      z-index: -1;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      background-color: var(--mainColor);
-    }
-  } */
 `;
 
 export default Footer;

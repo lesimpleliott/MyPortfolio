@@ -8,6 +8,7 @@ const Header = () => {
   const { theme, setTheme } = useStoreTheme();
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
+    localStorage.setItem("sysTheme", "false");
   };
 
   return (

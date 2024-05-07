@@ -7,6 +7,7 @@ type StickyBtnProps = {
   iconDark: string;
   iconLight: string;
   alt: string;
+  active?: boolean;
 };
 // RENDRE LINK OU FUNCTION Obligatoire ... Typescript
 
@@ -33,7 +34,11 @@ const StickyButton: React.FC<StickyBtnProps> = (props) => {
     <StickyButtonStyled>
       {/* Logique si props.function est défini */}
       {props.function && (
-        <button onMouseOver={anim} className="btn" onClick={props.function}>
+        <button
+          onMouseOver={anim}
+          className={props.active ? "btn active" : "btn"}
+          onClick={props.function}
+        >
           <img
             src={theme === "dark" ? props.iconDark : props.iconLight}
             alt={props.alt}
@@ -42,7 +47,12 @@ const StickyButton: React.FC<StickyBtnProps> = (props) => {
       )}
       {/* Logique si props.link est défini */}
       {props.link && (
-        <a onMouseOver={anim} className="btn" href={props.link} target="_blank">
+        <a
+          onMouseOver={anim}
+          className={props.active ? "btn active" : "btn"}
+          href={props.link}
+          target="_blank"
+        >
           <img
             src={theme === "dark" ? props.iconDark : props.iconLight}
             alt={props.alt}
@@ -57,6 +67,8 @@ const StickyButtonStyled = styled.div`
   width: 40px;
   height: 50px;
   display: flex;
+  align-items: center;
+  justify-content: center;
 
   .btn {
     all: unset;
@@ -67,6 +79,13 @@ const StickyButtonStyled = styled.div`
     align-items: center;
     justify-content: center;
     transition: transform 1000ms ease-out;
+
+    &.active {
+      border: solid 1px var(--mainColor);
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+    }
 
     img {
       width: 25px;
