@@ -1,8 +1,9 @@
 import styled from "styled-components";
-import HeroBanner from "../layouts/HeroBanner";
-
+import dataProjects from "../assets/datas/myProjects.json";
 import Dock from "../components/Dock";
+import Project from "../components/Project";
 import Stack from "../components/Stack";
+import HeroBanner from "../layouts/HeroBanner";
 
 const Home = () => {
   return (
@@ -20,7 +21,12 @@ const Home = () => {
       <section className="projects" id="projects">
         <h2>Mes projets</h2>
         <h3>Les projets sur lesquels j'ai travaillé depuis mes débuts.</h3>
-        <div className="blank"></div>
+
+        <div className="projectsContainer">
+          {dataProjects.map((project) => (
+            <Project key={project.id} project={project} />
+          ))}
+        </div>
       </section>
     </HomeStyled>
   );
@@ -34,8 +40,20 @@ const HomeStyled = styled.main`
     align-items: center;
   }
 
-  .blank {
-    height: 100vh;
+  .projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .projectsContainer {
+      max-width: 1024px;
+      margin-block-start: 50px;
+      margin-block-end: 100px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
   }
 `;
 

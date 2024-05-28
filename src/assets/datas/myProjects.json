@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "OhMyFood",
+    "descritpion": "lorem ipsum",
+    "tags": ["HTML", "Sass"],
+    "images": {
+      "hero": "",
+      "desktop": "./myProjects/ohmyfood_1280w.png",
+      "mobile": "./myProjects/ohmyfood_375w.png"
+    },
+    "links": {
+      "github": "https://github.com/lesimpleliott/OC_ohmyfood",
+      "preview": "https://lesimpleliott.github.io/OC_ohmyfood/"
+    }
+  },
+  {
+    "id": 2,
+    "title": "Sophie Bluel",
+    "descritpion": "lorem ipsum",
+    "tags": ["HTML", "Sass", "Javascript"],
+    "images": {
+      "hero": "",
+      "desktop": "./myProjects/sophieBluel_1280w.png",
+      "mobile": ""
+    },
+    "links": {
+      "github": "https://github.com/lesimpleliott/OC_SophieBluel",
+      "preview": ""
+    }
+  },
+  {
+    "id": 3,
+    "title": "Katelio Wedding",
+    "descritpion": "lorem ipsum",
+    "tags": ["HTML", "Sass", "Javascript"],
+    "images": {
+      "hero": "",
+      "desktop": "./myProjects/katelio_1280w.png",
+      "mobile": "./myProjects/katelio_375w.png"
+    },
+    "links": {
+      "github": "https://github.com/lesimpleliott/katelioWedding",
+      "preview": "https://katelio.fr/"
+    }
+  },
+  {
+    "id": 4,
+    "title": "Kasa",
+    "descritpion": "lorem ipsum",
+    "tags": ["React", "Sass"],
+    "images": {
+      "hero": "",
+      "desktop": "./myProjects/kasa_1280w.png",
+      "mobile": "./myProjects/kasa_375w.png"
+    },
+    "links": {
+      "github": "https://github.com/lesimpleliott/OC_Kasa",
+      "preview": "https://elegarage-kasa.netlify.app/"
+    }
+  },
+  {
+    "id": 5,
+    "title": "ArgentBank",
+    "descritpion": "lorem ipsum",
+    "tags": ["React", "Styled-Component", "Redux"],
+    "images": {
+      "hero": "",
+      "desktop": "./myProjects/argentBank_1280w.png",
+      "mobile": ""
+    },
+    "links": {
+      "github": "https://github.com/lesimpleliott/OC_ArgentBank",
+      "preview": ""
+    }
+  },
+  {
+    "id": 6,
+    "title": "MyPortfolio",
+    "descritpion": "lorem ipsum",
+    "tags": ["React", "Typescript", "Styled-Component"],
+    "images": {
+      "hero": "",
+      "desktop": "./myProjects/myPortfolio_1280w.png",
+      "mobile": "./myProjects/myPortfolio_375w.png"
+    },
+    "links": {
+      "github": "https://github.com/lesimpleliott/MyPortfolio",
+      "preview": "https://elegarage.fr/"
+    }
+  }
+]
