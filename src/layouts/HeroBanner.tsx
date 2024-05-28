@@ -47,7 +47,7 @@ const HeroBannerStyled = styled.section`
       content: "";
       position: absolute;
       inset: 0;
-      background-color: var(--heroBackground);
+      background-color: var(--heroBannerBackground);
       box-shadow: 0 -200px 50px -150px var(--background) inset;
       transition: box-shadow 250ms ease-in-out,
         background-color 250ms ease-in-out;
