@@ -49,7 +49,7 @@ const Project = ({ project }: { project: ProjectProps }) => {
 };
 
 // STYLED-COMPONENTS
-const ProjectCardStyled = styled.a`
+const ProjectCardStyled = styled.article`
   flex: 1 0 320px;
   height: 350px;
   border-radius: 15px;
@@ -60,13 +60,14 @@ const ProjectCardStyled = styled.a`
   cursor: pointer;
   transition: background-color 250ms ease-in-out, transform 250ms ease-out,
     box-shadow 250ms ease-in;
-
-  &:hover {
-    transform: scale(1.02);
-    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
+    
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
 
     .cta {
       background-color: var(--hoverCard);
+      backdrop-filter: blur(5px);
       p {
         opacity: 1;
       }
@@ -80,7 +81,7 @@ const ProjectCardStyled = styled.a`
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0);
-    transition: background-color 250ms ease-in-out;
+    transition: background-color 250ms ease-in-out, backdrop-filter 250ms ease-in-out;
 
     p {
       position: relative;
@@ -108,6 +109,7 @@ const ProjectCardStyled = styled.a`
     width: 100%;
     height: 280px;
     background: pink;
+    object-fit: cover;
   }
 
   .projectInfos {
@@ -119,6 +121,8 @@ const ProjectCardStyled = styled.a`
     align-items: center;
     justify-content: space-between;
     gap: 0.5rem;
+    position: relative;
+    z-index: 1;
 
     .tags {
       display: flex;

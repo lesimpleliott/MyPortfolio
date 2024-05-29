@@ -5,7 +5,7 @@
     "descritpion": "lorem ipsum",
     "tags": ["HTML", "Sass"],
     "images": {
-      "hero": "",
+      "hero": "./myProjects/ohmyfood_hero.webp",
       "desktop": "./myProjects/ohmyfood_1280w.png",
       "mobile": "./myProjects/ohmyfood_375w.png"
     },
@@ -20,7 +20,7 @@
     "descritpion": "lorem ipsum",
     "tags": ["HTML", "Sass", "Javascript"],
     "images": {
-      "hero": "",
+      "hero": "./myProjects/sophieBluel_hero.webp",
       "desktop": "./myProjects/sophieBluel_1280w.png",
       "mobile": ""
     },
@@ -35,7 +35,7 @@
     "descritpion": "lorem ipsum",
     "tags": ["HTML", "Sass", "Javascript"],
     "images": {
-      "hero": "",
+      "hero": "./myProjects/katelio_hero.webp",
       "desktop": "./myProjects/katelio_1280w.png",
       "mobile": "./myProjects/katelio_375w.png"
     },
@@ -50,7 +50,7 @@
     "descritpion": "lorem ipsum",
     "tags": ["React", "Sass"],
     "images": {
-      "hero": "",
+      "hero": "./myProjects/kasa_hero.webp",
       "desktop": "./myProjects/kasa_1280w.png",
       "mobile": "./myProjects/kasa_375w.png"
     },
@@ -65,7 +65,7 @@
     "descritpion": "lorem ipsum",
     "tags": ["React", "Styled-Component", "Redux"],
     "images": {
-      "hero": "",
+      "hero": "./myProjects/argentBank_hero.webp",
       "desktop": "./myProjects/argentBank_1280w.png",
       "mobile": ""
     },
@@ -80,7 +80,7 @@
     "descritpion": "lorem ipsum",
     "tags": ["React", "Typescript", "Styled-Component"],
     "images": {
-      "hero": "",
+      "hero": "./myProjects/myPortfolio_hero.webp",
       "desktop": "./myProjects/myPortfolio_1280w.png",
       "mobile": "./myProjects/myPortfolio_375w.png"
     },
