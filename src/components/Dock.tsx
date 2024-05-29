@@ -71,12 +71,16 @@ const DockStyled = styled.ul`
     .icon {
       width: 100%;
       height: 100%;
+      transition: transform 250ms ease-out;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
 
     .appName {
       padding: 5px 10px;
       position: absolute;
-      top: -33px;
+      top: -35px;
       text-align: center;
       white-space: nowrap;
       color: #ffffff;
