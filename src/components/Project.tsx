@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import myStack from "../assets/datas/myStack.json";
+import StickyButton from "./StickyButton";
 
 type ProjectProps = {
   id: number;
@@ -41,8 +42,28 @@ const Project = ({ project }: { project: ProjectProps }) => {
           })}
         </div>
       </div>
-      <div className="cta">
-        <p>Plus d'informations</p>
+      <div className="hoverBox">
+        <StickyButton
+          link="#"
+          alt="details icon"
+          icon="./icons/infos_white_100w.webp"
+        />
+
+        {project.links.github && (
+          <StickyButton
+            link={project.links.github}
+            alt="github icon"
+            icon="./icons/github_white_100w.webp"
+          />
+        )}
+
+        {project.links.preview && (
+          <StickyButton
+            link={project.links.preview}
+            alt="preview icon"
+            icon="./icons/link_white_100w.webp"
+          />
+        )}
       </div>
     </ProjectCardStyled>
   );
@@ -57,49 +78,40 @@ const ProjectCardStyled = styled.article`
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   position: relative;
-  cursor: pointer;
   transition: background-color 250ms ease-in-out, transform 250ms ease-out,
     box-shadow 250ms ease-in;
-    
-    &:hover {
-      transform: scale(1.02);
-      box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
 
-    .cta {
-      background-color: var(--hoverCard);
+  &:hover {
+    /* transform: scale(1.02); */
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
+
+    .hoverBox {
+      background-color: rgba(0, 0, 0, 0.5);
       backdrop-filter: blur(5px);
-      p {
+      .stickyBtn {
         opacity: 1;
+        transition: opacity 250ms ease-in-out;
       }
     }
   }
 
-  .cta {
+  .hoverBox {
     position: absolute;
     inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0);
-    transition: background-color 250ms ease-in-out, backdrop-filter 250ms ease-in-out;
+    transition: background-color 250ms ease-in-out,
+      backdrop-filter 250ms ease-in-out;
 
-    p {
-      position: relative;
-      top: -20px;
-      padding: 0.5rem 1rem;
-      border-radius: 10px;
-      background-color: var(--secondColor);
-      font-weight: 500;
-      color: white;
-      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    .stickyBtn {
+      width: 70px;
+      height: 50px;
       opacity: 0;
-      transition: opacity 350ms ease-in-out, transform 200ms ease-out;
-      user-select: none;
-      &:hover {
-        transform: scale(1.02);
-      }
-      &:active {
-        transform: scale(.99);
+      .stickyIcon {
+        height: 50px;
+        width: 50px;
       }
     }
   }
@@ -127,7 +139,6 @@ const ProjectCardStyled = styled.article`
     .tags {
       display: flex;
       gap: 0.7rem;
-
       .icon {
         height: 30px;
         width: 30px;

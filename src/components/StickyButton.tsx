@@ -1,15 +1,33 @@
 import styled from "styled-components";
 import useStoreTheme from "../theme.store";
 
-type StickyBtnProps = {
+// TypeScript
+type StickyBtnBaseProps = {
   function?: () => void;
   link?: string;
-  iconDark: string;
-  iconLight: string;
   alt: string;
   active?: boolean;
 };
-// RENDRE LINK OU FUNCTION Obligatoire ... Typescript
+type iconProps = StickyBtnBaseProps & {
+  icon: string;
+  iconDark?: never;
+  iconLight?: never;
+};
+type noIconProps = StickyBtnBaseProps & {
+  icon?: never;
+  iconDark: string;
+  iconLight: string;
+};
+type functionOrLinkProps =
+  | {
+      function: () => void;
+      link?: never;
+    }
+  | {
+      function?: never;
+      link: string;
+    };
+type StickyBtnProps = (iconProps | noIconProps) & functionOrLinkProps;
 
 const StickyButton: React.FC<StickyBtnProps> = (props) => {
   const { theme } = useStoreTheme();
@@ -31,7 +49,7 @@ const StickyButton: React.FC<StickyBtnProps> = (props) => {
   };
 
   return (
-    <StickyButtonStyled>
+    <StickyButtonStyled className="stickyBtn">
       {/* Logique si props.function est défini */}
       {props.function && (
         <button
@@ -40,11 +58,19 @@ const StickyButton: React.FC<StickyBtnProps> = (props) => {
           onClick={props.function}
         >
           <img
-            src={theme === "dark" ? props.iconDark : props.iconLight}
+            src={
+              props.icon
+                ? props.icon
+                : theme === "dark"
+                ? props.iconDark
+                : props.iconLight
+            }
             alt={props.alt}
+            className="stickyIcon"
           />
         </button>
       )}
+
       {/* Logique si props.link est défini */}
       {props.link && (
         <a
@@ -54,8 +80,15 @@ const StickyButton: React.FC<StickyBtnProps> = (props) => {
           target="_blank"
         >
           <img
-            src={theme === "dark" ? props.iconDark : props.iconLight}
+            src={
+              props.icon
+                ? props.icon
+                : theme === "dark"
+                ? props.iconDark
+                : props.iconLight
+            }
             alt={props.alt}
+            className="stickyIcon"
           />
         </a>
       )}
