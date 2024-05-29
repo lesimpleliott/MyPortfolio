@@ -6,8 +6,8 @@
     "tags": ["HTML", "Sass"],
     "images": {
       "hero": "./myProjects/ohmyfood_hero.webp",
-      "desktop": "./myProjects/ohmyfood_1280w.png",
-      "mobile": "./myProjects/ohmyfood_375w.png"
+      "desktop": "./myProjects/ohmyfood_1280w.webp",
+      "mobile": "./myProjects/ohmyfood_375w.webp"
     },
     "links": {
       "github": "https://github.com/lesimpleliott/OC_ohmyfood",
@@ -21,7 +21,7 @@
     "tags": ["HTML", "Sass", "Javascript"],
     "images": {
       "hero": "./myProjects/sophieBluel_hero.webp",
-      "desktop": "./myProjects/sophieBluel_1280w.png",
+      "desktop": "./myProjects/sophieBluel_1280w.webp",
       "mobile": ""
     },
     "links": {
@@ -36,8 +36,8 @@
     "tags": ["HTML", "Sass", "Javascript"],
     "images": {
       "hero": "./myProjects/katelio_hero.webp",
-      "desktop": "./myProjects/katelio_1280w.png",
-      "mobile": "./myProjects/katelio_375w.png"
+      "desktop": "./myProjects/katelio_1280w.webp",
+      "mobile": "./myProjects/katelio_375w.webp"
     },
     "links": {
       "github": "https://github.com/lesimpleliott/katelioWedding",
@@ -51,8 +51,8 @@
     "tags": ["React", "Sass"],
     "images": {
       "hero": "./myProjects/kasa_hero.webp",
-      "desktop": "./myProjects/kasa_1280w.png",
-      "mobile": "./myProjects/kasa_375w.png"
+      "desktop": "./myProjects/kasa_1280w.webp",
+      "mobile": "./myProjects/kasa_375w.webp"
     },
     "links": {
       "github": "https://github.com/lesimpleliott/OC_Kasa",
@@ -66,7 +66,7 @@
     "tags": ["React", "Styled-Component", "Redux"],
     "images": {
       "hero": "./myProjects/argentBank_hero.webp",
-      "desktop": "./myProjects/argentBank_1280w.png",
+      "desktop": "./myProjects/argentBank_1280w.webp",
       "mobile": ""
     },
     "links": {
@@ -81,8 +81,8 @@
     "tags": ["React", "Typescript", "Styled-Component"],
     "images": {
       "hero": "./myProjects/myPortfolio_hero.webp",
-      "desktop": "./myProjects/myPortfolio_1280w.png",
-      "mobile": "./myProjects/myPortfolio_375w.png"
+      "desktop": "./myProjects/myPortfolio_1280w.webp",
+      "mobile": "./myProjects/myPortfolio_375w.webp"
     },
     "links": {
       "github": "https://github.com/lesimpleliott/MyPortfolio",
