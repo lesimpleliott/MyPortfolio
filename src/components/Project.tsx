@@ -106,6 +106,8 @@ const ProjectCardStyled = styled.article`
       backdrop-filter 250ms ease-in-out;
 
     .stickyBtn {
+      position: relative;
+      top: -25px;
       width: 70px;
       height: 50px;
       opacity: 0;
@@ -137,10 +139,10 @@ const ProjectCardStyled = styled.article`
 
     .tags {
       display: flex;
-      gap: 0.7rem;
+      gap: 0.5rem;
       .icon {
-        height: 30px;
-        width: 30px;
+        height: 25px;
+        width: 25px;
       }
     }
   }

@@ -120,6 +120,8 @@ const FooterStyled = styled.footer`
       display: flex;
       justify-content: space-between;
       align-items: center;
+      font-size: 0.9rem;
+      font-weight: 200;
     }
 
     .socials {
