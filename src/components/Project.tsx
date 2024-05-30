@@ -120,7 +120,6 @@ const ProjectCardStyled = styled.article`
     display: block;
     width: 100%;
     height: 280px;
-    background: pink;
     object-fit: cover;
   }
 
