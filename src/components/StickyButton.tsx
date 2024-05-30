@@ -2,23 +2,24 @@ import styled from "styled-components";
 import useStoreTheme from "../theme.store";
 
 // TypeScript
-type StickyBtnBaseProps = {
-  function?: () => void;
-  link?: string;
+type BaseBtnProps = {
   alt: string;
   active?: boolean;
 };
-type iconProps = StickyBtnBaseProps & {
-  icon: string;
-  iconDark?: never;
-  iconLight?: never;
-};
-type noIconProps = StickyBtnBaseProps & {
-  icon?: never;
-  iconDark: string;
-  iconLight: string;
-};
-type functionOrLinkProps =
+
+type IconsProps =
+  | {
+      icon: string;
+      iconDark?: never;
+      iconLight?: never;
+    }
+  | {
+      icon?: never;
+      iconDark: string;
+      iconLight: string;
+    };
+
+type FunctionProps =
   | {
       function: () => void;
       link?: never;
@@ -27,14 +28,15 @@ type functionOrLinkProps =
       function?: never;
       link: string;
     };
-type StickyBtnProps = (iconProps | noIconProps) & functionOrLinkProps;
 
+type StickyBtnProps = BaseBtnProps & IconsProps & FunctionProps;
+
+// FONCTIONS
 const StickyButton: React.FC<StickyBtnProps> = (props) => {
   const { theme } = useStoreTheme();
 
   const anim = () => {
     const btns = document.querySelectorAll(".btn");
-
     btns.forEach((btn) => {
       btn.addEventListener("mouseover", (e) => {
         const mouseEvent = e as MouseEvent;
