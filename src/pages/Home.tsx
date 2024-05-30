@@ -34,6 +34,8 @@ const Home = () => {
 
 // STYLED-COMPONENTS
 const HomeStyled = styled.main`
+  margin-top: 0;
+
   .stack {
     display: flex;
     flex-direction: column;
