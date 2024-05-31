@@ -122,7 +122,7 @@ const StickyButtonStyled = styled.div`
       border-radius: 50%;
     }
 
-    img {
+    .stickyIcon {
       width: 25px;
       height: 25px;
     }
