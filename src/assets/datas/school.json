@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "title": "Baccalauréat STI - Génie mécanique",
+    "company": "Lycée Jules Ferry",
+    "city": "Versailles",
+    "date": {
+      "end": "2006-06-30",
+      "start": "2004-09-01"
+    },
+    "type": "Full time",
+    "content": {
+      "tags": []
+    }
+  },
+  {
+    "id": "2",
+    "title": "BTS Communication et Industries Graphiques - option prépresse",
+    "company": "Lycée Claude Garamont",
+    "city": "Colombes",
+    "date": {
+      "end": "2008-06-30",
+      "start": "2006-09-01"
+    },
+    "type": "Full time",
+    "content": {
+      "tags": []
+    }
+  },
+  {
+    "id": "3",
+    "title": "Licence professionnelle Management Industries Graphiques (IMPCIG)",
+    "company": "Gobelins, l'école de l'image",
+    "city": "Paris",
+    "date": {
+      "end": "2009-06-30",
+      "start": "2008-09-01"
+    },
+    "type": "Alternance",
+    "content": {
+      "tags": []
+    }
+  },
+  {
+    "id": "4",
+    "title": "Formation développeur web",
+    "company": "OpenClassRooms",
+    "city": "Paris",
+    "date": {
+      "end": "2024-06-18",
+      "start": "2023-09-19"
+    },
+    "type": "Full time",
+    "content": {
+      "tags": []
+    }
+  }
+]

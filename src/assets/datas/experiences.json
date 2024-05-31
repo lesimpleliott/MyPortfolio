@@ -1,0 +1,223 @@
+[
+  {
+    "id": "1",
+    "title": "Chef de projet Prépresse",
+    "company": "Come Back",
+    "city": "Clichy (92)",
+    "type": "Alternance",
+    "date": {
+      "end": "2009-09-18",
+      "start": "2008-10-01"
+    },
+    "content": {
+      "client": "L’Oréal, Nespresso, GDF Suez, Opel...",
+      "tags": ["Chef de projet", "Prépresse"],
+      "description": [
+        "Chef de projet prépresse en implant au sein de McCann Agency"
+      ],
+      "list": [
+        "Gestion prépresse et réalisation PDF HD selon contraintes",
+        "Dispatch pour presses (quotidienne et mensuelle) de différentes enseignes",
+        "Développement d’un nouvel outil collaboratif pour Come Back : Base de données fournisseurs accessible par internet pour l’ensemble des fabricants."
+      ]
+    }
+  },
+  {
+    "id": "2",
+    "title": "Fabricant édition Luxe",
+    "company": "Come Back",
+    "city": "Neuilly-sur-Seine (92)",
+    "type": "CDI",
+    "date": {
+      "end": "2015-05-29",
+      "start": "2010-09-06"
+    },
+    "content": {
+      "client": "Clarins Group : Clarins, Thierry Mugler, Azzaro, MyBlend, Kibio...",
+      "tags": ["Fabrication", "Gestion de projet", "Relation client"],
+      "description": [
+        "Responsable Achat édition pour le groupe Clarins en implant direct au siège de Clarins Fragrance Groupe"
+      ],
+      "list": [
+        "Prise de brief et identification du projet auprès du client",
+        "Conseil et force de proposition sur la conception de projets",
+        "Lancement et suivi de la réalisation d’un document pour impression (exécution, gravure)",
+        "Appel d’offre auprès de fournisseurs identifiés, négociation tarifs et délais",
+        "Lancement et suivi de fabrication (respect des délais, qualités...)"
+      ]
+    }
+  },
+  {
+    "id": "3",
+    "title": "Graphiste Exé Packaging",
+    "company": "Diadem / Team Créatif Group",
+    "city": "Limoges (87)",
+    "type": "CDD",
+    "date": {
+      "end": "2019-05-31",
+      "start": "2018-04-23"
+    },
+    "content": {
+      "client": "Lesieur, St Michel, Intermarché, Bjorg...",
+      "tags": ["Exécution", "Packaging", "Illustrator", "Automatisation"],
+      "description": [""],
+      "list": [
+        "Prise de brief et réalisation de mise en page selon charte graphique et contraintes techniques en relation avec le pôle fabrication",
+        "Responsable et référent de marques, coordination et mises à jours des références auprès des autres infographistes.",
+        "Développement en parallèle de scripts (Adobe et JavaScript) d’automatisation visant à l’amélioration des process et au gain de productivité.",
+        "Déploiement et mise à jour régulière des solutions d'automatisations crées au sein du studio."
+      ]
+    }
+  },
+  {
+    "id": "4",
+    "title": "Chef de projet Prépresse & Print",
+    "company": "La Maison des Impressions",
+    "city": "Paris",
+    "type": "CDD",
+    "date": {
+      "end": "2020-04-10",
+      "start": "2019-09-07"
+    },
+    "content": {
+      "client": "Opinel, Le théâtre de Belleville, Campagne Municipale Paris et région IDF 2020...",
+      "tags": ["Fabrication", "Industries Graphiques"],
+      "description": [],
+      "list": [
+        "En charge de l’ensemble de la fabrication pour un panel de client varié.",
+        "Gestion des délais, coûts et planning auprès d’un ensemble de fournisseurs identifiés.",
+        "Réception, contrôle des fichiers clients et corrections au besoin.",
+        "Réalisation de l'exécution à la mise en conformité de fichiers pour impression"
+      ]
+    }
+  },
+  {
+    "id": "5",
+    "title": "Freelance Industries Graphiques",
+    "company": "ElioGraphic",
+    "city": "France",
+    "type": "Freelance",
+    "date": {
+      "end": "2021-10-23",
+      "start": "2010-03-26"
+    },
+    "content": {
+      "client": "zerOGravity, divers acteurs du parachutisme, Seba Skates, Come Back Graphic, Pari Roller...",
+      "tags": ["Freelance", "Graphiste", "Industries Graphiques"],
+      "description": [""],
+      "list": [
+        "Création de maquettes et étude de faisabilité d’un projet",
+        "Mise en page et mise en conformité pour impression",
+        "Création complète de charte graphique",
+        "Création et mise en place de charte \"technique\"",
+        "Suivi de fabrication",
+        "Consultation pour un appel d’offre."
+      ]
+    }
+  },
+  {
+    "id": "6",
+    "title": "Sportif de haut niveau - Parachutisme",
+    "company": "Fédération Française de Parachutisme",
+    "city": "World",
+    "type": "",
+    "date": {
+      "end": "2021-10-31",
+      "start": "2013-11-01"
+    },
+    "content": {
+      "tags": ["Haut niveau", "Parachutisme", "Mad skills"],
+      "description": [
+        "2018 à 2021 Membre de l’équipe de France de Pilotage Sous Voile",
+        "2014 à 2017 Membre des équipes de France de Vol Relatif à 4 et à 8"
+      ],
+      "list": [
+        "Multiple champion de France indoor et outdoor",
+        "Top 5 mondial en VR4 et VR8",
+        "Capitaine de l'équipe de France espoir Artemis de 2015 à 2018",
+        "Coach et animateur de Vol Relatif visant à promouvoir la discipline.",
+        "Co-organisateur des records de France 2016 et 2017."
+      ]
+    }
+  },
+  {
+    "id": "7",
+    "title": "Chef de projet Prépresse & Print",
+    "company": "Clarins",
+    "city": "Neuilly-sur-Seine (92)",
+    "type": "CDI",
+    "date": {
+      "end": "2022-02-28",
+      "start": "2021-10-04"
+    },
+    "content": {
+      "tags": ["Gestion de projet", "Fabrication", "Industries Graphiques"],
+      "description": [""],
+      "list": [
+        "Assembler et instruire les briefs en provenance du client interne (Marketing, Merchandising, Trade...)",
+        "Briefer l'agence d'exécution/gravure internalisée",
+        "Organiser et piloter les workflows de suivi et de validation des assets sur une plateforme de suivi",
+        "Suivre les allers/retours de corrections et validations avec les différents intervenants internes (Réglementaire, Traduction...)",
+        "Suivre la livraison des fichiers aux imprimeurs ou service demandeur dans les délais impartis",
+        "Assister aux démarrages de production (Bon à tirer)",
+        "Suivi de la production, contrôle qualité et délai"
+      ]
+    }
+  },
+  {
+    "id": "8",
+    "title": "Chef de projet Exécution Packaging & Hero Image",
+    "company": "Extreme Agency",
+    "city": "Clichy (92)",
+    "type": "CDD",
+    "date": {
+      "end": "2022-09-30",
+      "start": "2022-04-04"
+    },
+    "content": {
+      "client": "Scamark (Leclerc)",
+      "tags": ["Gestion de projet", "Process", "Packaging"],
+      "description": [""],
+      "list": [
+        "Conseil méthodologie de travail projet EXE : Etude du fonctionnement, Etablissement d’un rapport d’étonnement, proposition et mise en place de nouvelles méthodes de travail avec l'équipe en place",
+        "Rédaction et mise en place de nouveaux process en lien avec l'ensemble des intervenants (Direction artistique, Exécution, Chef de projet)",
+        "Gestion de projet EXE & Conseil technique pour plusieurs marques-fille du compte Scamark",
+        "Gestion de projet EXE & Conseil technique pour plusieurs marques-fille du compte Scamark",
+        "Projet au démarrage. Anticipation de toute l’organisation afin de mener à bien le déploiement"
+      ]
+    }
+  },
+  {
+    "id": "9",
+    "title": "Responsable/Graphiste Exécution Édition Luxe & Corporate",
+    "company": "Extreme Agency",
+    "city": "Clichy (92)",
+    "type": "CDI",
+    "date": {
+      "end": "2023-04-01",
+      "start": "2022-10-01"
+    },
+    "content": {
+      "client": "Hermès, Van Cleef & Arpels, L'Oréal, EDF ...",
+      "tags": [
+        "Chaîne graphique",
+        "Pré-presse",
+        "Édition",
+        "Illustrator",
+        "InDesign"
+      ],
+      "description": [
+        "Au coeur du studio créatif, assurer l’exécution et le déploiement des sujets d’édition pour différents comptes clients."
+      ],
+      "list": [
+        "Supervision de freelance et d'une alternante",
+        "Conception, réalisation et exécution des projets print",
+        "Déclinaison créative des projets développés par les DA de l'agence",
+        "Interprétation des attentes de la direction artistique",
+        "Accompagnement des partenaires en photogravure et en traitement d’image",
+        "Contrôler la qualité des projets et apporter les corrections nécessaires",
+        "Réalisation des fichiers d’impression"
+      ]
+    }
+  }
+]
