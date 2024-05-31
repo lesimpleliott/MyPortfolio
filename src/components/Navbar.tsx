@@ -25,7 +25,7 @@ const Navbar = () => {
     }
   };
 
-  const toggleNavbar = () => {
+  const toggleMenu = () => {
     const navbarToggle = document.querySelector(".navbarToggleMenu");
     const navbarContent = document.querySelector(".navbarContent");
     if (navbarToggle && navbarContent) {
@@ -35,13 +35,28 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    // Initialisation de la navbar en fonction de la taille de l'écran
     navbarDisplay();
     window.addEventListener("resize", navbarDisplay);
+
+    // Gestion de l'ouverture/fermeture du menu avec la touche "ECHAP"
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        toggleMenu();
+      }
+    };
+    window.addEventListener("keydown", handleEscape);
+
+    // Nettoyage des eventListener
+    return () => {
+      window.removeEventListener("keydown", handleEscape);
+      window.removeEventListener("resize", navbarDisplay);
+    };
   }, []);
 
   return (
     <NavbarStyled id="navbar">
-      <button className="navbarToggleMenu" onClick={toggleNavbar}>
+      <button className="navbarToggleMenu" onClick={toggleMenu}>
         <span></span>
         <span></span>
         <span></span>
@@ -49,16 +64,16 @@ const Navbar = () => {
 
       <div className="navbarContent">
         <ul className="navbarContent__links">
-          <NavLink to="/#stack" onClick={toggleNavbar}>
+          <NavLink to="/#stack" onClick={toggleMenu}>
             <li>Stack</li>
           </NavLink>
-          <NavLink to="/#projects" onClick={toggleNavbar}>
+          <NavLink to="/#projects" onClick={toggleMenu}>
             <li>Projets</li>
           </NavLink>
-          <NavLink to="/about" onClick={toggleNavbar}>
+          <NavLink to="/about" onClick={toggleMenu}>
             <li>À propos</li>
           </NavLink>
-          <NavLink to="/contact" onClick={toggleNavbar}>
+          <NavLink to="/contact" onClick={toggleMenu}>
             <li>Contact</li>
           </NavLink>
         </ul>
