@@ -37,26 +37,26 @@ const Footer = () => {
           <div className="icons">
             <StickyButton
               link="mailto:lesimpleliott@gmail.com"
-              iconDark="./icons/mail_white.webp"
-              iconLight="./icons/mail_black.webp"
+              iconDark="./icons/mail_white.svg"
+              iconLight="./icons/mail_black.svg"
               alt="mail icon"
             />
             <StickyButton
               link="tel: +33663991329"
-              iconDark="./icons/telephone_white.webp"
-              iconLight="./icons/telephone_black.webp"
+              iconDark="./icons/telephone_white.svg"
+              iconLight="./icons/telephone_black.svg"
               alt="mail icon"
             />
             <StickyButton
               link="https://github.com/lesimpleliott"
-              iconDark="./icons/github_white.webp"
-              iconLight="./icons/github_black.webp"
+              iconDark="./icons/github_white.svg"
+              iconLight="./icons/github_black.svg"
               alt="github icon"
             />
             <StickyButton
               link="mailto:https://www.linkedin.com/in/lesimpleliott/"
-              iconDark="./icons/linkedin_white.webp"
-              iconLight="./icons/linkedin_black.webp"
+              iconDark="./icons/linkedin_white.svg"
+              iconLight="./icons/linkedin_black.svg"
               alt="linkedin icon"
             />
           </div>
@@ -73,15 +73,15 @@ const Footer = () => {
           <div className="icons">
             <StickyButton
               function={setSystemTheme}
-              iconDark="./icons/system_white.webp"
-              iconLight="./icons/system_black.webp"
+              iconDark="./icons/system_white.svg"
+              iconLight="./icons/system_black.svg"
               alt="system theme"
               active={getSysTheme === "true" ? true : false}
             />
             <StickyButton
               function={setDarkTheme}
-              iconDark="./icons/dark_white.webp"
-              iconLight="./icons/dark_black.webp"
+              iconDark="./icons/dark_white.svg"
+              iconLight="./icons/dark_black.svg"
               alt="dark theme"
               active={
                 getSysTheme === "false" && theme === "dark" ? true : false
@@ -89,8 +89,8 @@ const Footer = () => {
             />
             <StickyButton
               function={setLightTheme}
-              iconDark="./icons/light_white.webp"
-              iconLight="./icons/light_black.webp"
+              iconDark="./icons/light_white.svg"
+              iconLight="./icons/light_black.svg"
               alt="light theme"
               active={
                 getSysTheme === "false" && theme === "light" ? true : false
