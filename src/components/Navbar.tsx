@@ -14,11 +14,15 @@ const Navbar = () => {
 
   const navbarDisplay = () => {
     const navbar = document.getElementById("navbar");
-    if (navbar) {
+    const navbarToggle = document.querySelector(".navbarToggleMenu");
+    const navbarContent = document.querySelector(".navbarContent");
+    if (navbar && navbarToggle && navbarContent) {
       if (window.innerWidth < 768) {
         navbar.classList.add("mobile");
         navbar.classList.remove("desktop");
       } else {
+        navbarToggle.classList.remove("open");
+        navbarContent.classList.remove("open");
         navbar.classList.remove("mobile");
         navbar.classList.add("desktop");
       }
