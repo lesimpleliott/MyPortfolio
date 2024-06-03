@@ -8,21 +8,28 @@ type ImageType = {
 const ProfilPicture = ({ img, alt }: ImageType) => {
   return (
     <ProfilPictureStyled>
-      <img src={img} alt={alt} />
+      <div className="imgWrapper">
+        <img src={img} alt={alt} />
+      </div>
     </ProfilPictureStyled>
   );
 };
 
 const ProfilPictureStyled = styled.div`
-  position: relative;
-  width: 20vw;
-  min-width: 200px;
-  max-width: 300px;
-  height: 20vw;
-  min-height: 200px;
-  max-height: 300px;
-  border-radius: 100%;
-  background: var(--gradient);
+  display: flex;
+  align-items: center;
+
+  .imgWrapper {
+    position: relative;
+    width: 25vw;
+    min-width: 250px;
+    max-width: 300px;
+    height: 25vw;
+    min-height: 250px;
+    max-height: 300px;
+    border-radius: 100%;
+    background: var(--gradient);
+  }
 
   img {
     width: calc(100% - 16px);

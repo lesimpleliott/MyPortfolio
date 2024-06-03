@@ -1,23 +1,25 @@
 import styled from "styled-components";
 import ProfilPicture from "../components/ProfilPicture";
 
-const HeroBanner = () => {
+type HeroBannerType = {
+  profilPicture: string;
+  profilPictureAlt: string;
+  children: React.ReactNode;
+  backgroundImage?: string;
+};
+
+const HeroBanner: React.FC<HeroBannerType> = (props) => {
   return (
     <HeroBannerStyled>
-      <div className="banner">
-        <img src="./cover_eLeGaragePortfolio.webp" alt="" />
-      </div>
+      {props.backgroundImage && (
+        <div className="bannerBackground">
+          <img src={props.backgroundImage} alt={props.profilPictureAlt} />
+        </div>
+      )}
 
-      <div className="content">
-        <h1 className="title">
-          Hello world 👋,
-          <br /> Je suis <strong>Eliott Lesimple,</strong>
-          <br /> développeur Front-end.
-        </h1>
-        <ProfilPicture
-          img="./eliott.webp"
-          alt="Photo d'Eliott Lesimple - Développeur web FrontEnd"
-        />
+      <div className="bannerContent">
+        <ProfilPicture img={props.profilPicture} alt={props.profilPictureAlt} />
+        <div className="childrenWrapper">{props.children}</div>
       </div>
     </HeroBannerStyled>
   );
@@ -25,17 +27,19 @@ const HeroBanner = () => {
 
 const HeroBannerStyled = styled.section`
   width: 100vw;
-  height: 500px;
   position: relative;
-  padding: 0;
-  margin-bottom: -70px;
-  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  .banner {
+  .bannerBackground {
     width: 100%;
-    height: 100%;
+    height: 500px;
     overflow: hidden;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 
     img {
       width: 100%;
@@ -54,32 +58,29 @@ const HeroBannerStyled = styled.section`
     }
   }
 
-  .content {
+  .bannerContent {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    max-width: calc(1024px + 10vw);
+    padding: 3vw 5vw;
+    margin-top: 70px;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
-    gap: 8vw;
-    @media (max-width: 768px) {
-      flex-direction: column-reverse;
-      margin-top: 15px;
+    gap: 3vw;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      justify-content: flex-end;
+      text-align: center;
       gap: 5vw;
     }
 
-    .title {
-      font-family: "Poppins", sans-serif;
-      font-weight: 700;
-      font-size: clamp(1.8rem, 4vw, 3rem);
+    .childrenWrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       color: var(--text);
-      transition: color 250ms ease-in-out;
-      @media (max-width: 728px) {
-        text-align: center;
-      }
     }
   }
 `;
