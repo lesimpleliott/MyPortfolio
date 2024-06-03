@@ -1,16 +1,25 @@
 import styled from "styled-components";
-import dataProjects from "../assets/datas/myProjects.json";
-import Dock from "../components/Dock";
-import Project from "../components/Project";
-import Stack from "../components/Stack";
 import HeroBanner from "../layouts/HeroBanner";
+import useStoreTheme from "../theme.store";
 
 const Home = () => {
+  const { theme } = useStoreTheme();
+
   return (
     <HomeStyled>
-      <HeroBanner />
-
-      <section className="stack" id="stack">
+      <HeroBanner
+        backgroundImage="./cover_eLeGaragePortfolio.webp"
+        profilPicture="./eliott.webp"
+        profilPictureAlt="Photo d'Eliott Lesimple - Développeur web FrontEnd"
+      >
+        <h1 className="bannerTitle">
+          Hello world {theme === "dark" ? "🤘" : "👋"},
+          <br /> Je suis <strong>Eliott Lesimple,</strong>
+          <br /> développeur Front-end.
+        </h1>
+      </HeroBanner>
+      {/* 
+      <section className="stack">
         <h2>Stack</h2>
         <h3>Technologies avec lesquelles je travaille</h3>
         <Stack />
@@ -18,7 +27,7 @@ const Home = () => {
         <Dock />
       </section>
 
-      <section className="projects" id="projects">
+      <section className="projects">
         <h2>Mes projets</h2>
         <h3>Les projets sur lesquels j'ai travaillé depuis mes débuts.</h3>
 
@@ -27,15 +36,13 @@ const Home = () => {
             <Project key={project.id} project={project} />
           ))}
         </div>
-      </section>
+      </section> */}
     </HomeStyled>
   );
 };
 
 // STYLED-COMPONENTS
 const HomeStyled = styled.main`
-  margin-top: 0;
-
   .stack {
     display: flex;
     flex-direction: column;
