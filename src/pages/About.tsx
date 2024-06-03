@@ -33,10 +33,7 @@ const About = () => {
           </p>
         </div>
       </HeroBanner>
-      <CtaButton
-        title="Curriculum vitæ"
-        filePath="src/assets/dowloads/CV_LesimpleEliott.pdf"
-      />
+      <CtaButton title="Curriculum vitæ" filePath="./CV_LesimpleEliott.pdf" />
     </AboutStyled>
   );
 };
