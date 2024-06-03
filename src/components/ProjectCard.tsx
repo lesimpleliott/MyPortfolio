@@ -18,7 +18,7 @@ type ProjectProps = {
   };
 };
 
-const Project = ({ project }: { project: ProjectProps }) => {
+const ProjectCard = ({ project }: { project: ProjectProps }) => {
   return (
     <ProjectCardStyled>
       <img
@@ -44,16 +44,18 @@ const Project = ({ project }: { project: ProjectProps }) => {
       </div>
       <div className="hoverBox">
         <StickyButton
-          link="#"
+          function={() => console.log(project.id)}
           alt="details icon"
-          icon="./icons/infos_white_100w.webp"
+          icon="./icons/infos_white.svg"
+          sticky={false}
         />
 
         {project.links.github && (
           <StickyButton
             link={project.links.github}
             alt="github icon"
-            icon="./icons/github_white_100w.webp"
+            icon="./icons/github_white.svg"
+            sticky={false}
           />
         )}
 
@@ -61,7 +63,8 @@ const Project = ({ project }: { project: ProjectProps }) => {
           <StickyButton
             link={project.links.preview}
             alt="preview icon"
-            icon="./icons/link_white_100w.webp"
+            icon="./icons/link_white.svg"
+            sticky={false}
           />
         )}
       </div>
@@ -148,4 +151,4 @@ const ProjectCardStyled = styled.article`
   }
 `;
 
-export default Project;
+export default ProjectCard;

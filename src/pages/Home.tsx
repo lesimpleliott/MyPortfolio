@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import Dock from "../components/Dock";
+import Projects from "../components/Projects";
+import Stack from "../components/Stack";
 import HeroBanner from "../layouts/HeroBanner";
 import useStoreTheme from "../theme.store";
 
@@ -18,7 +21,7 @@ const Home = () => {
           <br /> développeur Front-end.
         </h1>
       </HeroBanner>
-      {/* 
+
       <section className="stack">
         <h2>Stack</h2>
         <h3>Technologies avec lesquelles je travaille</h3>
@@ -30,39 +33,24 @@ const Home = () => {
       <section className="projects">
         <h2>Mes projets</h2>
         <h3>Les projets sur lesquels j'ai travaillé depuis mes débuts.</h3>
-
-        <div className="projectsContainer">
-          {dataProjects.map((project) => (
-            <Project key={project.id} project={project} />
-          ))}
-        </div>
-      </section> */}
+        <Projects />
+      </section>
     </HomeStyled>
   );
 };
 
 // STYLED-COMPONENTS
 const HomeStyled = styled.main`
-  .stack {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
+  .stack,
   .projects {
+    height: 100%;
+    width: 100%;
+    max-width: calc(1024px + 2 * 5vw);
+    padding-inline: 5vw;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    .projectsContainer {
-      max-width: 1024px;
-      margin-block-start: 50px;
-      margin-block-end: 100px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-    }
   }
 `;
 

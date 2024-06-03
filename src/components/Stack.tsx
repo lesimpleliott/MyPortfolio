@@ -29,7 +29,6 @@ const Stack = () => {
 
 const StackStyled = styled.div`
   width: 100%;
-  max-width: 1024px;
   margin-block-start: 50px;
   margin-block-end: 100px;
 

@@ -36,11 +36,12 @@ const DockStyled = styled.ul`
   }
 
   .app {
-    max-width: 75px;
+    max-width: 95px;
     position: relative;
     display: flex;
     justify-content: center;
     transition: all 150ms ease-out;
+
     // Gestion des tailles des apps
     @media screen and (min-width: 1024px) {
       width: ${size}px;
@@ -73,7 +74,7 @@ const DockStyled = styled.ul`
       height: 100%;
       transition: transform 250ms ease-out;
       &:hover {
-        transform: scale(1.1);
+        transform: scale(1.2);
       }
     }
 

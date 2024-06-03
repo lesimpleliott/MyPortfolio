@@ -1,3 +1,4 @@
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import useStoreTheme from "../theme.store";
 
@@ -5,6 +6,7 @@ import useStoreTheme from "../theme.store";
 type BaseBtnProps = {
   alt: string;
   active?: boolean;
+  sticky?: boolean;
 };
 
 type IconsProps =
@@ -34,70 +36,72 @@ type StickyBtnProps = BaseBtnProps & IconsProps & FunctionProps;
 // FONCTIONS
 const StickyButton: React.FC<StickyBtnProps> = (props) => {
   const { theme } = useStoreTheme();
+  const btnRef = useRef<HTMLButtonElement | HTMLAnchorElement>(null);
 
-  const anim = () => {
-    const btns = document.querySelectorAll(".btn");
-    btns.forEach((btn) => {
-      btn.addEventListener("mouseover", (e) => {
-        const mouseEvent = e as MouseEvent;
-        (btn as HTMLElement).style.transform = `translate(${
-          mouseEvent.offsetX - 20
-        }px, ${mouseEvent.offsetY - 13}px)`;
-      });
-      btn.addEventListener("mouseleave", () => {
-        (btn as HTMLElement).style.transform = `translate(0px, 0px)`;
-      });
-    });
-  };
+  useEffect(() => {
+    const btn = btnRef.current;
+    if (!btn || props.sticky === false) return; // Ne pas ajouter les écouteurs si sticky est false
 
+    const handleMouseOver = (e: MouseEvent) => {
+      btn.style.transform = `translate(${e.offsetX - 20}px, ${
+        e.offsetY - 13
+      }px)`;
+    };
+
+    const handleMouseLeave = () => {
+      btn.style.transform = `translate(0px, 0px)`;
+    };
+
+    btn.addEventListener("mouseover", handleMouseOver as EventListener);
+    btn.addEventListener("mouseleave", handleMouseLeave as EventListener);
+
+    return () => {
+      btn.removeEventListener("mouseover", handleMouseOver as EventListener);
+      btn.removeEventListener("mouseleave", handleMouseLeave as EventListener);
+    };
+  }, [btnRef, props.sticky]);
+
+  const commonContent = (
+    <img
+      src={
+        props.icon
+          ? props.icon
+          : theme === "dark"
+          ? props.iconDark
+          : props.iconLight
+      }
+      alt={props.alt}
+      className="stickyIcon"
+    />
+  );
+
+  //JSX
   return (
     <StickyButtonStyled className="stickyBtn">
-      {/* Logique si props.function est défini */}
-      {props.function && (
+      {props.function ? (
         <button
-          onMouseOver={anim}
+          ref={btnRef as React.RefObject<HTMLButtonElement>}
           className={props.active ? "btn active" : "btn"}
           onClick={props.function}
         >
-          <img
-            src={
-              props.icon
-                ? props.icon
-                : theme === "dark"
-                ? props.iconDark
-                : props.iconLight
-            }
-            alt={props.alt}
-            className="stickyIcon"
-          />
+          {commonContent}
         </button>
-      )}
-
-      {/* Logique si props.link est défini */}
-      {props.link && (
+      ) : (
         <a
-          onMouseOver={anim}
+          ref={btnRef as React.RefObject<HTMLAnchorElement>}
           className={props.active ? "btn active" : "btn"}
           href={props.link}
           target="_blank"
+          rel="noopener noreferrer"
         >
-          <img
-            src={
-              props.icon
-                ? props.icon
-                : theme === "dark"
-                ? props.iconDark
-                : props.iconLight
-            }
-            alt={props.alt}
-            className="stickyIcon"
-          />
+          {commonContent}
         </a>
       )}
     </StickyButtonStyled>
   );
 };
 
+// STYLED-COMPONENTS
 const StickyButtonStyled = styled.div`
   width: 40px;
   height: 50px;
