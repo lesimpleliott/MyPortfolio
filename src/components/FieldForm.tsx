@@ -45,6 +45,7 @@ const FieldStyled = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
+  text-align: left;
 
   .field__label {
     margin-left: 5px;
