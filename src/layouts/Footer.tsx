@@ -1,3 +1,4 @@
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import Logo from "../components/Logo";
 import StickyButton from "../components/StickyButton";
@@ -6,6 +7,7 @@ import useStoreTheme from "../theme.store";
 const Footer = () => {
   const { theme, setTheme } = useStoreTheme();
   const getSysTheme = localStorage.getItem("sysTheme");
+  const location = useLocation();
 
   const setSystemTheme = () => {
     const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
@@ -32,35 +34,37 @@ const Footer = () => {
   return (
     <FooterStyled>
       <div className="footerContainer">
-        <section className="socials">
-          <Logo height={30} />
-          <div className="icons">
-            <StickyButton
-              link="mailto:lesimpleliott@gmail.com"
-              iconDark="./icons/mail_white.svg"
-              iconLight="./icons/mail_black.svg"
-              alt="mail icon"
-            />
-            <StickyButton
-              link="tel: +33663991329"
-              iconDark="./icons/telephone_white.svg"
-              iconLight="./icons/telephone_black.svg"
-              alt="mail icon"
-            />
-            <StickyButton
-              link="https://github.com/lesimpleliott"
-              iconDark="./icons/github_white.svg"
-              iconLight="./icons/github_black.svg"
-              alt="github icon"
-            />
-            <StickyButton
-              link="mailto:https://www.linkedin.com/in/lesimpleliott/"
-              iconDark="./icons/linkedin_white.svg"
-              iconLight="./icons/linkedin_black.svg"
-              alt="linkedin icon"
-            />
-          </div>
-        </section>
+        {location.pathname !== "/contact" && (
+          <section className="socials">
+            <Logo height={30} />
+            <div className="icons">
+              <StickyButton
+                link="mailto:lesimpleliott@gmail.com"
+                iconDark="./icons/mail_white.svg"
+                iconLight="./icons/mail_black.svg"
+                alt="mail icon"
+              />
+              <StickyButton
+                link="tel: +33663991329"
+                iconDark="./icons/telephone_white.svg"
+                iconLight="./icons/telephone_black.svg"
+                alt="mail icon"
+              />
+              <StickyButton
+                link="https://github.com/lesimpleliott"
+                iconDark="./icons/github_white.svg"
+                iconLight="./icons/github_black.svg"
+                alt="github icon"
+              />
+              <StickyButton
+                link="mailto:https://www.linkedin.com/in/lesimpleliott/"
+                iconDark="./icons/linkedin_white.svg"
+                iconLight="./icons/linkedin_black.svg"
+                alt="linkedin icon"
+              />
+            </div>
+          </section>
+        )}
 
         <section className="credits">
           <ul>
@@ -124,8 +128,8 @@ const FooterStyled = styled.footer`
       font-weight: 200;
     }
 
-    .socials {
-      border-bottom: solid 1px grey;
+    .credits {
+      border-top: solid 1px grey;
     }
 
     .icons {
