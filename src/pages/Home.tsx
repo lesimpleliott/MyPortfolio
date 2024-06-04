@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import Dock from "../components/Dock";
-import Projects from "../components/Projects";
-import Stack from "../components/Stack";
 import HeroBanner from "../layouts/HeroBanner";
+import Projects from "../layouts/Projects";
+import Stack from "../layouts/Stack";
 import useStoreTheme from "../theme.store";
 
 const Home = () => {
