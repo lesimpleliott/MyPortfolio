@@ -39,7 +39,6 @@ const SocialLinkStyled = styled.a`
   .socialLink__icon {
     width: 35px;
     height: 35px;
-    opacity: 1;
   }
 
   .socialLink__text {
@@ -49,6 +48,7 @@ const SocialLinkStyled = styled.a`
 
   &:hover {
     opacity: 0.6;
+    transition: opacity 200ms ease-in-out;
   }
 `;
 
