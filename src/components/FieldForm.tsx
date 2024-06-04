@@ -58,7 +58,6 @@ const FieldStyled = styled.div`
     border: solid var(--text) 2px;
     border-radius: 10px;
     resize: vertical;
-    background-color: var(--background);
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
 
     &::placeholder {
