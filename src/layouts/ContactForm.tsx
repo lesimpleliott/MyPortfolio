@@ -6,47 +6,11 @@ import FieldForm from "../components/FieldForm";
 const ContactForm = () => {
   const form = useRef<HTMLFormElement>(null);
 
-  // const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault();
-  //   const formMess = document.querySelector(".formMessage");
-
-  //   emailjs
-  //     .sendForm(
-  //       import.meta.env.VITE_SERVICE,
-  //       import.meta.env.VITE_TEMPLATE,
-  //       form.current as HTMLFormElement,
-  //       {
-  //         publicKey: import.meta.env.VITE_ID,
-  //       }
-  //     )
-  //     .then(
-  //       (res) => {
-  //         console.log(res.text);
-  //         if (form.current) {
-  //           (form.current as HTMLFormElement).reset();
-  //         }
-  //         formMess!.innerHTML = "<p class='success'>Message envoyé !</p>";
-
-  //         setTimeout(() => {
-  //           formMess!.innerHTML = "";
-  //         }, 5000);
-  //       },
-  //       (err) => {
-  //         console.log(err.text);
-  //         formMess!.innerHTML =
-  //           "<p class='error'>Une erreur s'est produite, veuillez réessayer</p>";
-
-  //         setTimeout(() => {
-  //           formMess!.innerHTML = "";
-  //         }, 5000);
-  //       }
-  //     );
-  // };
-
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // const formMess = document.querySelector(".formMessage");
     const submitBtn = document.getElementById("submitBtn") as HTMLElement;
+    submitBtn!.innerText = "Envoi en cours...";
 
     emailjs
       .sendForm(
@@ -148,16 +112,17 @@ const FormContactStyled = styled.form`
     &:hover {
       filter: brightness(1.4);
     }
-
     &:active {
       filter: brightness(0.8);
       box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25) inset;
+    }
+    &:focus {
+      outline: solid 2px var(--mainColor);
     }
 
     &.sent {
       background-color: #38bd38;
     }
-
     &.error {
       background-color: #f60404;
       animation: shake 300ms ease-out;
