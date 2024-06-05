@@ -18,6 +18,7 @@ const HeaderStyled = styled.header`
   width: 100%;
   position: fixed;
   z-index: 10;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
