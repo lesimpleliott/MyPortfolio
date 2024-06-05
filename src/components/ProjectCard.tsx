@@ -5,7 +5,7 @@ import StickyButton from "./StickyButton";
 type ProjectProps = {
   id: number;
   title: string;
-  descritpion: string;
+  description: string;
   tags: string[];
   images: {
     hero: string;
