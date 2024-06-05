@@ -10,7 +10,7 @@ type HeroBannerType = {
 
 const HeroBanner: React.FC<HeroBannerType> = (props) => {
   return (
-    <HeroBannerStyled>
+    <HeroBannerStyled className="heroBanner">
       {props.backgroundImage && (
         <div className="bannerBackground">
           <img src={props.backgroundImage} alt={props.profilPictureAlt} />
