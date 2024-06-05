@@ -2,12 +2,13 @@
   {
     "id": 1,
     "title": "OhMyFood",
-    "descritpion": "lorem ipsum",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vero distinctio officiis obcaecati debitis cumque dignissimos dolore veniam, officia, libero reiciendis sed animi. Placeat modi eveniet repudiandae. Libero minus, recusandae perferendis fugit ad nobis laborum et assumenda ratione, illum at voluptate ipsum mollitia ullam voluptatum! Sit doloremque voluptates eius nemo.",
     "tags": ["HTML", "Sass"],
+    "schoolProject": true,
     "images": {
       "hero": "./myProjects/ohmyfood_hero.webp",
-      "desktop": "./myProjects/ohmyfood_1280w.webp",
-      "mobile": "./myProjects/ohmyfood_375w.webp"
+      "desktop": "./myProjects/ohmyfood_desktop.webp",
+      "mobile": "./myProjects/ohmyfood_mobile.webp"
     },
     "links": {
       "github": "https://github.com/lesimpleliott/OC_ohmyfood",
@@ -17,11 +18,12 @@
   {
     "id": 2,
     "title": "Sophie Bluel",
-    "descritpion": "lorem ipsum",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vero distinctio officiis obcaecati debitis cumque dignissimos dolore veniam, officia, libero reiciendis sed animi. Placeat modi eveniet repudiandae. Libero minus, recusandae perferendis fugit ad nobis laborum et assumenda ratione, illum at voluptate ipsum mollitia ullam voluptatum! Sit doloremque voluptates eius nemo.",
     "tags": ["HTML", "Sass", "Javascript"],
+    "schoolProject": true,
     "images": {
       "hero": "./myProjects/sophieBluel_hero.webp",
-      "desktop": "./myProjects/sophieBluel_1280w.webp",
+      "desktop": "./myProjects/sophieBluel_desktop.webp",
       "mobile": ""
     },
     "links": {
@@ -32,12 +34,12 @@
   {
     "id": 3,
     "title": "Katelio Wedding",
-    "descritpion": "lorem ipsum",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vero distinctio officiis obcaecati debitis cumque dignissimos dolore veniam, officia, libero reiciendis sed animi. Placeat modi eveniet repudiandae. Libero minus, recusandae perferendis fugit ad nobis laborum et assumenda ratione, illum at voluptate ipsum mollitia ullam voluptatum! Sit doloremque voluptates eius nemo.",
     "tags": ["HTML", "Sass", "Javascript"],
     "images": {
       "hero": "./myProjects/katelio_hero.webp",
-      "desktop": "./myProjects/katelio_1280w.webp",
-      "mobile": "./myProjects/katelio_375w.webp"
+      "desktop": "./myProjects/katelio_desktop.webp",
+      "mobile": "./myProjects/katelio_mobile.webp"
     },
     "links": {
       "github": "https://github.com/lesimpleliott/katelioWedding",
@@ -47,12 +49,13 @@
   {
     "id": 4,
     "title": "Kasa",
-    "descritpion": "lorem ipsum",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vero distinctio officiis obcaecati debitis cumque dignissimos dolore veniam, officia, libero reiciendis sed animi. Placeat modi eveniet repudiandae. Libero minus, recusandae perferendis fugit ad nobis laborum et assumenda ratione, illum at voluptate ipsum mollitia ullam voluptatum! Sit doloremque voluptates eius nemo.",
     "tags": ["React", "Sass"],
+    "schoolProject": true,
     "images": {
       "hero": "./myProjects/kasa_hero.webp",
-      "desktop": "./myProjects/kasa_1280w.webp",
-      "mobile": "./myProjects/kasa_375w.webp"
+      "desktop": "./myProjects/kasa_desktop.webp",
+      "mobile": "./myProjects/kasa_mobile.webp"
     },
     "links": {
       "github": "https://github.com/lesimpleliott/OC_Kasa",
@@ -62,11 +65,12 @@
   {
     "id": 5,
     "title": "ArgentBank",
-    "descritpion": "lorem ipsum",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vero distinctio officiis obcaecati debitis cumque dignissimos dolore veniam, officia, libero reiciendis sed animi. Placeat modi eveniet repudiandae. Libero minus, recusandae perferendis fugit ad nobis laborum et assumenda ratione, illum at voluptate ipsum mollitia ullam voluptatum! Sit doloremque voluptates eius nemo.",
     "tags": ["React", "Styled-Component", "Redux"],
+    "schoolProject": true,
     "images": {
       "hero": "./myProjects/argentBank_hero.webp",
-      "desktop": "./myProjects/argentBank_1280w.webp",
+      "desktop": "./myProjects/argentBank_desktop.webp",
       "mobile": ""
     },
     "links": {
@@ -77,12 +81,12 @@
   {
     "id": 6,
     "title": "MyPortfolio",
-    "descritpion": "lorem ipsum",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vero distinctio officiis obcaecati debitis cumque dignissimos dolore veniam, officia, libero reiciendis sed animi. Placeat modi eveniet repudiandae. Libero minus, recusandae perferendis fugit ad nobis laborum et assumenda ratione, illum at voluptate ipsum mollitia ullam voluptatum! Sit doloremque voluptates eius nemo.",
     "tags": ["React", "Typescript", "Styled-Component"],
     "images": {
       "hero": "./myProjects/myPortfolio_hero.webp",
-      "desktop": "./myProjects/myPortfolio_1280w.webp",
-      "mobile": "./myProjects/myPortfolio_375w.webp"
+      "desktop": "./myProjects/myPortfolio_desktop.webp",
+      "mobile": "./myProjects/myPortfolio_mobile.webp"
     },
     "links": {
       "github": "https://github.com/lesimpleliott/MyPortfolio",
