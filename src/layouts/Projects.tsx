@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import dataProjects from "../assets/datas/myProjects.json";
+import myProjects from "../assets/datas/myProjects.json";
 import ProjectCard from "../components/ProjectCard";
 
 const Projects = () => {
   return (
     <ProjectsStyled>
-      {dataProjects.map((project) => (
+      {myProjects.map((project) => (
         <ProjectCard key={project.id} project={project} />
       ))}
     </ProjectsStyled>

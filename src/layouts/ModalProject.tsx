@@ -1,15 +1,20 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
-import mockupData from "../assets/datas/myProjects.json";
+import myProjects from "../assets/datas/myProjects.json";
+import useStoreProject from "../project.store";
 import useStoreTheme from "../theme.store";
 
 const ModalProject = () => {
   const { theme } = useStoreTheme();
+  const { setModalIsOpen } = useStoreProject();
+
+  // ******** A GARDER ???? ********
   const [index, setIndex] = useState(0);
-  const project = mockupData[index];
+  const project = myProjects[index];
+  // ******** A GARDER ???? ********
 
   const nextProject = () => {
-    if (index < mockupData.length - 1) {
+    if (index < myProjects.length - 1) {
       setIndex(index + 1);
     } else {
       setIndex(0);
@@ -19,8 +24,11 @@ const ModalProject = () => {
     if (index > 0) {
       setIndex(index - 1);
     } else {
-      setIndex(mockupData.length - 1);
+      setIndex(myProjects.length - 1);
     }
+  };
+  const closeModal = () => {
+    setModalIsOpen(false);
   };
 
   useEffect(() => {
@@ -35,15 +43,22 @@ const ModalProject = () => {
         prevProject();
       }
     };
+    const handleClose = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        closeModal();
+      }
+    };
 
     // Ajout des eventListener
     window.addEventListener("keydown", handleNext);
     window.addEventListener("keydown", handlePrev);
+    window.addEventListener("keydown", handleClose);
 
     // Nettoyage des eventListener
     return () => {
       window.removeEventListener("keydown", handleNext);
       window.removeEventListener("keydown", handlePrev);
+      window.removeEventListener("keydown", handleClose);
     };
   });
 
@@ -56,7 +71,7 @@ const ModalProject = () => {
         <button onClick={nextProject}>
           <i className="fa-solid fa-angle-right"></i>
         </button>
-        <button>
+        <button onClick={closeModal}>
           <i className="fa-solid fa-xmark"></i>
         </button>
       </nav>

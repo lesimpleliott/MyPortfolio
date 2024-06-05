@@ -1,12 +1,15 @@
 import styled from "styled-components";
 import Dock from "../components/Dock";
 import HeroBanner from "../layouts/HeroBanner";
+import ModalProject from "../layouts/ModalProject";
 import Projects from "../layouts/Projects";
 import Stack from "../layouts/Stack";
+import useStoreProject from "../project.store";
 import useStoreTheme from "../theme.store";
 
 const Home = () => {
   const { theme } = useStoreTheme();
+  const { modalIsOpen } = useStoreProject();
 
   return (
     <HomeStyled>
@@ -35,6 +38,8 @@ const Home = () => {
         <h3>Les projets sur lesquels j'ai travaillé depuis mes débuts.</h3>
         <Projects />
       </section>
+
+      {modalIsOpen && <ModalProject />}
     </HomeStyled>
   );
 };
