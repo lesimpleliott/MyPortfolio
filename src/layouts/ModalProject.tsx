@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import styled from "styled-components";
 import myProjects from "../assets/datas/myProjects.json";
 import useStoreProject from "../project.store";
@@ -6,25 +6,22 @@ import useStoreTheme from "../theme.store";
 
 const ModalProject = () => {
   const { theme } = useStoreTheme();
-  const { setModalIsOpen } = useStoreProject();
+  const { setModalIsOpen, tabIndex, setTabIndex } = useStoreProject();
 
-  // ******** A GARDER ???? ********
-  const [index, setIndex] = useState(0);
-  const project = myProjects[index];
-  // ******** A GARDER ???? ********
+  const project = myProjects[tabIndex];
 
   const nextProject = () => {
-    if (index < myProjects.length - 1) {
-      setIndex(index + 1);
+    if (tabIndex < myProjects.length - 1) {
+      setTabIndex(tabIndex + 1);
     } else {
-      setIndex(0);
+      setTabIndex(0);
     }
   };
   const prevProject = () => {
-    if (index > 0) {
-      setIndex(index - 1);
+    if (tabIndex > 0) {
+      setTabIndex(tabIndex - 1);
     } else {
-      setIndex(myProjects.length - 1);
+      setTabIndex(myProjects.length - 1);
     }
   };
   const closeModal = () => {
@@ -65,13 +62,13 @@ const ModalProject = () => {
   return (
     <ModalProjectStyled className="modalProject">
       <nav className="modalNavbar">
-        <button onClick={prevProject}>
+        <button className="prev" onClick={prevProject}>
           <i className="fa-solid fa-angle-left"></i>
         </button>
-        <button onClick={nextProject}>
+        <button className="next" onClick={nextProject}>
           <i className="fa-solid fa-angle-right"></i>
         </button>
-        <button onClick={closeModal}>
+        <button className="close" onClick={closeModal}>
           <i className="fa-solid fa-xmark"></i>
         </button>
       </nav>
@@ -80,8 +77,12 @@ const ModalProject = () => {
         <section className="modalBanner">
           <img src={project.images.hero} alt="" className="hero" />
           <div className="mockup">
-            <img src={project.images.desktop} alt="" />
-            <img src={project.images.mobile} alt="" />
+            {project.images.desktop && (
+              <img src={project.images.desktop} alt="" />
+            )}
+            {project.images.mobile && (
+              <img src={project.images.mobile} alt="" />
+            )}
           </div>
         </section>
         <section className="modalContent">
@@ -136,20 +137,18 @@ const ModalProject = () => {
   );
 };
 
-const ModalProjectStyled = styled.section`
+const ModalProjectStyled = styled.aside`
   height: 100vh;
   width: 100vw;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  background-color: var(--backgroundOpacity);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: fadeIn 300ms ease-out forwards;
 
   .modalNavbar,
   .modalWrapper {
@@ -176,9 +175,25 @@ const ModalProjectStyled = styled.section`
       box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
       justify-content: center;
       transition: background-color 200ms ease-out;
+      animation: modalScaleIn 200ms 100ms ease-out both;
 
-      &:hover {
-        background-color: var(--secondColor);
+      &.prev {
+        animation-delay: 100ms;
+      }
+      &.next {
+        animation-delay: 150ms;
+      }
+      &.prev,
+      &.next {
+        &:hover {
+          background-color: var(--secondColor);
+        }
+      }
+      &.close {
+        animation-delay: 200ms;
+        &:hover {
+          background-color: #c30000;
+        }
       }
     }
   }
@@ -191,6 +206,7 @@ const ModalProjectStyled = styled.section`
     border-radius: 10px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     overflow-y: auto;
+    animation: modalScaleIn 300ms ease-in-out;
 
     .modalBanner {
       width: 100%;
@@ -223,21 +239,23 @@ const ModalProjectStyled = styled.section`
     }
 
     .modalContent {
-      padding: 1rem 2rem 2rem 2rem;
+      padding: 2rem 2rem 2rem 2rem;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 20px;
 
       .modalHeader {
         display: flex;
         align-content: center;
         flex-wrap: wrap;
+        gap: 10px;
 
         .title {
           flex: 1 0 fit-content;
           font-size: 2rem;
+          font-weight: 600;
+          line-height: 1.2;
           color: var(--mainColor);
-          white-space: nowrap;
         }
 
         .tags {
@@ -245,7 +263,7 @@ const ModalProjectStyled = styled.section`
           align-items: center;
           justify-content: flex-start;
           gap: 5px;
-          flex-wrap: nowrap;
+          flex-wrap: wrap;
 
           .tag {
             background: linear-gradient(
@@ -271,6 +289,8 @@ const ModalProjectStyled = styled.section`
         align-items: center;
         justify-content: center;
         gap: 20px;
+        flex-wrap: wrap;
+
         .link {
           font-size: 0.9rem;
           font-weight: 500;
@@ -289,6 +309,34 @@ const ModalProjectStyled = styled.section`
           }
         }
       }
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      background-color: none;
+      backdrop-filter: blur(0px);
+      -webkit-backdrop-filter: blur(0px);
+    }
+    to {
+      background-color: var(--backgroundOpacity);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+  }
+
+  @keyframes modalScaleIn {
+    0% {
+      transform: scale(0);
+    }
+    60% {
+      transform: scale(1.05);
+    }
+    80% {
+      transform: scale(0.95);
+    }
+    100% {
+      transform: scale(1);
     }
   }
 `;

@@ -21,15 +21,19 @@ type ProjectProps = {
 };
 
 const ProjectCard = ({ project }: { project: ProjectProps }) => {
-  const { modalIsOpen, setModalIsOpen } = useStoreProject();
+  const { modalIsOpen, setModalIsOpen, setTabIndex } = useStoreProject();
 
   // Fonction pour gérer le clic sur le bouton "infos" dans une ProjectCard
-  const handleInfosButton = (id: number) => {
-    const projectIndex = myProjects.findIndex((project) => project.id === id);
+  const openModalProject = (id: number) => {
+    const projectIndex = myProjects.findIndex((project) => project.id === id); // en attente
     setModalIsOpen(true);
+    setTabIndex(projectIndex);
+
+    // ToDelete **************
     console.log(
       `Project ID: ${id}, Index: ${projectIndex}, modalIsOpen: ${modalIsOpen}`
     );
+    // ToDelete **************
   };
 
   return (
@@ -57,7 +61,7 @@ const ProjectCard = ({ project }: { project: ProjectProps }) => {
       </div>
       <div className="hoverBox">
         <StickyButton
-          function={() => handleInfosButton(project.id)}
+          function={() => openModalProject(project.id)}
           alt="details icon"
           icon="./icons/infos_white.svg"
           sticky={false}
@@ -98,7 +102,7 @@ const ProjectCardStyled = styled.article`
     box-shadow 250ms ease-in;
 
   &:hover {
-    /* transform: scale(1.02); */
+    transform: scale(1.02);
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
 
     .hoverBox {
