@@ -98,16 +98,15 @@ const ProjectCardStyled = styled.article`
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
   overflow: hidden;
   position: relative;
-  transition: background-color 250ms ease-in-out, transform 250ms ease-out,
-    box-shadow 250ms ease-in;
+  transition: background-color 250ms ease-in-out, box-shadow 250ms ease-in;
 
   &:hover {
-    transform: scale(1.02);
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
 
     .hoverBox {
+      backdrop-filter: blur(10px);
       background-color: rgba(0, 0, 0, 0.5);
-      backdrop-filter: blur(5px);
+      box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5) inset;
       .stickyBtn {
         opacity: 1;
         transition: opacity 250ms ease-in-out;
