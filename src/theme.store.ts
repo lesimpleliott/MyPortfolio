@@ -4,6 +4,7 @@ import { persist } from "zustand/middleware";
 type ThemeType = {
   theme: string;
   setTheme: (theme: string) => void;
+  toggleTheme: () => void;
 };
 
 // récuperer le theme systeme
@@ -23,6 +24,8 @@ const useStoreTheme = create(
     (set) => ({
       theme: getSystemTheme(),
       setTheme: (theme: string) => set({ theme }),
+      toggleTheme: () =>
+        set((state) => ({ theme: state.theme === "dark" ? "light" : "dark" })),
     }),
     { name: "theme" }
   )
