@@ -267,12 +267,15 @@ const ModalProjectStyled = styled.aside`
 
           .tag {
             background: linear-gradient(
-              90deg,
+              140deg,
               var(--mainColor),
+              #8436ea,
               var(--secondColor)
             );
             color: #fff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
             font-size: 0.8rem;
+            font-weight: 500;
             padding: 0.2rem 0.8rem;
             border-radius: 20px;
             white-space: nowrap;

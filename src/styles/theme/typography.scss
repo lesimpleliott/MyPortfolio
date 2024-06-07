@@ -31,7 +31,12 @@ h3 {
 
 strong {
   font-family: inherit;
-  background: linear-gradient(to right, var(--mainColor), var(--secondColor));
+  background: linear-gradient(
+    140deg,
+    var(--mainColor),
+    #8436ea,
+    var(--secondColor)
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
