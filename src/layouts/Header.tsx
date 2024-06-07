@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Logo from "../components/Logo";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navbar/Navbar";
 
 const Header = () => {
   return (
