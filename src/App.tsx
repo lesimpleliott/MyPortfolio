@@ -5,7 +5,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Error from "./pages/Error";
 import Home from "./pages/Home";
-import useStoreTheme from "./theme.store";
+import useStoreTheme from "./stores/theme.store";
 
 const App = () => {
   const { theme } = useStoreTheme();

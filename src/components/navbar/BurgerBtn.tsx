@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import useStoreNavbar from "../../navbar.store";
+import useStoreNavbar from "../../stores/navbar.store";
 
 const BurgerBtn = () => {
   const { responsiveMode } = useStoreNavbar();

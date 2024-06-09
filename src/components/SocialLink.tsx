@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import useStoreTheme from "../theme.store";
+import useStoreTheme from "../stores/theme.store";
 
 type SocialLinkProps = {
   href: string;

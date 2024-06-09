@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
-import useStoreNavbar from "../navbar.store";
-import useStoreTheme from "../theme.store";
+import useStoreNavbar from "../stores/navbar.store";
+import useStoreTheme from "../stores/theme.store";
 
 // TypeScript
 type BaseBtnProps = {

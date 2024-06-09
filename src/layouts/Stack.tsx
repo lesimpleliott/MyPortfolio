@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import dataStack from "../assets/datas/myStack.json";
-import useStoreTheme from "../theme.store";
+import useStoreTheme from "../stores/theme.store";
 
 const Stack = () => {
   const { theme } = useStoreTheme();

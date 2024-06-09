@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import useResponsiveMode from "../../hooks/useResponsiveMode";
-import useStoreNavbar from "../../navbar.store";
+import useStoreNavbar from "../../stores/navbar.store";
 import BurgerBtn from "./BurgerBtn";
 import ButtonsContainer from "./ButtonsContainer";
 

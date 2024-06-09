@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import styled from "styled-components";
-import useStoreNavbar from "../../navbar.store";
+import useStoreNavbar from "../../stores/navbar.store";
 import NavbarIcons from "./NavbarIcons";
 import NavbarLinks from "./NavbarLinks";
 

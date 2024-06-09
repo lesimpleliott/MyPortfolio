@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import styled from "styled-components";
-import useStoreNavbar from "../../navbar.store";
+import useStoreNavbar from "../../stores/navbar.store";
 
 const NavbarLinks = () => {
   const { responsiveMode, menuIsOpen, setMenuIsOpen } = useStoreNavbar();

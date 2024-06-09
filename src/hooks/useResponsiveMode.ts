@@ -1,5 +1,5 @@
 import { useCallback, useEffect } from "react";
-import useStoreNavbar from "../navbar.store";
+import useStoreNavbar from "../stores/navbar.store";
 
 const useResponsiveMode = () => {
   const { setResponsiveMode } = useStoreNavbar();

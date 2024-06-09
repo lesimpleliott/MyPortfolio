@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 import styled from "styled-components";
 import myProjects from "../assets/datas/myProjects.json";
-import useStoreProject from "../project.store";
-import useStoreTheme from "../theme.store";
+import useStoreProject from "../stores/project.store";
+import useStoreTheme from "../stores/theme.store";
 
 const ModalProject = () => {
   const { theme } = useStoreTheme();

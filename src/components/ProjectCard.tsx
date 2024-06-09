@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import myProjects from "../assets/datas/myProjects.json";
 import myStack from "../assets/datas/myStack.json";
-import useStoreProject from "../project.store";
+import useStoreProject from "../stores/project.store";
 import StickyButton from "./StickyButton";
 
 type ProjectProps = {

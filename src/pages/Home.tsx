@@ -4,8 +4,8 @@ import HeroBanner from "../layouts/HeroBanner";
 import ModalProject from "../layouts/ModalProject";
 import Projects from "../layouts/Projects";
 import Stack from "../layouts/Stack";
-import useStoreProject from "../project.store";
-import useStoreTheme from "../theme.store";
+import useStoreProject from "../stores/project.store";
+import useStoreTheme from "../stores/theme.store";
 
 const Home = () => {
   const { theme } = useStoreTheme();

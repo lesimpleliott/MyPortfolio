@@ -2,7 +2,7 @@ import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import Logo from "../components/Logo";
 import StickyButton from "../components/StickyButton";
-import useStoreTheme from "../theme.store";
+import useStoreTheme from "../stores/theme.store";
 
 const Footer = () => {
   const { theme, setTheme } = useStoreTheme();
