@@ -21,23 +21,17 @@ type ProjectProps = {
 };
 
 const ProjectCard = ({ project }: { project: ProjectProps }) => {
-  const { modalIsOpen, setModalIsOpen, setTabIndex } = useStoreProject();
+  const { setModalIsOpen, setTabIndex } = useStoreProject();
 
   // Fonction pour gérer le clic sur le bouton "infos" dans une ProjectCard
   const openModalProject = (id: number) => {
     const projectIndex = myProjects.findIndex((project) => project.id === id); // en attente
     setModalIsOpen(true);
     setTabIndex(projectIndex);
-
-    // ToDelete **************
-    console.log(
-      `Project ID: ${id}, Index: ${projectIndex}, modalIsOpen: ${modalIsOpen}`
-    );
-    // ToDelete **************
   };
 
   return (
-    <ProjectCardStyled>
+    <ProjectCardStyled onClick={() => openModalProject(project.id)}>
       <img
         className="projectHero"
         src={project.images.hero}
@@ -100,39 +94,41 @@ const ProjectCardStyled = styled.article`
   position: relative;
   transition: background-color 250ms ease-in-out, box-shadow 250ms ease-in;
 
-  &:hover {
-    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
+  @media screen and (min-width: 768px) {
+    &:hover {
+      box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
 
-    .hoverBox {
-      backdrop-filter: blur(10px);
-      background-color: rgba(0, 0, 0, 0.5);
-      box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5) inset;
-      .stickyBtn {
-        opacity: 1;
-        transition: opacity 250ms ease-in-out;
+      .hoverBox {
+        backdrop-filter: blur(10px);
+        background-color: rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5) inset;
+        .stickyBtn {
+          opacity: 1;
+          transition: opacity 250ms ease-in-out;
+        }
       }
     }
-  }
 
-  .hoverBox {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0);
-    transition: background-color 250ms ease-in-out,
-      backdrop-filter 250ms ease-in-out;
+    .hoverBox {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0);
+      transition: background-color 250ms ease-in-out,
+        backdrop-filter 250ms ease-in-out;
 
-    .stickyBtn {
-      position: relative;
-      top: -25px;
-      width: 70px;
-      height: 50px;
-      opacity: 0;
-      .stickyIcon {
+      .stickyBtn {
+        position: relative;
+        top: -25px;
+        width: 70px;
         height: 50px;
-        width: 50px;
+        opacity: 0;
+        .stickyIcon {
+          height: 50px;
+          width: 50px;
+        }
       }
     }
   }
