@@ -1,12 +1,10 @@
 import styled from "styled-components";
 
-//TYPESCRIPT
 type CtaButtonTypes = {
   title: string;
   filePath: string;
 };
 
-//REACT
 const CtaButton = (props: CtaButtonTypes) => {
   return (
     <CtaStyled>
@@ -26,6 +24,7 @@ const CtaButton = (props: CtaButtonTypes) => {
 
 //STYLED-COMPONENTS
 const CtaStyled = styled.button`
+  width: fit-content;
   position: relative;
   z-index: 1;
 
