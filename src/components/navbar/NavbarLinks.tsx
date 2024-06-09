@@ -4,7 +4,7 @@ import styled from "styled-components";
 import useStoreNavbar from "../../navbar.store";
 
 const NavbarLinks = () => {
-  const { responsiveMode } = useStoreNavbar();
+  const { responsiveMode, menuIsOpen, setMenuIsOpen } = useStoreNavbar();
   const [, setActiveBox] = useState<HTMLElement | null>(null);
   const location = useLocation();
   const underline = document.querySelector(".underline");
@@ -62,15 +62,21 @@ const NavbarLinks = () => {
     };
   }, [location.pathname, setUnderlinePosition]);
 
+  const handleLinkClick = () => {
+    setMenuIsOpen(false);
+  };
+
   return (
-    <NavbarLinksStyled className={responsiveMode}>
-      <NavLink to="/" className="link">
+    <NavbarLinksStyled
+      className={`${responsiveMode} ${menuIsOpen ? "open" : ""}`}
+    >
+      <NavLink to="/" className="link" onClick={handleLinkClick}>
         Home
       </NavLink>
-      <NavLink to="/about" className="link">
+      <NavLink to="/about" className="link" onClick={handleLinkClick}>
         About
       </NavLink>
-      <NavLink to="/contact" className="link">
+      <NavLink to="/contact" className="link" onClick={handleLinkClick}>
         Contact
       </NavLink>
       <span className="underline"></span>
@@ -105,7 +111,35 @@ export const NavbarLinksStyled = styled.div`
   }
 
   &.mobile {
-    display: none;
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    .link {
+      opacity: 0;
+      transition: opacity 0ms ease-in-out;
+    }
+
+    &.open {
+      .link {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        opacity: 1;
+        transition: background-color 250ms ease-in-out,
+          opacity 250ms 50ms ease-in-out;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
   }
 `;
 

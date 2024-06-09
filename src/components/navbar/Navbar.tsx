@@ -2,8 +2,7 @@ import styled from "styled-components";
 import useResponsiveMode from "../../hooks/useResponsiveMode";
 import useStoreNavbar from "../../navbar.store";
 import BurgerBtn from "./BurgerBtn";
-import NavbarIcons from "./NavbarIcons";
-import NavbarLinks from "./NavbarLinks";
+import ButtonsContainer from "./ButtonsContainer";
 
 const Navbar = () => {
   useResponsiveMode();
@@ -12,8 +11,7 @@ const Navbar = () => {
   return (
     <NavbarStyled className={responsiveMode}>
       <BurgerBtn />
-      <NavbarLinks />
-      <NavbarIcons />
+      <ButtonsContainer />
     </NavbarStyled>
   );
 };
@@ -30,6 +28,9 @@ const NavbarStyled = styled.nav`
     gap: 20px;
   }
   &.mobile {
+    width: 100%;
+    position: absolute;
+    padding: 5vw;
   }
 `;
 

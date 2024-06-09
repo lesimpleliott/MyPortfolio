@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
+import useStoreNavbar from "../navbar.store";
 import useStoreTheme from "../theme.store";
 
 // TypeScript
@@ -36,6 +37,7 @@ type StickyBtnProps = BaseBtnProps & IconsProps & FunctionProps;
 // FONCTIONS
 const StickyButton: React.FC<StickyBtnProps> = (props) => {
   const { theme } = useStoreTheme();
+  const { setMenuIsOpen } = useStoreNavbar();
   const btnRef = useRef<HTMLButtonElement | HTMLAnchorElement>(null);
 
   useEffect(() => {
@@ -75,6 +77,10 @@ const StickyButton: React.FC<StickyBtnProps> = (props) => {
     />
   );
 
+  const closeMenuBurger = () => {
+    setMenuIsOpen(false);
+  };
+
   //JSX
   return (
     <StickyButtonStyled className="stickyBtn">
@@ -93,6 +99,7 @@ const StickyButton: React.FC<StickyBtnProps> = (props) => {
           href={props.link}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={closeMenuBurger}
         >
           {commonContent}
         </a>

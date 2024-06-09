@@ -44,24 +44,6 @@ const BurgerBtnStyled = styled.button`
       border-radius: 10px;
       box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
       transition: transform 200ms ease-in-out, width 200ms ease-in-out;
-      &::after {
-        content: "";
-        display: block;
-        width: 0%;
-        height: 100%;
-        background-color: var(--mainColor);
-        opacity: 0.4;
-        transition: width 150ms ease-in-out;
-      }
-      &:nth-child(1)::after {
-        transition-delay: 100ms;
-      }
-      &:nth-child(2)::after {
-        transition-delay: 50ms;
-      }
-      &:nth-child(3)::after {
-        transition-delay: 0;
-      }
     }
     &.open {
       span:nth-child(1) {
