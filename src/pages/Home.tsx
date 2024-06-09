@@ -50,7 +50,7 @@ const HomeStyled = styled.main`
   .projects {
     height: 100%;
     width: 100%;
-    max-width: calc(1024px + 2 * 5vw);
+    max-width: 1024px;
     padding-inline: 5vw;
 
     display: flex;
