@@ -166,13 +166,13 @@ const ModalProjectStyled = styled.aside`
   .modalNavbar {
     display: flex;
     justify-content: flex-end;
-    gap: 8px;
+    gap: 15px;
     z-index: 100;
-    padding: 0.5rem;
+    padding: 1rem;
 
     button {
-      width: 20px;
-      height: 20px;
+      width: 25px;
+      height: 25px;
       border-radius: 100%;
       background-color: rgba(0, 0, 0, 0.4);
       color: #fff;
@@ -190,9 +190,10 @@ const ModalProjectStyled = styled.aside`
       &.next {
         animation-delay: 150ms;
       }
+
       &.prev,
       &.next {
-        &:hover {
+        &:active {
           background-color: var(--secondColor);
         }
       }
