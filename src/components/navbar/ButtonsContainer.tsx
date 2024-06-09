@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import styled from "styled-components";
 import useStoreNavbar from "../../navbar.store";
 import NavbarIcons from "./NavbarIcons";
@@ -5,6 +6,12 @@ import NavbarLinks from "./NavbarLinks";
 
 const ButtonsContainer = () => {
   const { responsiveMode, menuIsOpen } = useStoreNavbar();
+
+  useEffect(() => {
+    menuIsOpen
+      ? (document.body.style.overflow = "hidden")
+      : document.body.style.removeProperty("overflow");
+  }, [menuIsOpen]);
 
   return (
     <ButtonsContainerStyled

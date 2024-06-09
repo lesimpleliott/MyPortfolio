@@ -6,7 +6,8 @@ import useStoreTheme from "../theme.store";
 
 const ModalProject = () => {
   const { theme } = useStoreTheme();
-  const { setModalIsOpen, tabIndex, setTabIndex } = useStoreProject();
+  const { modalIsOpen, setModalIsOpen, tabIndex, setTabIndex } =
+    useStoreProject();
 
   const project = myProjects[tabIndex];
 
@@ -26,9 +27,15 @@ const ModalProject = () => {
   };
   const closeModal = () => {
     setModalIsOpen(false);
+    modalIsOpen && document.body.style.removeProperty("overflow");
   };
 
   useEffect(() => {
+    // Gestion du scroll
+    modalIsOpen
+      ? (document.body.style.overflow = "hidden")
+      : document.body.style.removeProperty("overflow");
+
     // Gestion des touches clavier
     const handleNext = (event: KeyboardEvent) => {
       if (event.key === "ArrowRight") {
