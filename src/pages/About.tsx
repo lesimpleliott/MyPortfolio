@@ -32,26 +32,45 @@ const About = () => {
             compétences solides.
           </p>
         </div>
+        <CtaButton title="Curriculum vitæ" filePath="./CV_LesimpleEliott.pdf" />
       </HeroBanner>
-      <CtaButton title="Curriculum vitæ" filePath="./CV_LesimpleEliott.pdf" />
     </AboutStyled>
   );
 };
 
 const AboutStyled = styled.main`
-  .childrenWrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  .textContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  padding-bottom: 50px;
+
+  .heroBanner {
+    .childrenWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .textContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      p {
+        font-size: clamp(0.9rem, 2vw, 1rem);
+      }
+    }
   }
 
-  p {
-    font-size: clamp(0.9rem, 2vw, 1rem);
+  @media screen and (max-width: 768px) {
+    padding-bottom: 75px;
+
+    .heroBanner {
+      .childrenWrapper {
+        align-items: center;
+      }
+    }
+    .textContainer {
+      @media screen and (max-width: 768px) {
+        text-align: justify;
+      }
+    }
   }
 `;
 
