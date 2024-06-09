@@ -111,19 +111,19 @@ export const NavbarLinksStyled = styled.div`
   }
 
   &.mobile {
-    width: 100%;
-    margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-
     .link {
       opacity: 0;
       transition: opacity 0ms ease-in-out;
     }
 
     &.open {
+      width: 100%;
+      margin-top: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+
       .link {
         width: 100%;
         height: 60px;
