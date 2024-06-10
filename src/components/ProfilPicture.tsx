@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 type ImageType = {
   img: string;
-  alt: string;
+  alt?: string;
 };
 
 const ProfilPicture = ({ img, alt }: ImageType) => {

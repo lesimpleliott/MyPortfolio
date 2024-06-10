@@ -105,10 +105,10 @@ const ModalNavbarStyled = styled.nav`
     animation: modalScaleIn 200ms 100ms ease-out both;
 
     &.prev {
-      animation-delay: 100ms;
+      animation-delay: 150ms;
     }
     &.next {
-      animation-delay: 150ms;
+      animation-delay: 125ms;
     }
 
     &.prev,
@@ -118,7 +118,7 @@ const ModalNavbarStyled = styled.nav`
       }
     }
     &.close {
-      animation-delay: 200ms;
+      animation-delay: 100ms;
       &:hover {
         background-color: #c30000;
       }

@@ -2,36 +2,21 @@ import styled from "styled-components";
 import myProjects from "../assets/datas/myProjects.json";
 import myStack from "../assets/datas/myStack.json";
 import useStoreProject from "../stores/project.store";
+import { ProjectType } from "../types/project.type";
 import StickyButton from "./StickyButton";
 
-type ProjectProps = {
-  id: number;
-  title: string;
-  description: string;
-  tags: string[];
-  images: {
-    hero: string;
-    desktop: string;
-    mobile: string;
-  };
-  links: {
-    github?: string;
-    preview?: string;
-  };
-};
-
-const ProjectCard = ({ project }: { project: ProjectProps }) => {
+const ProjectCard = ({ project }: { project: ProjectType }) => {
   const { setModalIsOpen, setTabIndex } = useStoreProject();
 
   // Fonction pour gérer le clic sur le bouton "infos" dans une ProjectCard
-  const openModalProject = (id: number) => {
-    const projectIndex = myProjects.findIndex((project) => project.id === id); // en attente
+  const openModal = (id: number) => {
+    const projectIndex = myProjects.findIndex((project) => project.id === id);
     setModalIsOpen(true);
     setTabIndex(projectIndex);
   };
 
   return (
-    <ProjectCardStyled onClick={() => openModalProject(project.id)}>
+    <ProjectCardStyled onClick={() => openModal(project.id)}>
       <img
         className="projectHero"
         src={project.images.hero}
@@ -55,7 +40,7 @@ const ProjectCard = ({ project }: { project: ProjectProps }) => {
       </div>
       <div className="hoverBox">
         <StickyButton
-          function={() => openModalProject(project.id)}
+          function={() => openModal(project.id)}
           alt="details icon"
           icon="./icons/infos_white.svg"
           sticky={false}

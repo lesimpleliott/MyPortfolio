@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import ProfilPicture from "../components/ProfilPicture";
 
-type HeroBannerType = {
+type HeroBannerProps = {
   profilPicture: string;
   profilPictureAlt: string;
   children: React.ReactNode;
   backgroundImage?: string;
 };
 
-const HeroBanner: React.FC<HeroBannerType> = (props) => {
+const HeroBanner: React.FC<HeroBannerProps> = (props) => {
   return (
     <HeroBannerStyled className="heroBanner">
       {props.backgroundImage && (
