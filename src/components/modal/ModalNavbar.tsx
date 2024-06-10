@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import styled from "styled-components";
 import myProjects from "../../assets/datas/myProjects.json";
-import useStoreModal from "../../stores/modal.store";
+import { useStoreModal } from "../../stores/modal.store";
 import useStoreProject from "../../stores/project.store";
 
 type ModalNavbarProps = {
@@ -100,16 +100,15 @@ const ModalNavbarStyled = styled.nav`
     border: solid 2px #fff;
     display: flex;
     align-items: center;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     justify-content: center;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     transition: background-color 200ms ease-out;
     animation: modalScaleIn 200ms 100ms ease-out both;
 
-    &.prev {
-      animation-delay: 150ms;
-    }
-    &.next {
-      animation-delay: 125ms;
+    &.prev,
+    &.next,
+    &.close {
+      animation-delay: 100ms;
     }
 
     &.prev,
@@ -119,7 +118,6 @@ const ModalNavbarStyled = styled.nav`
       }
     }
     &.close {
-      animation-delay: 100ms;
       &:hover {
         background-color: #c30000;
       }

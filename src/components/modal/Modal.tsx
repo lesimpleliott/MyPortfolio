@@ -1,10 +1,12 @@
-import { ReactNode, useEffect } from "react";
+import { useEffect } from "react";
 import styled from "styled-components";
-import ModalNavbar from "../../components/modal/ModalNavbar";
-import useStoreModal from "../../stores/modal.store";
+import ModalCredits from "../../layouts/ModalCredits";
+import ModalProject from "../../layouts/ModalProject";
+import { useStoreModal } from "../../stores/modal.store";
+import ModalNavbar from "./ModalNavbar";
 
-const Modal = ({ children }: { children: ReactNode }) => {
-  const { modalIsOpen } = useStoreModal();
+const Modal = () => {
+  const { modalIsOpen, modalContent } = useStoreModal();
 
   useEffect(() => {
     modalIsOpen
@@ -13,9 +15,14 @@ const Modal = ({ children }: { children: ReactNode }) => {
   });
 
   return (
-    <ModalStyled className="modalProject">
-      <ModalNavbar previous next />
-      <article className="modalContent">{children}</article>
+    <ModalStyled>
+      {modalContent === "project" && <ModalNavbar next previous />}
+      {modalContent === "credits" && <ModalNavbar />}
+
+      <div className="modalContent">
+        {modalContent === "project" && <ModalProject />}
+        {modalContent === "credits" && <ModalCredits />}
+      </div>
     </ModalStyled>
   );
 };

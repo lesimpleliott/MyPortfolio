@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import Logo from "../components/Logo";
 import StickyButton from "../components/StickyButton";
+import { useStoreModal } from "../stores/modal.store";
 import useStoreTheme from "../stores/theme.store";
 
 const Footer = () => {
@@ -29,6 +30,12 @@ const Footer = () => {
     setTheme("light");
     // Ajouter class "activeTheme" à l'option choisie
     localStorage.setItem("sysTheme", "false");
+  };
+
+  const { setModalIsOpen, setModalContent } = useStoreModal();
+  const openModal = () => {
+    setModalIsOpen(true);
+    setModalContent("credits");
   };
 
   return (
@@ -72,7 +79,12 @@ const Footer = () => {
               Made by <strong>Eliott Lesimple</strong> with{" "}
               <strong>Love</strong> and <strong>lots of coffee</strong>
             </li>
-            <li>© 2024 - Tous droits réservés</li>
+            <li>
+              © 2024 - Tous droits réservés -{" "}
+              <button id="credits" onClick={openModal}>
+                Crédits
+              </button>
+            </li>
           </ul>
           <div className="icons">
             <StickyButton
@@ -130,6 +142,11 @@ const FooterStyled = styled.footer`
 
     .credits {
       border-top: solid 1px grey;
+
+      #credits {
+        cursor: pointer;
+        text-decoration: underline;
+      }
     }
 
     .icons {

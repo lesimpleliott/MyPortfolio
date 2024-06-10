@@ -1,15 +1,15 @@
 import styled from "styled-components";
 import Dock from "../components/Dock";
+// import Modal from "../components/modal/Modal";
 import HeroBanner from "../layouts/HeroBanner";
-import ModalProject from "../layouts/ModalProject";
 import Projects from "../layouts/Projects";
 import Stack from "../layouts/Stack";
-import useStoreModal from "../stores/modal.store";
+// import { useStoreModal } from "../stores/modal.store";
 import useStoreTheme from "../stores/theme.store";
 
 const Home = () => {
   const { theme } = useStoreTheme();
-  const { modalIsOpen } = useStoreModal();
+  // const { modalIsOpen } = useStoreModal();
 
   return (
     <HomeStyled>
@@ -39,7 +39,7 @@ const Home = () => {
         <Projects />
       </section>
 
-      {modalIsOpen && <ModalProject />}
+      {/* {modalIsOpen && <Modal />} */}
     </HomeStyled>
   );
 };

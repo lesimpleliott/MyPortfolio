@@ -1,13 +1,16 @@
+// stores/modal.store.ts
 import { create } from "zustand";
 
-type projectStoreType = {
+type ModalStore = {
   modalIsOpen: boolean;
-  setModalIsOpen: (modalIsOpen: boolean) => void;
+  modalContent: "project" | "credits" | null;
+  setModalIsOpen: (value: boolean) => void;
+  setModalContent: (value: "project" | "credits" | null) => void;
 };
 
-const useStoreModal = create<projectStoreType>((set) => ({
+export const useStoreModal = create<ModalStore>((set) => ({
   modalIsOpen: false,
-  setModalIsOpen: (modalIsOpen: boolean) => set({ modalIsOpen }),
+  modalContent: null,
+  setModalIsOpen: (value) => set(() => ({ modalIsOpen: value })),
+  setModalContent: (value) => set(() => ({ modalContent: value })),
 }));
-
-export default useStoreModal;
