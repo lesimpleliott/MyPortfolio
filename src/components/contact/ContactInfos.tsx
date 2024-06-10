@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import SocialLink from "../components/SocialLink";
+import SocialLink from "../../components/SocialLink";
 
 const ContactInfos = () => {
   return (

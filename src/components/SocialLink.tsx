@@ -25,7 +25,7 @@ const SocialLink = (props: SocialLinkProps) => {
 const SocialLinkStyled = styled.a`
   width: fit-content;
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
   align-items: center;
   text-decoration: none;
   color: var(--text);

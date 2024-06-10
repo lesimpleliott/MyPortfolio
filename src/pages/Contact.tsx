@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import ContactForm from "../layouts/ContactForm";
-import ContactInfos from "../layouts/ContactInfos";
+import ContactForm from "../components/contact/ContactForm";
+import ContactInfos from "../components/contact/ContactInfos";
 
 const Contact = () => {
   return (

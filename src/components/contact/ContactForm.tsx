@@ -1,7 +1,7 @@
 import emailjs from "@emailjs/browser";
 import { useRef } from "react";
 import styled from "styled-components";
-import FieldForm from "../components/FieldForm";
+import FieldForm from "./FieldForm";
 
 const ContactForm = () => {
   const form = useRef<HTMLFormElement>(null);
