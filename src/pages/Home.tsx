@@ -4,12 +4,12 @@ import HeroBanner from "../layouts/HeroBanner";
 import ModalProject from "../layouts/ModalProject";
 import Projects from "../layouts/Projects";
 import Stack from "../layouts/Stack";
-import useStoreProject from "../stores/project.store";
+import useStoreModal from "../stores/modal.store";
 import useStoreTheme from "../stores/theme.store";
 
 const Home = () => {
   const { theme } = useStoreTheme();
-  const { modalIsOpen } = useStoreProject();
+  const { modalIsOpen } = useStoreModal();
 
   return (
     <HomeStyled>

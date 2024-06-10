@@ -1,12 +1,14 @@
 import styled from "styled-components";
 import myProjects from "../assets/datas/myProjects.json";
 import myStack from "../assets/datas/myStack.json";
+import useStoreModal from "../stores/modal.store";
 import useStoreProject from "../stores/project.store";
 import { ProjectType } from "../types/project.type";
 import StickyButton from "./StickyButton";
 
 const ProjectCard = ({ project }: { project: ProjectType }) => {
-  const { setModalIsOpen, setTabIndex } = useStoreProject();
+  const { setTabIndex } = useStoreProject();
+  const { setModalIsOpen } = useStoreModal();
 
   // Fonction pour gérer le clic sur le bouton "infos" dans une ProjectCard
   const openModal = (id: number) => {

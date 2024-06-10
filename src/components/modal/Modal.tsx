@@ -1,10 +1,10 @@
 import { ReactNode, useEffect } from "react";
 import styled from "styled-components";
 import ModalNavbar from "../../components/modal/ModalNavbar";
-import useStoreProject from "../../stores/project.store";
+import useStoreModal from "../../stores/modal.store";
 
 const Modal = ({ children }: { children: ReactNode }) => {
-  const { modalIsOpen } = useStoreProject();
+  const { modalIsOpen } = useStoreModal();
 
   useEffect(() => {
     modalIsOpen

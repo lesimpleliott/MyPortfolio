@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import styled from "styled-components";
 import myProjects from "../../assets/datas/myProjects.json";
+import useStoreModal from "../../stores/modal.store";
 import useStoreProject from "../../stores/project.store";
 
 type ModalNavbarProps = {
@@ -9,8 +10,8 @@ type ModalNavbarProps = {
 };
 
 const ModalNavbar = ({ previous, next }: ModalNavbarProps) => {
-  const { modalIsOpen, setModalIsOpen, tabIndex, setTabIndex } =
-    useStoreProject();
+  const { tabIndex, setTabIndex } = useStoreProject();
+  const { modalIsOpen, setModalIsOpen } = useStoreModal();
 
   const nextProject = () => {
     if (tabIndex < myProjects.length - 1) {
