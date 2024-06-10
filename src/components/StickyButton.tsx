@@ -38,11 +38,12 @@ type StickyBtnProps = BaseBtnProps & IconsProps & FunctionProps;
 const StickyButton: React.FC<StickyBtnProps> = (props) => {
   const { theme } = useStoreTheme();
   const { setMenuIsOpen } = useStoreNavbar();
+  const { responsiveMode } = useStoreNavbar();
   const btnRef = useRef<HTMLButtonElement | HTMLAnchorElement>(null);
 
   useEffect(() => {
     const btn = btnRef.current;
-    if (!btn || props.sticky === false) return; // Ne pas ajouter les écouteurs si sticky est false
+    if (!btn || props.sticky === false || responsiveMode === "mobile") return; // Ne pas ajouter les écouteurs si sticky est false
 
     const handleMouseOver = (e: MouseEvent) => {
       btn.style.transform = `translate(${e.offsetX - 20}px, ${
@@ -61,7 +62,7 @@ const StickyButton: React.FC<StickyBtnProps> = (props) => {
       btn.removeEventListener("mouseover", handleMouseOver as EventListener);
       btn.removeEventListener("mouseleave", handleMouseLeave as EventListener);
     };
-  }, [btnRef, props.sticky]);
+  }, [btnRef, props.sticky, responsiveMode]);
 
   const commonContent = (
     <img
