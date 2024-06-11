@@ -1,4 +1,4 @@
-name: Generate a build and push to another branch (main)
+name: Build and push to elegarage.fr (main)
 
 on:
   push:
@@ -41,10 +41,3 @@ jobs:
           FOLDER: dist # Le répertoire où tes assets sont générés
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub l'ajoutera automatiquement - pas besoin de récupérer un token
           MESSAGE: "Build: ({sha}) {msg}" # Le message de commit
-
-
-      # - name: Delete build branch (optional)
-      #   run: |
-      #     git push origin --delete build
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
