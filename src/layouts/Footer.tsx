@@ -60,15 +60,21 @@ const FooterStyled = styled.footer`
         align-items: center;
       }
       .credits {
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
         text-align: center;
-        gap: 20px;
+        gap: 15px;
       }
 
-      .stickyIcon {
-        height: 40px;
-        width: 40px;
+      .btn {
+        &.active {
+          width: 38px;
+          height: 38px;
+        }
+        .stickyIcon {
+          height: 35px;
+          width: 35px;
+        }
       }
 
       .logo {
