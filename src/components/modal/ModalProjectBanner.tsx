@@ -25,6 +25,13 @@ const ModalProjectBanner = ({ project }: { project: ProjectType }) => {
           />
         )}
       </div>
+      {project.schoolProject && (
+        <img
+          className="schoolProject"
+          src="./icons/openclassrooms.svg"
+          alt="school project icon"
+        />
+      )}
     </ModalProjectBannerStyled>
   );
 };
@@ -39,6 +46,14 @@ const ModalProjectBannerStyled = styled.section`
     height: 100%;
     opacity: 0.2;
     object-fit: cover;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
+  }
+  .schoolProject {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 1.5rem;
+    left: 2rem;
   }
   .mockups {
     height: 80%;

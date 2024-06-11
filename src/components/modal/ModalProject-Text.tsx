@@ -4,6 +4,7 @@ import { ProjectType } from "../../types/project.type";
 
 const ModalProjectText = ({ project }: { project: ProjectType }) => {
   const { theme } = useStoreTheme();
+  // const description = project.description.replace(/\n/g, "<br>");
 
   return (
     <ModalProjectTextStyled>
@@ -18,6 +19,7 @@ const ModalProjectText = ({ project }: { project: ProjectType }) => {
         </div>
       </div>
       <p className="description">{project.description}</p>
+
       <div className="links">
         <a
           href={project.links.github}
@@ -35,22 +37,42 @@ const ModalProjectText = ({ project }: { project: ProjectType }) => {
           />
           Voir le repository
         </a>
-        <a
-          href={project.links.preview}
-          target="_blank"
-          className="link"
-          rel="noreferrer"
-        >
-          <img
-            src={
-              theme === "dark"
-                ? "./icons/link_white.svg"
-                : "./icons/link_black.svg"
-            }
-            alt="icon github"
-          />
-          Voir la preview
-        </a>
+        {project.links.preview && (
+          <a
+            href={project.links.preview}
+            target="_blank"
+            className="link"
+            rel="noreferrer"
+          >
+            <img
+              src={
+                theme === "dark"
+                  ? "./icons/link_white.svg"
+                  : "./icons/link_black.svg"
+              }
+              alt="icon github"
+            />
+            Voir la preview
+          </a>
+        )}
+        {project.links.website && (
+          <a
+            href={project.links.website}
+            target="_blank"
+            className="link"
+            rel="noreferrer"
+          >
+            <img
+              src={
+                theme === "dark"
+                  ? "./icons/link_white.svg"
+                  : "./icons/link_black.svg"
+              }
+              alt="icon github"
+            />
+            Voir le site
+          </a>
+        )}
       </div>
     </ModalProjectTextStyled>
   );
@@ -103,6 +125,8 @@ const ModalProjectTextStyled = styled.section`
   .description {
     text-align: justify;
     font-size: 0.9rem;
+    white-space: pre-line;
+    line-height: 1.8;
   }
   .links {
     margin-top: 10px;

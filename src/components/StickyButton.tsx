@@ -24,7 +24,9 @@ type IconsProps =
 
 type FunctionProps =
   | {
-      function: () => void;
+      function: (
+        event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+      ) => void;
       link?: never;
     }
   | {
@@ -89,7 +91,10 @@ const StickyButton: React.FC<StickyBtnProps> = (props) => {
         <button
           ref={btnRef as React.RefObject<HTMLButtonElement>}
           className={props.active ? "btn active" : "btn"}
-          onClick={props.function}
+          onClick={(e) => {
+            e.stopPropagation();
+            props.function(e);
+          }}
         >
           {commonContent}
         </button>
@@ -100,7 +105,10 @@ const StickyButton: React.FC<StickyBtnProps> = (props) => {
           href={props.link}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={closeMenuBurger}
+          onClick={(e) => {
+            e.stopPropagation();
+            closeMenuBurger();
+          }}
         >
           {commonContent}
         </a>

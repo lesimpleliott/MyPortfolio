@@ -7,7 +7,8 @@ type ImageType = {
 
 type LinksType = {
   github: string;
-  preview: string;
+  preview?: string;
+  website?: string;
 };
 
 // Type pour l'objet principal
