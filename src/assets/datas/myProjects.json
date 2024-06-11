@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "OhMyFood",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vero distinctio officiis obcaecati debitis cumque dignissimos dolore veniam, officia, libero reiciendis sed animi. Placeat modi eveniet repudiandae. Libero minus, recusandae perferendis fugit ad nobis laborum et assumenda ratione, illum at voluptate ipsum mollitia ullam voluptatum! Sit doloremque voluptates eius nemo.",
+    "description": "Projet réalisé dans le cadre de la formation Développeur Web d'OpenClassrooms : Améliorez l'interface d'un site mobile avec des animations CSS. \nTravail sur l'interface mobile-first du site d’une start-up type 'Deliveroo'. Utilisation de Sass afin d'implémenter des animations CSS et versionning du projet avec Git et GitHub.",
     "tags": ["HTML", "Sass"],
     "schoolProject": true,
     "images": {
@@ -18,7 +18,7 @@
   {
     "id": 2,
     "title": "Sophie Bluel",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vero distinctio officiis obcaecati debitis cumque dignissimos dolore veniam, officia, libero reiciendis sed animi. Placeat modi eveniet repudiandae. Libero minus, recusandae perferendis fugit ad nobis laborum et assumenda ratione, illum at voluptate ipsum mollitia ullam voluptatum! Sit doloremque voluptates eius nemo.",
+    "description": "Projet réalisé dans le cadre de la formation Développeur Web d'OpenClassrooms : Transformez une maquette en site web. \nIntégration de la maquette d'un site pour une photographe professionnelle. Utilisation de Sass pour la gestion des styles et de Javascript pour la gestion des interactions.",
     "tags": ["HTML", "Sass", "Javascript"],
     "schoolProject": true,
     "images": {
@@ -34,7 +34,7 @@
   {
     "id": 3,
     "title": "Katelio Wedding",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vero distinctio officiis obcaecati debitis cumque dignissimos dolore veniam, officia, libero reiciendis sed animi. Placeat modi eveniet repudiandae. Libero minus, recusandae perferendis fugit ad nobis laborum et assumenda ratione, illum at voluptate ipsum mollitia ullam voluptatum! Sit doloremque voluptates eius nemo.",
+    "description": "Développement du site de mon mariage et celui de ma femme. Site 'éphémère' permettant de gérer la diffusion des informations de l'evenement aux invités ainsi que les RSVP. \nUtilisation de Sass pour la gestion des styles et de Javascript Vanilla pour la gestion des interactions. La librairie SMTP.Js a été utilisée afin de gérer l'envoi des mails. \nLe site est hébergé sur un serveur et nom de domine personnel (katelio.fr). \n\nNe cherchez pas plus longtemps le mot de passe : pinktouch ",
     "tags": ["HTML", "Sass", "Javascript"],
     "images": {
       "hero": "./myProjects/katelio_hero.webp",
@@ -43,13 +43,13 @@
     },
     "links": {
       "github": "https://github.com/lesimpleliott/katelioWedding",
-      "preview": "https://katelio.fr/"
+      "preview": "https://lesimpleliott.github.io/katelioWedding/"
     }
   },
   {
     "id": 4,
     "title": "Kasa",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vero distinctio officiis obcaecati debitis cumque dignissimos dolore veniam, officia, libero reiciendis sed animi. Placeat modi eveniet repudiandae. Libero minus, recusandae perferendis fugit ad nobis laborum et assumenda ratione, illum at voluptate ipsum mollitia ullam voluptatum! Sit doloremque voluptates eius nemo.",
+    "description": "Projet réalisé dans le cadre de la formation Développeur Web d'OpenClassrooms : Créez une application web de location immobilière avec React. \nDéveloppement d'un site de location de logements. Utilisation de React pour la partie front-end et de Sass pour la gestion des styles.",
     "tags": ["React", "Sass"],
     "schoolProject": true,
     "images": {
@@ -65,7 +65,7 @@
   {
     "id": 5,
     "title": "ArgentBank",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vero distinctio officiis obcaecati debitis cumque dignissimos dolore veniam, officia, libero reiciendis sed animi. Placeat modi eveniet repudiandae. Libero minus, recusandae perferendis fugit ad nobis laborum et assumenda ratione, illum at voluptate ipsum mollitia ullam voluptatum! Sit doloremque voluptates eius nemo.",
+    "description": "Projet réalisé dans le cadre de la formation Développeur Web d'OpenClassrooms : Implémentez le front-end d'une application bancaire avec React. \nDéveloppement d'une application web de gestion de compte bancaire. Utilisation de React, Redux et Styled-Component pour la partie front-end. Utilisation de l'API REST transmis par OpenClassRooms pour la partie back-end.",
     "tags": ["React", "Styled-Component", "Redux"],
     "schoolProject": true,
     "images": {
@@ -81,7 +81,7 @@
   {
     "id": 6,
     "title": "MyPortfolio",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae vero distinctio officiis obcaecati debitis cumque dignissimos dolore veniam, officia, libero reiciendis sed animi. Placeat modi eveniet repudiandae. Libero minus, recusandae perferendis fugit ad nobis laborum et assumenda ratione, illum at voluptate ipsum mollitia ullam voluptatum! Sit doloremque voluptates eius nemo.",
+    "description": "Développement de mon portfolio personnel. \nUtilisation de React et Typescript pour la partie front-end, le style est réalisé avec Styled-Component et Sass. \nLe site est hébergé sur un serveur personnel (Hostinger) et déployé via GitHub Actions qui permet une mise en production immédiate lors de chaque 'push' sur la branche 'main'. \n ",
     "tags": ["React", "Typescript", "Styled-Component"],
     "images": {
       "hero": "./myProjects/myPortfolio_hero.webp",
@@ -90,7 +90,7 @@
     },
     "links": {
       "github": "https://github.com/lesimpleliott/MyPortfolio",
-      "preview": "https://elegarage.fr/"
+      "website": "https://elegarage.fr/"
     }
   }
 ]
