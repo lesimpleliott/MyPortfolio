@@ -3,7 +3,7 @@ import styled from "styled-components";
 const ModalCredits = () => {
   return (
     <ModalCreditsStyled>
-      <h2>© Crédits</h2>
+      <h2>Crédits</h2>
       <p>
         Images :{" "}
         <a href="https://unsplash.com/fr" target="_blank">

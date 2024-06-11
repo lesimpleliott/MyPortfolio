@@ -39,11 +39,11 @@ const ModalStyled = styled.aside`
   justify-content: center;
   align-items: center;
   animation: fadeIn 300ms ease-out forwards;
+  padding-bottom: 75px;
 
   .modalContent {
     width: 80%;
     max-width: 768px;
-    position: relative;
     max-height: 80%;
     background-color: var(--background);
     border: solid 3px #fff;
