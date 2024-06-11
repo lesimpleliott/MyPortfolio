@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Logo = ({ height }: { height: number }) => {
   return (
     <NavLink to="/">
-      <StyledLogo>
+      <LogoStyled className="logo">
         <svg
           id="logo-eLeGarage"
           data-name="logo-eLeGarage"
@@ -26,12 +26,12 @@ const Logo = ({ height }: { height: number }) => {
             d="M274,50h-1.3c-1.1,0-2.1-.9-2.1-2.1s.9-2.1,2.1-2.1h1.3c2.2,0,2.4-1.2,2.4-3.2s-.1-2.2-.3-3.8c0,0,0,0,0-.1,0-.3,0-.6,0-.9-.1-1.3-.3-2.8-.3-4.4,0-4,1-6.8,3.3-8.6-2.3-1.8-3.4-4.5-3.3-8.6,0-1.6.2-3.1.3-4.4,0-.3,0-.5,0-.8,0,0,0,0,0,0,.2-1.3.3-2.6.3-3.9,0-2.8-.9-3.1-2.4-3.1h-1.3c-1.1,0-2.1-.9-2.1-2.1S271.6,0,272.7,0h1.4c5.6.1,6.4,4.6,6.4,7.2s-.2,3-.4,4.4c0,.2,0,.5,0,.8-.1,1.3-.3,2.6-.3,4,0,4.6,1.5,5.8,4.6,6.4.9.2,1.6,1,1.6,2h0c0,1.1-.7,2-1.6,2.2-3,.7-4.7,1.9-4.6,6.5,0,1.5.1,2.8.3,4,0,.3,0,.6,0,.9.3,1.7.4,3.1.4,4.3,0,5.9-3.5,7.3-6.4,7.3h0Z"
           />
         </svg>
-      </StyledLogo>
+      </LogoStyled>
     </NavLink>
   );
 };
 
-const StyledLogo = styled.div`
+const LogoStyled = styled.div`
   cursor: pointer;
 
   .cls-1 {
