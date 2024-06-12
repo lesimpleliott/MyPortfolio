@@ -1,154 +1,62 @@
-import emailjs from "@emailjs/browser";
-import { useRef } from "react";
+import React from "react";
 import styled from "styled-components";
-import FieldForm from "./FieldForm";
+import FieldInput from "./FieldInput";
+import SubmitContainer from "./SubmitContainer";
 
-const ContactForm = () => {
-  const form = useRef<HTMLFormElement>(null);
-
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+const ContactForm: React.FC = () => {
+  const sentMessage = (e: React.FormEvent) => {
     e.preventDefault();
-    // const formMess = document.querySelector(".formMessage");
-    const submitBtn = document.getElementById("submitBtn") as HTMLElement;
-    submitBtn!.innerText = "Envoi en cours...";
-
-    emailjs
-      .sendForm(
-        import.meta.env.VITE_SERVICE,
-        import.meta.env.VITE_TEMPLATE,
-        form.current as HTMLFormElement,
-        {
-          publicKey: import.meta.env.VITE_ID,
-        }
-      )
-      .then(
-        (res) => {
-          console.log(res.text);
-          if (form.current) {
-            (form.current as HTMLFormElement).reset();
-          }
-          submitBtn!.innerText = "Message envoyé !";
-          submitBtn!.classList.add("sent");
-
-          setTimeout(() => {
-            submitBtn!.innerText = "Envoyer";
-            submitBtn!.classList.remove("sent");
-          }, 2500);
-        },
-        (err) => {
-          console.log(err.text);
-          submitBtn!.innerText = "Une erreur s'est produite";
-          submitBtn!.classList.add("error");
-
-          setTimeout(() => {
-            submitBtn!.innerText = "Envoyer";
-            submitBtn!.classList.remove("error");
-          }, 2500);
-        }
-      );
+    console.log("envoyé !");
+    // if (fullName && email && !fullNameError) {
+    //   console.log("Message envoyé !");
+    //   setFullName("");
+    //   setEmail("");
+    //   setInputValid(false);
+    // } else {
+    //   console.log("Veuillez remplir correctement les champs.");
+    // }
   };
 
   return (
-    <FormContactStyled ref={form} onSubmit={sendEmail}>
-      <FieldForm
+    <FormContactStyled onSubmit={sentMessage}>
+      <FieldInput
+        label="Nom, prénom"
         type="text"
         name="fullName"
-        text="Prénom, Nom*"
-        placeholder="Juste Leblanc"
         icon="fa-solid fa-user"
-        required={true}
+        placeholder="Juste Leblanc"
+        regExp={/^[a-zA-Z -\\é\\è\\à\\ï\\î\\ü\\û\\ù]*$/}
+        required
       />
-      <FieldForm
+      <FieldInput
+        label="Email"
         type="email"
         name="email"
-        text="Email*"
-        placeholder="juste@leblanc.fr"
         icon="fa-solid fa-at"
-        required={true}
+        placeholder="juste.leblanc@example.com"
+        regExp={/^[a-z0-9_.-]+@[a-z0-9_.-]+\.[a-z]+$/}
+        required
       />
-      <FieldForm
+      <FieldInput
+        label="Object"
         type="text"
-        name="subject"
-        text="Sujet*"
+        name="object"
         placeholder="ex : On boit un café ?"
         icon="fa-solid fa-circle-info"
-        required={true}
+        regExp={/[a-zA-Z -_.À-ÖØ-öø-ÿ]+/}
+        required
       />
 
-      <FieldForm
-        type="textarea"
-        name="message"
-        text="Message*"
-        placeholder="Votre message ici..."
-      />
-
-      <button type="submit" className="btn" id="submitBtn">
-        Envoyer
-      </button>
+      <SubmitContainer />
     </FormContactStyled>
   );
 };
 
 const FormContactStyled = styled.form`
-  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1rem;
-
-  .btn {
-    width: 100%;
-    height: 45px;
-    margin-top: 0.5rem;
-    text-align: center;
-    background-color: var(--secondColor);
-    color: white;
-    font-weight: 500;
-    font-size: 1.1rem;
-    border-radius: 10px;
-    transition: filter 200ms ease-out, box-shadow 200ms ease-out,
-      background-color 200ms ease-out;
-
-    &:hover {
-      filter: brightness(1.4);
-    }
-    &:active {
-      filter: brightness(0.8);
-      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25) inset;
-    }
-    &:focus {
-      outline: solid 2px var(--mainColor);
-    }
-
-    &.sent {
-      background-color: #38bd38;
-    }
-    &.error {
-      background-color: #f60404;
-      animation: shake 300ms ease-out;
-    }
-
-    @keyframes shake {
-      0% {
-        transform: translateX(0px);
-      }
-      20% {
-        transform: translateX(10px);
-      }
-      40% {
-        transform: translateX(-10px);
-      }
-      60% {
-        transform: translateX(10px);
-      }
-      80% {
-        transform: translateX(-10px);
-      }
-      100% {
-        transform: translateX(0px);
-      }
-    }
-  }
+  width: 100%;
 `;
 
 export default ContactForm;

@@ -10,34 +10,32 @@ type FieldFormProps = {
 };
 
 const FieldForm = (props: FieldFormProps) => {
-  if (props.type === "textarea") {
-    return (
-      <FieldStyled>
-        <label className="field__label">{props.text}</label>
-        <textarea
+  const inputElement =
+    props.type === "textarea" ? (
+      <textarea
+        name={props.name}
+        id={props.name}
+        placeholder={props.placeholder}
+      />
+    ) : (
+      <div className="field__input">
+        {props.icon && <i className={`${props.icon} icon`}></i>}
+        <input
+          type={props.type}
           name={props.name}
           id={props.name}
+          required={props.required}
           placeholder={props.placeholder}
         />
-      </FieldStyled>
+      </div>
     );
-  } else {
-    return (
-      <FieldStyled>
-        <label className="field__label">{props.text}</label>
-        <div className="field__input">
-          {props.icon && <i className={`${props.icon} icon`}></i>}
-          <input
-            type="text"
-            name={props.name}
-            id={props.name}
-            required={props.required}
-            placeholder={props.placeholder}
-          />
-        </div>
-      </FieldStyled>
-    );
-  }
+
+  return (
+    <FieldStyled>
+      <label className="field__label">{props.text}</label>
+      {inputElement}
+    </FieldStyled>
+  );
 };
 
 const FieldStyled = styled.div`

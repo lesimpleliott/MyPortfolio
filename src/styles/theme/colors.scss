@@ -1,7 +1,12 @@
+#root {
+  --formError: #ba0000;
+  --formValid: #00ba00;
+  --gradient: linear-gradient(#e710ab, #8436ea, #2a95ed);
+}
+
 [data-theme="light"] {
   --mainColor: #e710ab;
   --secondColor: #2a95ed;
-  --gradient: linear-gradient(#e710ab, #8436ea, #2a95ed);
   --text: #3d3d3d;
   --background: #f2f2f2;
   --backgroundOpacity: rgba(242, 242, 242, 0.7);
@@ -12,7 +17,6 @@
 [data-theme="dark"] {
   --mainColor: #e710ab;
   --secondColor: #2a95ed;
-  --gradient: linear-gradient(#e710ab, #8436ea, #2a95ed);
   --text: #d8d8d8;
   --background: #191919;
   --backgroundOpacity: rgba(25, 25, 25, 0.7);
