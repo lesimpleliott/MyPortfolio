@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Modal from "./components/modal/Modal";
 import Footer from "./layouts/Footer";
@@ -11,8 +12,15 @@ import useStoreTheme from "./stores/theme.store";
 
 const App = () => {
   const { modalIsOpen } = useStoreModal();
-  const { theme } = useStoreTheme();
-  document.body.setAttribute("data-theme", theme);
+  const { theme, initSysTheme } = useStoreTheme();
+
+  useEffect(() => {
+    initSysTheme();
+  }, [initSysTheme]);
+
+  useEffect(() => {
+    document.body.setAttribute("data-theme", theme);
+  }, [theme]);
 
   return (
     <BrowserRouter>

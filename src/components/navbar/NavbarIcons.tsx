@@ -4,8 +4,13 @@ import useStoreTheme from "../../stores/theme.store";
 import StickyButton from "../StickyButton";
 
 const NavbarIcons = () => {
-  const { toggleTheme } = useStoreTheme();
   const { responsiveMode, menuIsOpen } = useStoreNavbar();
+  const { theme, toggleTheme } = useStoreTheme();
+
+  const switchTheme = () => {
+    toggleTheme();
+    console.log(theme);
+  };
 
   return (
     <NavBarIconsStyled
@@ -26,7 +31,7 @@ const NavbarIcons = () => {
         sticky={responsiveMode === "desktop" ? true : false}
       />
       <StickyButton
-        function={toggleTheme}
+        function={switchTheme}
         iconDark="./icons/light_white.svg"
         iconLight="./icons/dark_black.svg"
         alt="theme icon"

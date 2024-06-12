@@ -1,33 +1,57 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
-type ThemeType = {
-  theme: string;
-  setTheme: (theme: string) => void;
+type ThemeType = "light" | "dark";
+
+type ThemeStoreType = {
+  theme: ThemeType;
+  setTheme: (theme: ThemeType) => void;
   toggleTheme: () => void;
+  sysTheme: boolean;
+  setSysTheme: (sysTheme: boolean) => void;
+  initSysTheme: () => void;
 };
 
-// récuperer le theme systeme
-const getSystemTheme = (): string => {
-  if (
-    window.matchMedia &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-  ) {
-    return "dark";
-  } else {
-    return "light";
-  }
-};
+const getSysTheme = (): boolean =>
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches;
 
-const useStoreTheme = create(
-  persist<ThemeType>(
-    (set) => ({
-      theme: getSystemTheme(),
-      setTheme: (theme: string) => set({ theme }),
-      toggleTheme: () =>
-        set((state) => ({ theme: state.theme === "dark" ? "light" : "dark" })),
+const useStoreTheme = create<ThemeStoreType>()(
+  persist(
+    (set, get) => ({
+      // theme et setTheme : indique le theme actuel et permet de le changer
+      theme: getSysTheme() ? "dark" : "light",
+      setTheme: (theme) => set({ theme }),
+
+      // fonction toggleTheme : permet de changer de theme : light => dark ou dark => light
+      toggleTheme: () => {
+        const currentTheme = get().theme;
+        set({
+          theme: currentTheme === "light" ? "dark" : "light",
+          sysTheme: false,
+        });
+      },
+
+      // sysTheme et setSysTheme : indique si le theme est identique au theme du systeme (true ou false)
+      sysTheme: true,
+      setSysTheme: (sysTheme) => set({ sysTheme }),
+
+      // initSysTheme : initialise le theme en fonction du theme du systeme
+      initSysTheme: () => {
+        const storedState = JSON.parse(
+          localStorage.getItem("theme-store") || "{}"
+        ).state;
+        if (storedState) {
+          set({ theme: storedState.theme, sysTheme: storedState.sysTheme });
+        } else {
+          const darkMode = getSysTheme();
+          set({ theme: darkMode ? "dark" : "light", sysTheme: true });
+        }
+      },
     }),
-    { name: "theme" }
+    {
+      name: "theme-store",
+    }
   )
 );
 

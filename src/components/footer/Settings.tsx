@@ -3,53 +3,47 @@ import useStoreTheme from "../../stores/theme.store";
 import StickyButton from "../StickyButton";
 
 const Settings = () => {
-  const { theme, setTheme } = useStoreTheme();
-  const getSysTheme = localStorage.getItem("sysTheme");
+  const { sysTheme, theme, setTheme, setSysTheme } = useStoreTheme();
 
-  const setSystemTheme = () => {
-    const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
-      .matches
-      ? "dark"
-      : "light";
-    setTheme(systemTheme);
-    // Ajouter class "activeTheme" à l'option choisie
-    localStorage.setItem("sysTheme", "true");
+  const systemTheme = () => {
+    setSysTheme(true);
+    setTheme(
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light"
+    );
   };
-
-  const setDarkTheme = () => {
+  const darkTheme = () => {
     setTheme("dark");
-    // Ajouter class "activeTheme" à l'option choisie
-    localStorage.setItem("sysTheme", "false");
+    setSysTheme(false);
   };
-
-  const setLightTheme = () => {
+  const lightTheme = () => {
     setTheme("light");
-    // Ajouter class "activeTheme" à l'option choisie
-    localStorage.setItem("sysTheme", "false");
+    setSysTheme(false);
   };
 
   return (
     <SettingsStyled>
       <StickyButton
-        function={setSystemTheme}
+        function={systemTheme}
         iconDark="./icons/system_white.svg"
         iconLight="./icons/system_black.svg"
         alt="system theme"
-        active={getSysTheme === "true" ? true : false}
+        active={sysTheme}
       />
       <StickyButton
-        function={setDarkTheme}
+        function={darkTheme}
         iconDark="./icons/dark_white.svg"
         iconLight="./icons/dark_black.svg"
         alt="dark theme"
-        active={getSysTheme === "false" && theme === "dark" ? true : false}
+        active={sysTheme === false && theme === "dark"}
       />
       <StickyButton
-        function={setLightTheme}
+        function={lightTheme}
         iconDark="./icons/light_white.svg"
         iconLight="./icons/light_black.svg"
         alt="light theme"
-        active={getSysTheme === "false" && theme === "light" ? true : false}
+        active={sysTheme === false && theme === "light"}
       />
     </SettingsStyled>
   );
