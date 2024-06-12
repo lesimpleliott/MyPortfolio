@@ -343,7 +343,7 @@ Le site est hébergé sur un serveur personnel (Hostinger) et déployé via GitH
     gap: 20px;
   }
 `,iv=()=>{const e=mn();return m.jsx(ov,{children:m.jsxs("div",{className:"footerContainer",children:[e.pathname!=="/contact"&&m.jsxs("section",{className:"socials",children:[m.jsx(wp,{height:30}),m.jsx(nv,{})]}),m.jsxs("section",{className:"credits",children:[m.jsx(Z1,{}),m.jsx(ev,{})]})]})})},ov=$.footer`
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -664,8 +664,7 @@ Le site est hébergé sur un serveur personnel (Hostinger) et déployé via GitH
     object-fit: cover;
   }
 `,kp=e=>m.jsxs(Ev,{className:"heroBanner",children:[e.backgroundImage&&m.jsx("div",{className:"bannerBackground",children:m.jsx("img",{src:e.backgroundImage,alt:e.profilPictureAlt})}),m.jsxs("div",{className:"bannerContent",children:[m.jsx(kv,{img:e.profilPicture,alt:e.profilPictureAlt}),m.jsx("div",{className:"childrenWrapper",children:e.children})]})]}),Ev=$.section`
-  width: 100vw;
-  position: relative;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1217,7 +1216,7 @@ Le site est hébergé sur un serveur personnel (Hostinger) et déployé via GitH
       }
     }
   }
-`,uy=()=>{const{theme:e}=Ht();return m.jsxs(cy,{children:[m.jsx(kp,{backgroundImage:"./cover_eLeGaragePortfolio.webp",profilPicture:"./eliott.webp",profilPictureAlt:"Photo d'Eliott Lesimple - Développeur web FrontEnd",children:m.jsxs("h1",{className:"bannerTitle",children:["Hello world ",e==="dark"?"🤘":"👋",",",m.jsx("br",{})," Je suis ",m.jsx("strong",{children:"Eliott Lesimple,"}),m.jsx("br",{})," développeur Front-end."]})}),m.jsxs("section",{className:"stack",children:[m.jsx("h2",{children:"Stack"}),m.jsx("h3",{children:"Technologies avec lesquelles je travaille"}),m.jsx(sy,{}),m.jsx("h3",{children:"Les Apps que j'utilise tous les jours"}),m.jsx(Yv,{})]}),m.jsxs("section",{className:"projects",children:[m.jsx("h2",{children:"Mes projets"}),m.jsx("h3",{children:"Les projets sur lesquels j'ai travaillé depuis mes débuts."}),m.jsx(oy,{})]})]})},cy=$.main`
+`,uy=()=>{const{theme:e}=Ht();return m.jsxs(cy,{children:[m.jsx(kp,{backgroundImage:"./cover_eLeGaragePortfolio.webp",profilPicture:"./eliott.webp",profilPictureAlt:"Photo d'Eliott Lesimple - Développeur web FrontEnd",children:m.jsxs("h1",{className:"bannerTitle",children:["Hello world ",e==="dark"?"🤘":"👋",",",m.jsx("br",{})," Je suis ",m.jsx("strong",{children:"Eliott Lesimple,"}),m.jsx("br",{})," développeur Front-end."]})}),m.jsxs("section",{className:"stack",children:[m.jsx("h2",{children:"Stack"}),m.jsx("h3",{children:"Technologies avec lesquelles je travaille."}),m.jsx(sy,{}),m.jsx("h3",{children:"Les Apps que j'utilise tous les jours."}),m.jsx(Yv,{})]}),m.jsxs("section",{className:"projects",children:[m.jsx("h2",{children:"Mes projets"}),m.jsx("h3",{children:"Les projets sur lesquels j'ai travaillé depuis mes débuts."}),m.jsx(oy,{})]})]})},cy=$.main`
   .stack,
   .projects {
     height: 100%;
