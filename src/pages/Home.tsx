@@ -1,15 +1,12 @@
 import styled from "styled-components";
 import Dock from "../components/Dock";
-// import Modal from "../components/modal/Modal";
 import HeroBanner from "../layouts/HeroBanner";
 import Projects from "../layouts/Projects";
 import Stack from "../layouts/Stack";
-// import { useStoreModal } from "../stores/modal.store";
 import useStoreTheme from "../stores/theme.store";
 
 const Home = () => {
   const { theme } = useStoreTheme();
-  // const { modalIsOpen } = useStoreModal();
 
   return (
     <HomeStyled>
@@ -27,9 +24,9 @@ const Home = () => {
 
       <section className="stack">
         <h2>Stack</h2>
-        <h3>Technologies avec lesquelles je travaille</h3>
+        <h3>Technologies avec lesquelles je travaille.</h3>
         <Stack />
-        <h3>Les Apps que j'utilise tous les jours</h3>
+        <h3>Les Apps que j'utilise tous les jours.</h3>
         <Dock />
       </section>
 
@@ -38,8 +35,6 @@ const Home = () => {
         <h3>Les projets sur lesquels j'ai travaillé depuis mes débuts.</h3>
         <Projects />
       </section>
-
-      {/* {modalIsOpen && <Modal />} */}
     </HomeStyled>
   );
 };
