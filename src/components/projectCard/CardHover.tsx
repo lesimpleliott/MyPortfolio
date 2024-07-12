@@ -43,6 +43,15 @@ const CardHover = ({ project }: { project: ProjectType }) => {
           sticky={false}
         />
       )}
+
+      {project.links.website && (
+        <StickyButton
+          link={project.links.website}
+          alt="preview icon"
+          icon="./icons/website_white.svg"
+          sticky={false}
+        />
+      )}
     </CardHoverStyled>
   );
 };

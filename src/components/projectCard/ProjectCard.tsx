@@ -38,6 +38,7 @@ const ProjectCardStyled = styled.article`
   overflow: hidden;
   position: relative;
   transition: background-color 250ms ease-in-out, box-shadow 250ms ease-in;
+  cursor: pointer;
 
   @media screen and (min-width: 768px) {
     &:hover {
