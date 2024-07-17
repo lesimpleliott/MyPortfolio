@@ -63,6 +63,22 @@
     }
   },
   {
+    "id": 5,
+    "title": "ArgentBank",
+    "description": "Projet réalisé dans le cadre de la formation Développeur Web d'OpenClassrooms : Implémentez le front-end d'une application bancaire avec React. \nDéveloppement d'une application web de gestion de compte bancaire. Utilisation de React, Redux et Styled-Component pour la partie front-end. Utilisation de l'API REST transmis par OpenClassRooms pour la partie back-end.",
+    "tags": ["React", "Styled-Component", "Redux"],
+    "schoolProject": true,
+    "images": {
+      "hero": "./myProjects/argentBank_hero.webp",
+      "desktop": "./myProjects/argentBank_desktop.webp",
+      "mobile": ""
+    },
+    "links": {
+      "github": "https://github.com/lesimpleliott/OC_ArgentBank",
+      "preview": ""
+    }
+  },
+  {
     "id": 6,
     "title": "MyPortfolio",
     "description": "Développement de mon portfolio personnel. \nUtilisation de React et Typescript pour la partie front-end, le style est réalisé avec Styled-Component et Sass. \nLe site est hébergé sur un serveur personnel (Hostinger) et déployé via GitHub Actions qui permet une mise en production immédiate lors de chaque 'push' sur la branche 'main'. \n ",
@@ -80,7 +96,7 @@
   {
     "id": 7,
     "title": "Katelio - Album photos",
-    "description": "Développement du site contenant l'ensemble des photos du mariage de Katherine et Eliott. \n Création de la Galerie Masonry et du slider full responsive. \n Mot de passe : demo ",
+    "description": "Développement du site contenant l'ensemble des photos du mariage de Katherine et Eliott. \n Création de la Galerie Masonry et du slider full responsive. \n Mot de passe : toujoursplus ",
     "tags": ["React", "Typescript", "Redux"],
     "images": {
       "hero": "./myProjects/katelioPhotos_hero.webp",
@@ -89,7 +105,7 @@
     },
     "links": {
       "github": "https://github.com/lesimpleliott/KE-Wedding-Pictures.git",
-      "preview": "https://demo.katelio.fr/"
+      "website": "https://katelio.fr/"
     }
   }
 ]
