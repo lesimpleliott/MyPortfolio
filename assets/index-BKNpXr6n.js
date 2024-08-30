@@ -85,7 +85,7 @@ Error generating stack: `+o.message+`
 Travail sur l'interface mobile-first du site d’une start-up type 'Deliveroo'. Utilisation de Sass afin d'implémenter des animations CSS et versionning du projet avec Git et GitHub.`,tags:["HTML","Sass"],schoolProject:!0,images:{hero:"./myProjects/ohmyfood_hero.webp",desktop:"./myProjects/ohmyfood_desktop.webp",mobile:"./myProjects/ohmyfood_mobile.webp"},links:{github:"https://github.com/lesimpleliott/OC_ohmyfood",preview:"https://lesimpleliott.github.io/OC_ohmyfood/"}},{id:2,title:"Sophie Bluel",description:`Projet réalisé dans le cadre de la formation Développeur Web d'OpenClassrooms : Transformez une maquette en site web. 
 Intégration de la maquette d'un site pour une photographe professionnelle. Utilisation de Sass pour la gestion des styles et de Javascript pour la gestion des interactions.`,tags:["HTML","Sass","Javascript"],schoolProject:!0,images:{hero:"./myProjects/sophieBluel_hero.webp",desktop:"./myProjects/sophieBluel_desktop.webp",mobile:""},links:{github:"https://github.com/lesimpleliott/OC_SophieBluel",preview:""}},{id:3,title:"Katelio Wedding",description:`Développement du site de mon mariage et celui de ma femme. Site 'éphémère' permettant de gérer la diffusion des informations de l'evenement aux invités ainsi que les RSVP. 
 Utilisation de Sass pour la gestion des styles et de Javascript Vanilla pour la gestion des interactions. La librairie SMTP.Js a été utilisée afin de gérer l'envoi des mails. 
-Le site est hébergé sur un serveur et nom de domine personnel (katelio.fr). 
+Le site est hébergé sur un serveur et nom de domaine personnel (katelio.fr). 
 
 Ne cherchez pas plus longtemps le mot de passe : pinktouch `,tags:["HTML","Sass","Javascript"],images:{hero:"./myProjects/katelio_hero.webp",desktop:"./myProjects/katelio_desktop.webp",mobile:"./myProjects/katelio_mobile.webp"},links:{github:"https://github.com/lesimpleliott/katelioWedding",preview:"https://lesimpleliott.github.io/katelioWedding/"}},{id:4,title:"Kasa",description:`Projet réalisé dans le cadre de la formation Développeur Web d'OpenClassrooms : Créez une application web de location immobilière avec React. 
 Développement d'un site de location de logements. Utilisation de React pour la partie front-end et de Sass pour la gestion des styles.`,tags:["React","Sass"],schoolProject:!0,images:{hero:"./myProjects/kasa_hero.webp",desktop:"./myProjects/kasa_desktop.webp",mobile:"./myProjects/kasa_mobile.webp"},links:{github:"https://github.com/lesimpleliott/OC_Kasa",preview:"https://oc-kasa-sable.vercel.app/"}},{id:6,title:"MyPortfolio",description:`Développement de mon portfolio personnel. 
@@ -1095,7 +1095,7 @@ Le site est hébergé sur un serveur personnel (Hostinger) et déployé via GitH
       width: 50px;
     }
   }
-`,Rp=[{name:"HTML",icon:"./myStack/HTML.svg"},{name:"CSS",icon:"./myStack/CSS.svg"},{name:"Sass",icon:"./myStack/SASS.svg"},{name:"Javascript",icon:"./myStack/JAVASCRIPT.svg"},{name:"Github",icon:"./myStack/GITHUB_WHITE.svg",iconLight:"./myStack/GITHUB_BLACK.svg"},{name:"Git",icon:"./myStack/GIT.svg"},{name:"React",icon:"./myStack/REACT.svg"},{name:"Typescript",icon:"./myStack/TYPESCRIPT.svg"},{name:"Styled-Component",icon:"./myStack/STYLED-COMPONENTS.png"},{name:"Redux",icon:"./myStack/REDUX.svg"},{name:"Zustand",icon:"./myStack/ZUSTAND.png"},{name:"Jest",icon:"./myStack/JEST.svg"}],ty=({project:e})=>{var t;return m.jsxs(ny,{children:[m.jsx("h4",{className:"title",children:e.title}),m.jsx("div",{className:"tags",children:(t=e.tags)==null?void 0:t.map((n,r)=>{const i=Rp.find(o=>o.name===n);return m.jsx("img",{className:"icon",src:i==null?void 0:i.icon,alt:`icon de ${i==null?void 0:i.name}`},r)})})]})},ny=$.div`
+`,Rp=[{name:"React",icon:"./myStack/REACT.svg"},{name:"Typescript",icon:"./myStack/TYPESCRIPT.svg"},{name:"Redux",icon:"./myStack/REDUX.svg"},{name:"Javascript",icon:"./myStack/JAVASCRIPT.svg"},{name:"HTML",icon:"./myStack/HTML.svg"},{name:"CSS",icon:"./myStack/CSS.svg"},{name:"Sass",icon:"./myStack/SASS.svg"},{name:"Tailwind",icon:"./myStack/TAILWIND.svg"},{name:"Styled-Component",icon:"./myStack/STYLED-COMPONENTS.png"},{name:"Github",icon:"./myStack/GITHUB_WHITE.svg",iconLight:"./myStack/GITHUB_BLACK.svg"},{name:"Git",icon:"./myStack/GIT.svg"},{name:"Jest",icon:"./myStack/JEST.svg"},{name:"Zustand",icon:"./myStack/ZUSTAND.png"}],ty=({project:e})=>{var t;return m.jsxs(ny,{children:[m.jsx("h4",{className:"title",children:e.title}),m.jsx("div",{className:"tags",children:(t=e.tags)==null?void 0:t.map((n,r)=>{const i=Rp.find(o=>o.name===n);return m.jsx("img",{className:"icon",src:i==null?void 0:i.icon,alt:`icon de ${i==null?void 0:i.name}`},r)})})]})},ny=$.div`
   height: 70px;
   width: 100%;
   padding: 1rem;
@@ -1141,7 +1141,7 @@ Le site est hébergé sur un serveur personnel (Hostinger) et déployé via GitH
       }
     }
   }
-`,oy=()=>m.jsx(ly,{children:Xn.map(e=>m.jsx(ry,{project:e},e.id))}),ly=$.div`
+`,oy=()=>m.jsx(ly,{children:Xn.slice().reverse().map(e=>m.jsx(ry,{project:e},e.id))}),ly=$.div`
   max-width: 1024px;
   margin-block-start: 50px;
   margin-block-end: 100px;
@@ -1149,7 +1149,7 @@ Le site est hébergé sur un serveur personnel (Hostinger) et déployé via GitH
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
-`,sy=()=>{const{theme:e}=Ht();return m.jsx(ay,{children:m.jsx("ul",{children:Rp.map((t,n)=>m.jsxs("li",{children:[m.jsx("img",{className:"icon",src:t.iconLight&&e==="light"?t.iconLight:t.icon,alt:t.name}),m.jsx("span",{className:"name",children:t.name})]},n))})})},ay=$.div`
+`,sy=()=>{const{theme:e}=Ht();return m.jsx(ay,{children:m.jsx("ul",{children:Rp.slice(0,12).map((t,n)=>m.jsxs("li",{children:[m.jsx("img",{className:"icon",src:t.iconLight&&e==="light"?t.iconLight:t.icon,alt:t.name}),m.jsx("span",{className:"name",children:t.name})]},n))})})},ay=$.div`
   width: 100%;
   margin-block-start: 50px;
   margin-block-end: 100px;
