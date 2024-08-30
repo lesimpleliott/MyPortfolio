@@ -34,7 +34,7 @@
   {
     "id": 3,
     "title": "Katelio Wedding",
-    "description": "Développement du site de mon mariage et celui de ma femme. Site 'éphémère' permettant de gérer la diffusion des informations de l'evenement aux invités ainsi que les RSVP. \nUtilisation de Sass pour la gestion des styles et de Javascript Vanilla pour la gestion des interactions. La librairie SMTP.Js a été utilisée afin de gérer l'envoi des mails. \nLe site est hébergé sur un serveur et nom de domine personnel (katelio.fr). \n\nNe cherchez pas plus longtemps le mot de passe : pinktouch ",
+    "description": "Développement du site de mon mariage et celui de ma femme. Site 'éphémère' permettant de gérer la diffusion des informations de l'evenement aux invités ainsi que les RSVP. \nUtilisation de Sass pour la gestion des styles et de Javascript Vanilla pour la gestion des interactions. La librairie SMTP.Js a été utilisée afin de gérer l'envoi des mails. \nLe site est hébergé sur un serveur et nom de domaine personnel (katelio.fr). \n\nNe cherchez pas plus longtemps le mot de passe : pinktouch ",
     "tags": ["HTML", "Sass", "Javascript"],
     "images": {
       "hero": "./myProjects/katelio_hero.webp",

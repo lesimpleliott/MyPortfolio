@@ -5,9 +5,12 @@ import ProjectCard from "../components/projectCard/ProjectCard";
 const Projects = () => {
   return (
     <ProjectsStyled>
-      {myProjects.map((project) => (
-        <ProjectCard key={project.id} project={project} />
-      ))}
+      {myProjects
+        .slice()
+        .reverse()
+        .map((project) => (
+          <ProjectCard key={project.id} project={project} />
+        ))}
     </ProjectsStyled>
   );
 };
