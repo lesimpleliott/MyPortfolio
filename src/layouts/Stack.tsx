@@ -8,7 +8,7 @@ const Stack = () => {
   return (
     <StackStyled>
       <ul>
-        {dataStack.map((stack, index) => (
+        {dataStack.slice(0, 12).map((stack, index) => (
           <li key={index}>
             <img
               className="icon"

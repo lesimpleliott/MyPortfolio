@@ -1,18 +1,19 @@
 [
+  { "name": "React", "icon": "./myStack/REACT.svg" },
+  { "name": "Typescript", "icon": "./myStack/TYPESCRIPT.svg" },
+  { "name": "Redux", "icon": "./myStack/REDUX.svg" },
+  { "name": "Javascript", "icon": "./myStack/JAVASCRIPT.svg" },
   { "name": "HTML", "icon": "./myStack/HTML.svg" },
   { "name": "CSS", "icon": "./myStack/CSS.svg" },
   { "name": "Sass", "icon": "./myStack/SASS.svg" },
-  { "name": "Javascript", "icon": "./myStack/JAVASCRIPT.svg" },
+  { "name": "Tailwind", "icon": "./myStack/TAILWIND.svg" },
+  { "name": "Styled-Component", "icon": "./myStack/STYLED-COMPONENTS.png" },
   {
     "name": "Github",
     "icon": "./myStack/GITHUB_WHITE.svg",
     "iconLight": "./myStack/GITHUB_BLACK.svg"
   },
   { "name": "Git", "icon": "./myStack/GIT.svg" },
-  { "name": "React", "icon": "./myStack/REACT.svg" },
-  { "name": "Typescript", "icon": "./myStack/TYPESCRIPT.svg" },
-  { "name": "Styled-Component", "icon": "./myStack/STYLED-COMPONENTS.png" },
-  { "name": "Redux", "icon": "./myStack/REDUX.svg" },
-  { "name": "Zustand", "icon": "./myStack/ZUSTAND.png" },
-  { "name": "Jest", "icon": "./myStack/JEST.svg" }
+  { "name": "Jest", "icon": "./myStack/JEST.svg" },
+  { "name": "Zustand", "icon": "./myStack/ZUSTAND.png" }
 ]
