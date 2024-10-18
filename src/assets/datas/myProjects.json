@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "OhMyFood",
-    "description": "Projet réalisé dans le cadre de la formation Développeur Web d'OpenClassrooms : Améliorez l'interface d'un site mobile avec des animations CSS. \nTravail sur l'interface mobile-first du site d’une start-up type 'Deliveroo'. Utilisation de Sass afin d'implémenter des animations CSS et versionning du projet avec Git et GitHub.",
+    "description": "Projet réalisé dans le cadre de la formation Développeur Web d'OpenClassrooms : Améliorez l'interface d'un site mobile avec des animations CSS. \nTravail sur l'interface mobile-first du site d’une start-up type 'Deliveroo'. Utilisation de Sass afin d'implémenter des animations CSS et versionnement du projet avec Git et GitHub.",
     "tags": ["HTML", "Sass"],
     "schoolProject": true,
     "images": {
@@ -32,21 +32,6 @@
     }
   },
   {
-    "id": 3,
-    "title": "Katelio Wedding",
-    "description": "Développement du site de mon mariage et celui de ma femme. Site 'éphémère' permettant de gérer la diffusion des informations de l'evenement aux invités ainsi que les RSVP. \nUtilisation de Sass pour la gestion des styles et de Javascript Vanilla pour la gestion des interactions. La librairie SMTP.Js a été utilisée afin de gérer l'envoi des mails. \nLe site est hébergé sur un serveur et nom de domaine personnel (katelio.fr). \n\nNe cherchez pas plus longtemps le mot de passe : pinktouch ",
-    "tags": ["HTML", "Sass", "Javascript"],
-    "images": {
-      "hero": "./myProjects/katelio_hero.webp",
-      "desktop": "./myProjects/katelio_desktop.webp",
-      "mobile": "./myProjects/katelio_mobile.webp"
-    },
-    "links": {
-      "github": "https://github.com/lesimpleliott/katelioWedding",
-      "preview": "https://lesimpleliott.github.io/katelioWedding/"
-    }
-  },
-  {
     "id": 4,
     "title": "Kasa",
     "description": "Projet réalisé dans le cadre de la formation Développeur Web d'OpenClassrooms : Créez une application web de location immobilière avec React. \nDéveloppement d'un site de location de logements. Utilisation de React pour la partie front-end et de Sass pour la gestion des styles.",
@@ -63,9 +48,39 @@
     }
   },
   {
+    "id": 8,
+    "title": "Dashboard",
+    "description": "Développement d'une application de tableau de bord pour la visualisation et la gestion des données hospitalières. \nCe projet a été réalisé avec une stack moderne comprenant React, TypeScript, et Tailwind CSS. \nL'application utilise Recharts pour la création de graphiques dynamiques, i18next pour la gestion de la localisation et la traduction en plusieurs langues, et Zustand pour la gestion du store de manière simple et efficace.",
+    "tags": ["React", "Typescript", "Tailwind"],
+    "images": {
+      "hero": "./myProjects/dashboard_hero.webp",
+      "desktop": "./myProjects/dashboard_desktop.webp",
+      "mobile": "./myProjects/dashboard_mobile.webp"
+    },
+    "links": {
+      "github": "https://github.com/lesimpleliott/Tekkare-dashboard.git",
+      "preview": "https://tekkare.elegarage.fr/"
+    }
+  },
+  {
+    "id": 3,
+    "title": "Katelio Wedding",
+    "description": "Développement du site de mon mariage et celui de ma femme. Site 'éphémère' permettant de gérer la diffusion des informations de l'événement aux invités ainsi que les RSVP. \nUtilisation de Sass pour la gestion des styles et de Javascript Vanilla pour la gestion des interactions. La librairie SMTP.js a été utilisée afin de gérer l'envoi des mails. \nLe site est hébergé sur un serveur et nom de domaine personnel (katelio.fr). \n\nNe cherchez pas plus longtemps le mot de passe : pinktouch.",
+    "tags": ["HTML", "Sass", "Javascript"],
+    "images": {
+      "hero": "./myProjects/katelio_hero.webp",
+      "desktop": "./myProjects/katelio_desktop.webp",
+      "mobile": "./myProjects/katelio_mobile.webp"
+    },
+    "links": {
+      "github": "https://github.com/lesimpleliott/katelioWedding",
+      "preview": "https://lesimpleliott.github.io/katelioWedding/"
+    }
+  },
+  {
     "id": 6,
     "title": "MyPortfolio",
-    "description": "Développement de mon portfolio personnel. \nUtilisation de React et Typescript pour la partie front-end, le style est réalisé avec Styled-Component et Sass. \nLe site est hébergé sur un serveur personnel (Hostinger) et déployé via GitHub Actions qui permet une mise en production immédiate lors de chaque 'push' sur la branche 'main'. \n ",
+    "description": "Développement de mon portfolio personnel. \nUtilisation de React et TypeScript pour la partie front-end, le style est réalisé avec Styled-Components et Sass. \nLe site est hébergé sur un serveur personnel (Hostinger) et déployé via GitHub Actions qui permet une mise en production immédiate lors de chaque 'push' sur la branche 'main'.",
     "tags": ["React", "Typescript", "Styled-Component"],
     "images": {
       "hero": "./myProjects/myPortfolio_hero.webp",
@@ -80,7 +95,7 @@
   {
     "id": 7,
     "title": "Katelio - Album photos",
-    "description": "Développement du site contenant l'ensemble des photos du mariage de Katherine et Eliott. \n Création de la Galerie Masonry et du slider full responsive. \n Mot de passe : demo ",
+    "description": "Développement du site contenant l'ensemble des photos du mariage de Katherine et Eliott. \nCréation de la Galerie Masonry et du slider full responsive. \nMot de passe : demo.",
     "tags": ["React", "Typescript", "Redux"],
     "images": {
       "hero": "./myProjects/katelioPhotos_hero.webp",
