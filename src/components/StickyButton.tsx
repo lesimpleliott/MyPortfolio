@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import useStoreNavbar from "../stores/navbar.store";
+import useStoreResponsive from "../stores/responsive.store";
 import useStoreTheme from "../stores/theme.store";
 
 // TypeScript
@@ -40,7 +41,7 @@ type StickyBtnProps = BaseBtnProps & IconsProps & FunctionProps;
 const StickyButton: React.FC<StickyBtnProps> = (props) => {
   const { theme } = useStoreTheme();
   const { setMenuIsOpen } = useStoreNavbar();
-  const { responsiveMode } = useStoreNavbar();
+  const { responsiveMode } = useStoreResponsive();
   const btnRef = useRef<HTMLButtonElement | HTMLAnchorElement>(null);
 
   useEffect(() => {
