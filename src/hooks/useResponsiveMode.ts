@@ -1,8 +1,8 @@
 import { useCallback, useEffect } from "react";
-import useStoreNavbar from "../stores/navbar.store";
+import useStoreResponsive from "../stores/responsive.store";
 
 const useResponsiveMode = () => {
-  const { setResponsiveMode } = useStoreNavbar();
+  const { setResponsiveMode } = useStoreResponsive();
 
   const initResponsiveMode = useCallback(() => {
     if (window.innerWidth < 768) {

@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import useStoreNavbar from "../../stores/navbar.store";
+import useStoreResponsive from "../../stores/responsive.store";
 
 const BurgerBtn = () => {
-  const { responsiveMode } = useStoreNavbar();
+  const { responsiveMode } = useStoreResponsive();
   const { menuIsOpen, setMenuIsOpen } = useStoreNavbar();
 
   const toggleMenu = () => {

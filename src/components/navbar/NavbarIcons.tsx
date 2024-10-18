@@ -2,9 +2,11 @@ import styled from "styled-components";
 import useStoreNavbar from "../../stores/navbar.store";
 import useStoreTheme from "../../stores/theme.store";
 import StickyButton from "../StickyButton";
+import useStoreResponsive from "../../stores/responsive.store";
 
 const NavbarIcons = () => {
-  const { responsiveMode, menuIsOpen } = useStoreNavbar();
+  const {  menuIsOpen } = useStoreNavbar();
+  const { responsiveMode } = useStoreResponsive();
   const { theme, toggleTheme } = useStoreTheme();
 
   const switchTheme = () => {

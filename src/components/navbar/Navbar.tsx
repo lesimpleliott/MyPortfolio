@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import useResponsiveMode from "../../hooks/useResponsiveMode";
-import useStoreNavbar from "../../stores/navbar.store";
+import useStoreResponsive from "../../stores/responsive.store";
 import BurgerBtn from "./BurgerBtn";
 import ButtonsContainer from "./ButtonsContainer";
 
 const Navbar = () => {
   useResponsiveMode();
-  const { responsiveMode } = useStoreNavbar();
+  const { responsiveMode } = useStoreResponsive();
 
   return (
     <NavbarStyled className={responsiveMode}>

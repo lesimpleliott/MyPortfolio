@@ -2,9 +2,11 @@ import { useCallback, useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import useStoreNavbar from "../../stores/navbar.store";
+import useStoreResponsive from "../../stores/responsive.store";
 
 const NavbarLinks = () => {
-  const { responsiveMode, menuIsOpen, setMenuIsOpen } = useStoreNavbar();
+  const { menuIsOpen, setMenuIsOpen } = useStoreNavbar();
+  const { responsiveMode } = useStoreResponsive();
   const [, setActiveBox] = useState<HTMLElement | null>(null);
   const location = useLocation();
   const underline = document.querySelector(".underline");

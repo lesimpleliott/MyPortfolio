@@ -3,9 +3,12 @@ import styled from "styled-components";
 import useStoreNavbar from "../../stores/navbar.store";
 import NavbarIcons from "./NavbarIcons";
 import NavbarLinks from "./NavbarLinks";
+import useStoreResponsive from "../../stores/responsive.store";
 
 const ButtonsContainer = () => {
-  const { responsiveMode, menuIsOpen } = useStoreNavbar();
+  const {  menuIsOpen } = useStoreNavbar();
+  const { responsiveMode } = useStoreResponsive();
+
 
   useEffect(() => {
     menuIsOpen
