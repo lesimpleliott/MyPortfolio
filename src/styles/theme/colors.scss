@@ -7,6 +7,8 @@
   --backgroundOpacity: rgba(242, 242, 242, 0.7);
   --cardBackground: #fff;
   --hoverCard: rgba(242, 242, 242, 0.5);
+  --color-success: #22c55e;
+  --color-error: #ef4444;
 }
 
 [data-theme="dark"] {
@@ -18,4 +20,6 @@
   --backgroundOpacity: rgba(25, 25, 25, 0.7);
   --cardBackground: #363636;
   --hoverCard: rgba(25, 25, 25, 0.5);
+  --color-success: #22c55e;
+  --color-error: #ef4444;
 }
