@@ -41,16 +41,18 @@ const Home = () => {
 
 // STYLED-COMPONENTS
 const HomeStyled = styled.main`
-  .stack,
-  .projects {
+  .projects,
+  .stack {
     height: 100%;
     width: 100%;
-    max-width: 1024px;
-    padding-inline: 5vw;
-
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .stack {
+    max-width: 1024px;
+    padding-inline: 5vw;
   }
 `;
 
