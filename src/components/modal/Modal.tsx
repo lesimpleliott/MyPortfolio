@@ -44,13 +44,21 @@ const ModalStyled = styled.aside`
   .modalContent {
     width: 80%;
     max-width: 768px;
-    max-height: 80%;
+    height: 100vw;
+    min-height: 80%;
+    display: flex;
+    flex-direction: column;
     background-color: var(--background);
     border: solid 3px #fff;
     border-radius: 10px;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
     overflow-y: auto;
     animation: modalScaleIn 300ms ease-in-out;
+
+    @media screen and (min-width: 768px) {
+      height: 60%;
+      min-height: 60%;
+    }
   }
 `;
 

@@ -83,6 +83,7 @@ const ModalProjectTextStyled = styled.section`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  flex: 1;
 
   .header {
     display: flex;
@@ -91,7 +92,9 @@ const ModalProjectTextStyled = styled.section`
     gap: 10px;
 
     .title {
-      flex: 1 0 fit-content;
+      padding: 0;
+      text-align: left;
+      flex: 1;
       font-size: 2rem;
       font-weight: 600;
       line-height: 1.2;
@@ -127,6 +130,7 @@ const ModalProjectTextStyled = styled.section`
     font-size: 0.9rem;
     white-space: pre-line;
     line-height: 1.8;
+    flex: 1;
   }
   .links {
     margin-top: 10px;

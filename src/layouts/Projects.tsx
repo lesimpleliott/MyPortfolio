@@ -65,9 +65,9 @@ const ProjectsStyled = styled.div<{ showAll: boolean; maxHeight: number }>`
     transition: height 500ms ease-in-out;
 
     .cardContainer {
-      max-width: 1024px;
+      max-width: calc(1024px + 5vw * 2);
       margin: 0 auto;
-      padding: 0 5vw;
+      padding-inline: 5vw;
       display: grid;
       grid-template-columns: 1fr;
       gap: 2rem;
