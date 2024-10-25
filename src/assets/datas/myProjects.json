@@ -6,9 +6,9 @@
     "tags": ["HTML", "Sass"],
     "schoolProject": true,
     "images": {
-      "hero": "./myProjects/ohmyfood_hero.webp",
-      "desktop": "./myProjects/ohmyfood_desktop.webp",
-      "mobile": "./myProjects/ohmyfood_mobile.webp"
+      "hero": "/myProjects/ohmyfood_hero.webp",
+      "desktop": "/myProjects/ohmyfood_desktop.webp",
+      "mobile": "/myProjects/ohmyfood_mobile.webp"
     },
     "links": {
       "github": "https://github.com/lesimpleliott/OC_ohmyfood",
@@ -22,8 +22,8 @@
     "tags": ["HTML", "Sass", "Javascript"],
     "schoolProject": true,
     "images": {
-      "hero": "./myProjects/sophieBluel_hero.webp",
-      "desktop": "./myProjects/sophieBluel_desktop.webp",
+      "hero": "/myProjects/sophieBluel_hero.webp",
+      "desktop": "/myProjects/sophieBluel_desktop.webp",
       "mobile": ""
     },
     "links": {
@@ -38,9 +38,9 @@
     "tags": ["React", "Sass"],
     "schoolProject": true,
     "images": {
-      "hero": "./myProjects/kasa_hero.webp",
-      "desktop": "./myProjects/kasa_desktop.webp",
-      "mobile": "./myProjects/kasa_mobile.webp"
+      "hero": "/myProjects/kasa_hero.webp",
+      "desktop": "/myProjects/kasa_desktop.webp",
+      "mobile": "/myProjects/kasa_mobile.webp"
     },
     "links": {
       "github": "https://github.com/lesimpleliott/OC_Kasa",
@@ -53,9 +53,9 @@
     "description": "Développement d'une application de tableau de bord pour la visualisation et la gestion des données hospitalières. \nCe projet a été réalisé avec une stack moderne comprenant React, TypeScript, et Tailwind CSS. \nL'application utilise Recharts pour la création de graphiques dynamiques, i18next pour la gestion de la localisation et la traduction en plusieurs langues, et Zustand pour la gestion du store de manière simple et efficace.",
     "tags": ["React", "Typescript", "Tailwind"],
     "images": {
-      "hero": "./myProjects/dashboard_hero.webp",
-      "desktop": "./myProjects/dashboard_desktop.webp",
-      "mobile": "./myProjects/dashboard_mobile.webp"
+      "hero": "/myProjects/dashboard_hero.webp",
+      "desktop": "/myProjects/dashboard_desktop.webp",
+      "mobile": "/myProjects/dashboard_mobile.webp"
     },
     "links": {
       "github": "https://github.com/lesimpleliott/Tekkare-dashboard.git",
@@ -68,9 +68,9 @@
     "description": "Développement du site de mon mariage et celui de ma femme. Site 'éphémère' permettant de gérer la diffusion des informations de l'événement aux invités ainsi que les RSVP. \nUtilisation de Sass pour la gestion des styles et de Javascript Vanilla pour la gestion des interactions. La librairie SMTP.js a été utilisée afin de gérer l'envoi des mails. \nLe site est hébergé sur un serveur et nom de domaine personnel (katelio.fr). \n\nNe cherchez pas plus longtemps le mot de passe : pinktouch.",
     "tags": ["HTML", "Sass", "Javascript"],
     "images": {
-      "hero": "./myProjects/katelio_hero.webp",
-      "desktop": "./myProjects/katelio_desktop.webp",
-      "mobile": "./myProjects/katelio_mobile.webp"
+      "hero": "/myProjects/katelio_hero.webp",
+      "desktop": "/myProjects/katelio_desktop.webp",
+      "mobile": "/myProjects/katelio_mobile.webp"
     },
     "links": {
       "github": "https://github.com/lesimpleliott/katelioWedding",
@@ -83,9 +83,9 @@
     "description": "Développement de mon portfolio personnel. \nUtilisation de React et TypeScript pour la partie front-end, le style est réalisé avec Styled-Components et Sass. \nLe site est hébergé sur un serveur personnel (Hostinger) et déployé via GitHub Actions qui permet une mise en production immédiate lors de chaque 'push' sur la branche 'main'.",
     "tags": ["React", "Typescript", "Styled-Component"],
     "images": {
-      "hero": "./myProjects/myPortfolio_hero.webp",
-      "desktop": "./myProjects/myPortfolio_desktop.webp",
-      "mobile": "./myProjects/myPortfolio_mobile.webp"
+      "hero": "/myProjects/myPortfolio_hero.webp",
+      "desktop": "/myProjects/myPortfolio_desktop.webp",
+      "mobile": "/myProjects/myPortfolio_mobile.webp"
     },
     "links": {
       "github": "https://github.com/lesimpleliott/MyPortfolio",
@@ -98,9 +98,9 @@
     "description": "Développement du site contenant l'ensemble des photos du mariage de Katherine et Eliott. \nCréation de la Galerie Masonry et du slider full responsive. \nMot de passe : demo.",
     "tags": ["React", "Typescript", "Redux"],
     "images": {
-      "hero": "./myProjects/katelioPhotos_hero.webp",
-      "desktop": "./myProjects/katelioPhotos_desktop.webp",
-      "mobile": "./myProjects/katelioPhotos_mobile.webp"
+      "hero": "/myProjects/katelioPhotos_hero.webp",
+      "desktop": "/myProjects/katelioPhotos_desktop.webp",
+      "mobile": "/myProjects/katelioPhotos_mobile.webp"
     },
     "links": {
       "github": "https://github.com/lesimpleliott/KE-Wedding-Pictures.git",

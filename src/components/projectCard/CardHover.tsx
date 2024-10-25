@@ -72,6 +72,7 @@ const CardHoverStyled = styled.div`
     width: 70px;
     height: 50px;
     opacity: 0;
+    visibility: hidden;
     .stickyIcon {
       height: 50px;
       width: 50px;

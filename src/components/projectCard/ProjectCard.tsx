@@ -49,6 +49,7 @@ const ProjectCardStyled = styled.article`
         background-color: var(----hoverCard);
         .stickyBtn {
           opacity: 1;
+          visibility: visible;
           transition: opacity 250ms ease-in-out;
         }
       }
